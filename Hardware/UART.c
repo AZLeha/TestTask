@@ -1,4 +1,4 @@
-#include "UART.h"
+#include "./inc/UART.h"
 
 #include "stm32f10x.h"
 #include <stdbool.h>
@@ -16,12 +16,12 @@ void UART_Init(void)
 
 	//UART1 TX(PA9)  RX(PA10)
 
-	GPIOA->CRH &= ~(GPIO_CRH_MODE9 | GPIO_CRH_MODE10);
-	GPIOA->CRH |= GPIO_CRH_MODE9;
-	GPIOA->CRH &= ~GPIO_CRH_MODE10;
+	GPIOA->CRH &= ~(GPIO_CRH_MODE9 | GPIO_CRH_MODE10 |
+					GPIO_CRH_CNF9 | GPIO_CRH_CNF10);
 
-	GPIOA->CRH &= ~(GPIO_CRH_CNF9 | GPIO_CRH_CNF10);
-	GPIOA->CRH |= GPIO_CRH_CNF9_1 | GPIO_CRH_CNF10_0;
+
+	GPIOA->CRH |= 	GPIO_CRH_MODE9 |
+					GPIO_CRH_CNF9_1 | GPIO_CRH_CNF10_0;
 
 
 	//0x1D4C 9600;
@@ -61,13 +61,13 @@ bool UART_TransmitDataViaDMA(void * aData, uint16_t dataSize)
 
 
 
-void UART_TransmitString(char* aData)
+void UART_TransmitString(char* acData)
 {
 
-	while((*aData) != '\0')
+	while((*acData) != '\0')
 	{
-		inlineTransmitByte((uint8_t)(*aData));
-		aData++;
+		inlineTransmitByte((uint8_t)(*acData));
+		acData++;
 	}
 
 
