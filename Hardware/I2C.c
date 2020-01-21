@@ -17,8 +17,8 @@ typedef enum
 
 __attribute__((always_inline)) static inline void inlineStartConditions(uint8_t ucDeviceAddress,eDataDirection xDataDirection);
 
-__attribute__((always_inline)) static inline void inlineWriteData(void * pvOutputData, uint8_t ucDataSize, eI2C_directionData xDirectionData);
-__attribute__((always_inline)) static inline void inlineReadData(void * pvInputData, uint8_t ucDataSize, eI2C_directionData xDirectionData);
+__attribute__((always_inline)) static inline void inlineWriteData(void * pvOutputData, uint8_t ucDataSize, eI2C_Endianness xDirectionData);
+__attribute__((always_inline)) static inline void inlineReadData(void * pvInputData, uint8_t ucDataSize, eI2C_Endianness xDirectionData);
 
 
 
@@ -47,7 +47,7 @@ void I2C_Init()
 }
 
 
-void I2C_WriteData (uint8_t ucDeviceAddress, uint8_t ucRegisterPointer, void * pvOutputData, uint8_t ucDataSize, eI2C_directionData xDirectionData)
+void I2C_WriteData (uint8_t ucDeviceAddress, uint8_t ucRegisterPointer, void * pvOutputData, uint8_t ucDataSize, eI2C_Endianness xDirectionData)
 {
 	inlineStartConditions(ucDeviceAddress,eWrite);
 	inlineWriteData(&ucRegisterPointer, 1, xDirectionData);
@@ -55,7 +55,7 @@ void I2C_WriteData (uint8_t ucDeviceAddress, uint8_t ucRegisterPointer, void * p
 	I2C1->CR1 |= I2C_CR1_STOP;
 }
 
-void I2C_ReadData (uint8_t ucDeviceAddress, uint8_t ucRegisterPointer, void * pvInputData, uint8_t ucDataSize, eI2C_directionData xDirectionData)
+void I2C_ReadData (uint8_t ucDeviceAddress, uint8_t ucRegisterPointer, void * pvInputData, uint8_t ucDataSize, eI2C_Endianness xDirectionData)
 {
 	inlineStartConditions(ucDeviceAddress,eWrite);
 	inlineWriteData(&ucRegisterPointer, 1, xDirectionData);
@@ -88,14 +88,14 @@ __attribute__((always_inline)) inline void inlineStartConditions(uint8_t ucDevic
 /*! \todo Подлежит оптимизации:
  *  (1. реалзовать защиту от висяков.)
  */
-__attribute__((always_inline)) inline void inlineWriteData(void * pvOutputData, uint8_t ucDataSize, eI2C_directionData xDirectionData)
+__attribute__((always_inline)) inline void inlineWriteData(void * pvOutputData, uint8_t ucDataSize, eI2C_Endianness xDirectionData)
 {
 	uint8_t *pointer = pvOutputData;
 
 
 	for(uint8_t i = 0;ucDataSize>0; i++, ucDataSize--)
 	{
-		if(xDirectionData == eI2C_MSBLast)
+		if(xDirectionData == eI2C_littleEndian)
 			I2C1->DR = (uint16_t) pointer[i];
 		else
 			I2C1->DR = (uint16_t) pointer[ucDataSize-1];
@@ -107,7 +107,7 @@ __attribute__((always_inline)) inline void inlineWriteData(void * pvOutputData, 
 /*! \todo Подлежит оптимизации:
  *  (1. реалзовать защиту от висяков.)
  */
-__attribute__((always_inline)) inline void inlineReadData(void * pvInputData, uint8_t ucDataSize, eI2C_directionData xDirectionData)
+__attribute__((always_inline)) inline void inlineReadData(void * pvInputData, uint8_t ucDataSize, eI2C_Endianness xDirectionData)
 {
 	uint8_t *pointer = pvInputData;
 
@@ -123,7 +123,7 @@ __attribute__((always_inline)) inline void inlineReadData(void * pvInputData, ui
 
 		while (!(I2C1->SR1 & I2C_SR1_RXNE)){asm("NOP");}
 
-		if(xDirectionData == eI2C_MSBLast)
+		if(xDirectionData == eI2C_littleEndian)
 			pointer[i] = (uint8_t)I2C1->DR;
 		else
 			pointer[ucDataSize-1] = (uint8_t)I2C1->DR;

@@ -63,29 +63,29 @@ void BMP280_setings(eBMP280_setings xSetings)
 	uint8_t data;
 
 	data = xSetings;
-	I2C_WriteData(BMP280_I2C_ADDRESS,BMP280_eControl,&data,1, eI2C_MSBFirst);
+	I2C_WriteData(BMP280_I2C_ADDRESS,BMP280_eControl,&data,1, eI2C_bigEndian);
 
 	data = xSetings>>8;
-	I2C_WriteData(BMP280_I2C_ADDRESS,BMP280_eConfig,&data,1, eI2C_MSBFirst);
+	I2C_WriteData(BMP280_I2C_ADDRESS,BMP280_eConfig,&data,1, eI2C_bigEndian);
 
 }
 
 void BMP280_updateCalibrationTabel()
 {
-	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eDig_T1,&calibrationTabel.dig_T1, 2, eI2C_MSBLast);
-	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eDig_T2,&calibrationTabel.dig_T2, 2, eI2C_MSBLast);
-	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eDig_T3,&calibrationTabel.dig_T3, 2, eI2C_MSBLast);
+	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eDig_T1,&calibrationTabel.dig_T1, 2, eI2C_littleEndian);
+	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eDig_T2,&calibrationTabel.dig_T2, 2, eI2C_littleEndian);
+	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eDig_T3,&calibrationTabel.dig_T3, 2, eI2C_littleEndian);
 
 
-	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eDig_P1,&calibrationTabel.dig_P1, 2, eI2C_MSBLast);
-	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eDig_P2,&calibrationTabel.dig_P2, 2, eI2C_MSBLast);
-	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eDig_P3,&calibrationTabel.dig_P3, 2, eI2C_MSBLast);
-	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eDig_P4,&calibrationTabel.dig_P4, 2, eI2C_MSBLast);
-	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eDig_P5,&calibrationTabel.dig_P5, 2, eI2C_MSBLast);
-	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eDig_P6,&calibrationTabel.dig_P6, 2, eI2C_MSBLast);
-	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eDig_P7,&calibrationTabel.dig_P7, 2, eI2C_MSBLast);
-	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eDig_P8,&calibrationTabel.dig_P8, 2, eI2C_MSBLast);
-	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eDig_P9,&calibrationTabel.dig_P9, 2, eI2C_MSBLast);
+	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eDig_P1,&calibrationTabel.dig_P1, 2, eI2C_littleEndian);
+	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eDig_P2,&calibrationTabel.dig_P2, 2, eI2C_littleEndian);
+	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eDig_P3,&calibrationTabel.dig_P3, 2, eI2C_littleEndian);
+	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eDig_P4,&calibrationTabel.dig_P4, 2, eI2C_littleEndian);
+	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eDig_P5,&calibrationTabel.dig_P5, 2, eI2C_littleEndian);
+	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eDig_P6,&calibrationTabel.dig_P6, 2, eI2C_littleEndian);
+	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eDig_P7,&calibrationTabel.dig_P7, 2, eI2C_littleEndian);
+	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eDig_P8,&calibrationTabel.dig_P8, 2, eI2C_littleEndian);
+	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eDig_P9,&calibrationTabel.dig_P9, 2, eI2C_littleEndian);
 
 }
 
@@ -95,8 +95,6 @@ void BMP280_init(void)
 {
 	I2C_Init();
 
-
-	//BMP280_setings();
 	BMP280_updateCalibrationTabel();
 
 	for(uint32_t i=0; i<0xFffff;i++) asm("NOP");
@@ -111,9 +109,9 @@ double BMP280_getTemp(void)
 	int32_t adc_T=0;
 
 
-	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eTemp,&adc_T, 3, eI2C_MSBFirst);
+	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eTemp,&adc_T, 3, eI2C_bigEndian);
 
-	adc_T >>=4;
+	adc_T >>= 4;
 
 	double var1, var2, T;
 	var1 = (((double)adc_T)/16384.0 - ((double)calibrationTabel.dig_T1)/1024.0) * ((double)calibrationTabel.dig_T2);
@@ -133,8 +131,8 @@ double BMP280_getPress(void)
 	int32_t adc_P=0;
 	BMP280_getTemp();
 
-	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_ePressure,&adc_P, 3, eI2C_MSBFirst);
-	adc_P >>=4;
+	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_ePressure,&adc_P, 3, eI2C_bigEndian);
+	adc_P >>= 4;
 
 
 
