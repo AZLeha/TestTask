@@ -1,0 +1,1339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AVAKS_TestTask: Файл src/inc/fff.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AVAKS_TestTask
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('fff_8h.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл fff.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;ff.h&quot;</code><br />
+</div>
+<p><a href="fff_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a6cbf52747c06ecf2aa8df282cc5d0fdb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#a6cbf52747c06ecf2aa8df282cc5d0fdb">ff_eof</a>(fp)&#160;&#160;&#160;((int)((fp)-&gt;fptr == (fp)-&gt;obj.objsize))</td></tr>
+<tr class="separator:a6cbf52747c06ecf2aa8df282cc5d0fdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf75dc454ef73fe551e68174ef16de72"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#abf75dc454ef73fe551e68174ef16de72">ff_error</a>(fp)&#160;&#160;&#160;((fp)-&gt;err)</td></tr>
+<tr class="separator:abf75dc454ef73fe551e68174ef16de72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a130b3c21cbef5d15249fc1bdfd496bc7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#a130b3c21cbef5d15249fc1bdfd496bc7">ff_tell</a>(fp)&#160;&#160;&#160;((fp)-&gt;fptr)</td></tr>
+<tr class="separator:a130b3c21cbef5d15249fc1bdfd496bc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72caf55ef30c67f1522505cc8a1411e9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#a72caf55ef30c67f1522505cc8a1411e9">ff_size</a>(fp)&#160;&#160;&#160;((fp)-&gt;obj.objsize)</td></tr>
+<tr class="separator:a72caf55ef30c67f1522505cc8a1411e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34f3837610af8ddf072a973682bdf156"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#a34f3837610af8ddf072a973682bdf156">ff_rewind</a>(fp)&#160;&#160;&#160;<a class="el" href="fff_8h.html#a34b18cdf9a7401c295f4467cb0733d75">ff_lseek</a>((fp), 0)</td></tr>
+<tr class="separator:a34f3837610af8ddf072a973682bdf156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad05a6fb86fdb41e274d99f60d003b599"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#ad05a6fb86fdb41e274d99f60d003b599">ff_rewinddir</a>(dp)&#160;&#160;&#160;<a class="el" href="fff_8h.html#a3da9de4bf53c143e64b97cf9abc82b91">ff_readdir</a>((dp), 0)</td></tr>
+<tr class="separator:ad05a6fb86fdb41e274d99f60d003b599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a687cb9bff8bb5413ccebdedcc50b6c8b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#a687cb9bff8bb5413ccebdedcc50b6c8b">ff_rmdir</a>(path)&#160;&#160;&#160;<a class="el" href="fff_8h.html#aca2da4751187f303745672d63a38ee23">ff_unlink</a>(path)</td></tr>
+<tr class="separator:a687cb9bff8bb5413ccebdedcc50b6c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6432334ad6fd03f696836b8bbf7b87f1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#a6432334ad6fd03f696836b8bbf7b87f1">ff_unmount</a>(path)&#160;&#160;&#160;<a class="el" href="fff_8h.html#ac0bd8bdba5d063a92e2964a780897d81">ff_mount</a>(0, path, 0)</td></tr>
+<tr class="separator:a6432334ad6fd03f696836b8bbf7b87f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:acac8f24d75f5ab482f85edc47abd35b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#acac8f24d75f5ab482f85edc47abd35b3">ff_init</a> (void)</td></tr>
+<tr class="separator:acac8f24d75f5ab482f85edc47abd35b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9292a99ce261cfd98d113a8f3402989b"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#a9292a99ce261cfd98d113a8f3402989b">ff_open</a> (FIL *fp, const TCHAR *path, BYTE mode)</td></tr>
+<tr class="separator:a9292a99ce261cfd98d113a8f3402989b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a241d6aa074e5894080a2e7ed8ccd8d62"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#a241d6aa074e5894080a2e7ed8ccd8d62">ff_close</a> (FIL *fp)</td></tr>
+<tr class="separator:a241d6aa074e5894080a2e7ed8ccd8d62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af72cf873d6019926ef92c7f1eaeeab45"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#af72cf873d6019926ef92c7f1eaeeab45">ff_read</a> (FIL *fp, void *buff, UINT btr, UINT *br)</td></tr>
+<tr class="separator:af72cf873d6019926ef92c7f1eaeeab45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdd5fce0a0a6f8771a25c9a70dec68e3"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#abdd5fce0a0a6f8771a25c9a70dec68e3">ff_write</a> (FIL *fp, const void *buff, UINT btw, UINT *bw)</td></tr>
+<tr class="separator:abdd5fce0a0a6f8771a25c9a70dec68e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34b18cdf9a7401c295f4467cb0733d75"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#a34b18cdf9a7401c295f4467cb0733d75">ff_lseek</a> (FIL *fp, FSIZE_t ofs)</td></tr>
+<tr class="separator:a34b18cdf9a7401c295f4467cb0733d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeccb410c5d61265a877033add9c73593"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#aeccb410c5d61265a877033add9c73593">ff_truncate</a> (FIL *fp)</td></tr>
+<tr class="separator:aeccb410c5d61265a877033add9c73593"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57278c253060db8ef027ab54d1913ff4"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#a57278c253060db8ef027ab54d1913ff4">ff_sync</a> (FIL *fp)</td></tr>
+<tr class="separator:a57278c253060db8ef027ab54d1913ff4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae36896cfd6e95569f5ac977a71517555"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#ae36896cfd6e95569f5ac977a71517555">ff_opendir</a> (DIR *dp, const TCHAR *path)</td></tr>
+<tr class="separator:ae36896cfd6e95569f5ac977a71517555"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fe5b46bdc142fd8d63985c1265a2a71"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#a5fe5b46bdc142fd8d63985c1265a2a71">ff_closedir</a> (DIR *dp)</td></tr>
+<tr class="separator:a5fe5b46bdc142fd8d63985c1265a2a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3da9de4bf53c143e64b97cf9abc82b91"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#a3da9de4bf53c143e64b97cf9abc82b91">ff_readdir</a> (DIR *dp, FILINFO *fno)</td></tr>
+<tr class="separator:a3da9de4bf53c143e64b97cf9abc82b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a4980b18c31d2d01ae590f90adde0d3"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#a6a4980b18c31d2d01ae590f90adde0d3">ff_findfirst</a> (DIR *dp, FILINFO *fno, const TCHAR *path, const TCHAR *pattern)</td></tr>
+<tr class="separator:a6a4980b18c31d2d01ae590f90adde0d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98c1fc6e09b539154ddf92b1e6221b5e"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#a98c1fc6e09b539154ddf92b1e6221b5e">ff_findnext</a> (DIR *dp, FILINFO *fno)</td></tr>
+<tr class="separator:a98c1fc6e09b539154ddf92b1e6221b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f5f6f80ab2d7c18354f83b967d93237"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#a0f5f6f80ab2d7c18354f83b967d93237">ff_mkdir</a> (const TCHAR *path)</td></tr>
+<tr class="separator:a0f5f6f80ab2d7c18354f83b967d93237"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca2da4751187f303745672d63a38ee23"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#aca2da4751187f303745672d63a38ee23">ff_unlink</a> (const TCHAR *path)</td></tr>
+<tr class="separator:aca2da4751187f303745672d63a38ee23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58661170f2bb3e8bd2bcca81156ca61b"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#a58661170f2bb3e8bd2bcca81156ca61b">ff_rename</a> (const TCHAR *path_old, const TCHAR *path_new)</td></tr>
+<tr class="separator:a58661170f2bb3e8bd2bcca81156ca61b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a1e628cf6db04d479a6ebd99aab3990"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#a1a1e628cf6db04d479a6ebd99aab3990">ff_stat</a> (const TCHAR *path, FILINFO *fno)</td></tr>
+<tr class="separator:a1a1e628cf6db04d479a6ebd99aab3990"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad590a631e778d7b2ff63c497c3fb573b"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#ad590a631e778d7b2ff63c497c3fb573b">ff_chmod</a> (const TCHAR *path, BYTE attr, BYTE mask)</td></tr>
+<tr class="separator:ad590a631e778d7b2ff63c497c3fb573b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ddbcdeb38806723a68413a589797d05"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#a4ddbcdeb38806723a68413a589797d05">ff_utime</a> (const TCHAR *path, const FILINFO *fno)</td></tr>
+<tr class="separator:a4ddbcdeb38806723a68413a589797d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35303384fa9440806bd7126ed81c4a7f"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#a35303384fa9440806bd7126ed81c4a7f">ff_chdir</a> (const TCHAR *path)</td></tr>
+<tr class="separator:a35303384fa9440806bd7126ed81c4a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05342c598150a844db56dc8172499f6f"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#a05342c598150a844db56dc8172499f6f">ff_chdrive</a> (const TCHAR *path)</td></tr>
+<tr class="separator:a05342c598150a844db56dc8172499f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c110906046b2127afd11198a54e0198"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#a8c110906046b2127afd11198a54e0198">ff_getcwd</a> (TCHAR *buff, UINT len)</td></tr>
+<tr class="separator:a8c110906046b2127afd11198a54e0198"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfb3522de8ef32a6b80f8e7217f47791"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#acfb3522de8ef32a6b80f8e7217f47791">ff_getfree</a> (const TCHAR *path, DWORD *nclst, FATFS **fatfs)</td></tr>
+<tr class="separator:acfb3522de8ef32a6b80f8e7217f47791"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaa8aca573361b6d06211b0d0d3891be"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#acaa8aca573361b6d06211b0d0d3891be">ff_getlabel</a> (const TCHAR *path, TCHAR *label, DWORD *vsn)</td></tr>
+<tr class="separator:acaa8aca573361b6d06211b0d0d3891be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafefee67f4449629c218b4c155ad6e7d"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#aafefee67f4449629c218b4c155ad6e7d">ff_setlabel</a> (const TCHAR *label)</td></tr>
+<tr class="separator:aafefee67f4449629c218b4c155ad6e7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c44117bd43ab7a43b0ce79c10df4ef2"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#a6c44117bd43ab7a43b0ce79c10df4ef2">ff_forward</a> (FIL *fp, UINT(*func)(const BYTE *, UINT), UINT btf, UINT *bf)</td></tr>
+<tr class="separator:a6c44117bd43ab7a43b0ce79c10df4ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e3d564f2c64616ef28de613bcc54af2"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#a0e3d564f2c64616ef28de613bcc54af2">ff_expand</a> (FIL *fp, FSIZE_t fsz, BYTE opt)</td></tr>
+<tr class="separator:a0e3d564f2c64616ef28de613bcc54af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0bd8bdba5d063a92e2964a780897d81"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#ac0bd8bdba5d063a92e2964a780897d81">ff_mount</a> (FATFS *fs, const TCHAR *path, BYTE opt)</td></tr>
+<tr class="separator:ac0bd8bdba5d063a92e2964a780897d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7c0a24435a446d8d0728a168b5a1b69"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#ae7c0a24435a446d8d0728a168b5a1b69">ff_mkfs</a> (const TCHAR *path, const MKFS_PARM *opt, void *work, UINT len)</td></tr>
+<tr class="separator:ae7c0a24435a446d8d0728a168b5a1b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64a0a9536bdb32a4ce37ceeb1c294692"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#a64a0a9536bdb32a4ce37ceeb1c294692">ff_fdisk</a> (BYTE pdrv, const LBA_t ptbl[], void *work)</td></tr>
+<tr class="separator:a64a0a9536bdb32a4ce37ceeb1c294692"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa17eb24f1c5b3a1ab5ed0f08c5ac7331"><td class="memItemLeft" align="right" valign="top">FRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#aa17eb24f1c5b3a1ab5ed0f08c5ac7331">ff_setcp</a> (WORD cp)</td></tr>
+<tr class="separator:aa17eb24f1c5b3a1ab5ed0f08c5ac7331"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1cde8c9bbf477f9ef1346e10767e01e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#ad1cde8c9bbf477f9ef1346e10767e01e">ff_putc</a> (TCHAR c, FIL *fp)</td></tr>
+<tr class="separator:ad1cde8c9bbf477f9ef1346e10767e01e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30e69efa82bb76ba194a559ce1b01a1b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#a30e69efa82bb76ba194a559ce1b01a1b">ff_puts</a> (const TCHAR *str, FIL *cp)</td></tr>
+<tr class="separator:a30e69efa82bb76ba194a559ce1b01a1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af31bad9b0ba6fe2ef7fe88102e88710a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#af31bad9b0ba6fe2ef7fe88102e88710a">ff_printf</a> (FIL *fp, const TCHAR *str,...)</td></tr>
+<tr class="separator:af31bad9b0ba6fe2ef7fe88102e88710a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd32f24cf7c8884badefad2e0abb344c"><td class="memItemLeft" align="right" valign="top">TCHAR *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fff_8h.html#abd32f24cf7c8884badefad2e0abb344c">ff_gets</a> (TCHAR *buff, int len, FIL *fp)</td></tr>
+<tr class="separator:abd32f24cf7c8884badefad2e0abb344c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a6cbf52747c06ecf2aa8df282cc5d0fdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cbf52747c06ecf2aa8df282cc5d0fdb">&#9670;&nbsp;</a></span>ff_eof</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ff_eof</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fp</td><td>)</td>
+          <td>&#160;&#160;&#160;((int)((fp)-&gt;fptr == (fp)-&gt;obj.objsize))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf75dc454ef73fe551e68174ef16de72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf75dc454ef73fe551e68174ef16de72">&#9670;&nbsp;</a></span>ff_error</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ff_error</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fp</td><td>)</td>
+          <td>&#160;&#160;&#160;((fp)-&gt;err)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34f3837610af8ddf072a973682bdf156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34f3837610af8ddf072a973682bdf156">&#9670;&nbsp;</a></span>ff_rewind</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ff_rewind</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fp</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="fff_8h.html#a34b18cdf9a7401c295f4467cb0733d75">ff_lseek</a>((fp), 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad05a6fb86fdb41e274d99f60d003b599"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad05a6fb86fdb41e274d99f60d003b599">&#9670;&nbsp;</a></span>ff_rewinddir</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ff_rewinddir</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">dp</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="fff_8h.html#a3da9de4bf53c143e64b97cf9abc82b91">ff_readdir</a>((dp), 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a687cb9bff8bb5413ccebdedcc50b6c8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a687cb9bff8bb5413ccebdedcc50b6c8b">&#9670;&nbsp;</a></span>ff_rmdir</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ff_rmdir</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">path</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="fff_8h.html#aca2da4751187f303745672d63a38ee23">ff_unlink</a>(path)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72caf55ef30c67f1522505cc8a1411e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72caf55ef30c67f1522505cc8a1411e9">&#9670;&nbsp;</a></span>ff_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ff_size</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fp</td><td>)</td>
+          <td>&#160;&#160;&#160;((fp)-&gt;obj.objsize)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a130b3c21cbef5d15249fc1bdfd496bc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a130b3c21cbef5d15249fc1bdfd496bc7">&#9670;&nbsp;</a></span>ff_tell</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ff_tell</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fp</td><td>)</td>
+          <td>&#160;&#160;&#160;((fp)-&gt;fptr)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6432334ad6fd03f696836b8bbf7b87f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6432334ad6fd03f696836b8bbf7b87f1">&#9670;&nbsp;</a></span>ff_unmount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ff_unmount</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">path</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="fff_8h.html#ac0bd8bdba5d063a92e2964a780897d81">ff_mount</a>(0, path, 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a35303384fa9440806bd7126ed81c4a7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35303384fa9440806bd7126ed81c4a7f">&#9670;&nbsp;</a></span>ff_chdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_chdir </td>
+          <td>(</td>
+          <td class="paramtype">const TCHAR *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05342c598150a844db56dc8172499f6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05342c598150a844db56dc8172499f6f">&#9670;&nbsp;</a></span>ff_chdrive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_chdrive </td>
+          <td>(</td>
+          <td class="paramtype">const TCHAR *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad590a631e778d7b2ff63c497c3fb573b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad590a631e778d7b2ff63c497c3fb573b">&#9670;&nbsp;</a></span>ff_chmod()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_chmod </td>
+          <td>(</td>
+          <td class="paramtype">const TCHAR *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BYTE&#160;</td>
+          <td class="paramname"><em>attr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BYTE&#160;</td>
+          <td class="paramname"><em>mask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a241d6aa074e5894080a2e7ed8ccd8d62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a241d6aa074e5894080a2e7ed8ccd8d62">&#9670;&nbsp;</a></span>ff_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_close </td>
+          <td>(</td>
+          <td class="paramtype">FIL *&#160;</td>
+          <td class="paramname"><em>fp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5fe5b46bdc142fd8d63985c1265a2a71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fe5b46bdc142fd8d63985c1265a2a71">&#9670;&nbsp;</a></span>ff_closedir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_closedir </td>
+          <td>(</td>
+          <td class="paramtype">DIR *&#160;</td>
+          <td class="paramname"><em>dp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e3d564f2c64616ef28de613bcc54af2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e3d564f2c64616ef28de613bcc54af2">&#9670;&nbsp;</a></span>ff_expand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_expand </td>
+          <td>(</td>
+          <td class="paramtype">FIL *&#160;</td>
+          <td class="paramname"><em>fp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FSIZE_t&#160;</td>
+          <td class="paramname"><em>fsz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BYTE&#160;</td>
+          <td class="paramname"><em>opt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64a0a9536bdb32a4ce37ceeb1c294692"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64a0a9536bdb32a4ce37ceeb1c294692">&#9670;&nbsp;</a></span>ff_fdisk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_fdisk </td>
+          <td>(</td>
+          <td class="paramtype">BYTE&#160;</td>
+          <td class="paramname"><em>pdrv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const LBA_t&#160;</td>
+          <td class="paramname"><em>ptbl</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>work</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a4980b18c31d2d01ae590f90adde0d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a4980b18c31d2d01ae590f90adde0d3">&#9670;&nbsp;</a></span>ff_findfirst()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_findfirst </td>
+          <td>(</td>
+          <td class="paramtype">DIR *&#160;</td>
+          <td class="paramname"><em>dp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILINFO *&#160;</td>
+          <td class="paramname"><em>fno</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const TCHAR *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const TCHAR *&#160;</td>
+          <td class="paramname"><em>pattern</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a98c1fc6e09b539154ddf92b1e6221b5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98c1fc6e09b539154ddf92b1e6221b5e">&#9670;&nbsp;</a></span>ff_findnext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_findnext </td>
+          <td>(</td>
+          <td class="paramtype">DIR *&#160;</td>
+          <td class="paramname"><em>dp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILINFO *&#160;</td>
+          <td class="paramname"><em>fno</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c44117bd43ab7a43b0ce79c10df4ef2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c44117bd43ab7a43b0ce79c10df4ef2">&#9670;&nbsp;</a></span>ff_forward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_forward </td>
+          <td>(</td>
+          <td class="paramtype">FIL *&#160;</td>
+          <td class="paramname"><em>fp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT(*)(const BYTE *, UINT)&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>btf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT *&#160;</td>
+          <td class="paramname"><em>bf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c110906046b2127afd11198a54e0198"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c110906046b2127afd11198a54e0198">&#9670;&nbsp;</a></span>ff_getcwd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_getcwd </td>
+          <td>(</td>
+          <td class="paramtype">TCHAR *&#160;</td>
+          <td class="paramname"><em>buff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acfb3522de8ef32a6b80f8e7217f47791"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfb3522de8ef32a6b80f8e7217f47791">&#9670;&nbsp;</a></span>ff_getfree()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_getfree </td>
+          <td>(</td>
+          <td class="paramtype">const TCHAR *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DWORD *&#160;</td>
+          <td class="paramname"><em>nclst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FATFS **&#160;</td>
+          <td class="paramname"><em>fatfs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acaa8aca573361b6d06211b0d0d3891be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaa8aca573361b6d06211b0d0d3891be">&#9670;&nbsp;</a></span>ff_getlabel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_getlabel </td>
+          <td>(</td>
+          <td class="paramtype">const TCHAR *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TCHAR *&#160;</td>
+          <td class="paramname"><em>label</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DWORD *&#160;</td>
+          <td class="paramname"><em>vsn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd32f24cf7c8884badefad2e0abb344c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd32f24cf7c8884badefad2e0abb344c">&#9670;&nbsp;</a></span>ff_gets()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TCHAR* ff_gets </td>
+          <td>(</td>
+          <td class="paramtype">TCHAR *&#160;</td>
+          <td class="paramname"><em>buff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FIL *&#160;</td>
+          <td class="paramname"><em>fp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acac8f24d75f5ab482f85edc47abd35b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acac8f24d75f5ab482f85edc47abd35b3">&#9670;&nbsp;</a></span>ff_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ff_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34b18cdf9a7401c295f4467cb0733d75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34b18cdf9a7401c295f4467cb0733d75">&#9670;&nbsp;</a></span>ff_lseek()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_lseek </td>
+          <td>(</td>
+          <td class="paramtype">FIL *&#160;</td>
+          <td class="paramname"><em>fp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FSIZE_t&#160;</td>
+          <td class="paramname"><em>ofs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f5f6f80ab2d7c18354f83b967d93237"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f5f6f80ab2d7c18354f83b967d93237">&#9670;&nbsp;</a></span>ff_mkdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_mkdir </td>
+          <td>(</td>
+          <td class="paramtype">const TCHAR *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae7c0a24435a446d8d0728a168b5a1b69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7c0a24435a446d8d0728a168b5a1b69">&#9670;&nbsp;</a></span>ff_mkfs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_mkfs </td>
+          <td>(</td>
+          <td class="paramtype">const TCHAR *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const MKFS_PARM *&#160;</td>
+          <td class="paramname"><em>opt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0bd8bdba5d063a92e2964a780897d81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0bd8bdba5d063a92e2964a780897d81">&#9670;&nbsp;</a></span>ff_mount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_mount </td>
+          <td>(</td>
+          <td class="paramtype">FATFS *&#160;</td>
+          <td class="paramname"><em>fs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const TCHAR *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BYTE&#160;</td>
+          <td class="paramname"><em>opt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9292a99ce261cfd98d113a8f3402989b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9292a99ce261cfd98d113a8f3402989b">&#9670;&nbsp;</a></span>ff_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_open </td>
+          <td>(</td>
+          <td class="paramtype">FIL *&#160;</td>
+          <td class="paramname"><em>fp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const TCHAR *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BYTE&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae36896cfd6e95569f5ac977a71517555"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae36896cfd6e95569f5ac977a71517555">&#9670;&nbsp;</a></span>ff_opendir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_opendir </td>
+          <td>(</td>
+          <td class="paramtype">DIR *&#160;</td>
+          <td class="paramname"><em>dp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const TCHAR *&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af31bad9b0ba6fe2ef7fe88102e88710a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af31bad9b0ba6fe2ef7fe88102e88710a">&#9670;&nbsp;</a></span>ff_printf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ff_printf </td>
+          <td>(</td>
+          <td class="paramtype">FIL *&#160;</td>
+          <td class="paramname"><em>fp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const TCHAR *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad1cde8c9bbf477f9ef1346e10767e01e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1cde8c9bbf477f9ef1346e10767e01e">&#9670;&nbsp;</a></span>ff_putc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ff_putc </td>
+          <td>(</td>
+          <td class="paramtype">TCHAR&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FIL *&#160;</td>
+          <td class="paramname"><em>fp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a30e69efa82bb76ba194a559ce1b01a1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30e69efa82bb76ba194a559ce1b01a1b">&#9670;&nbsp;</a></span>ff_puts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ff_puts </td>
+          <td>(</td>
+          <td class="paramtype">const TCHAR *&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FIL *&#160;</td>
+          <td class="paramname"><em>cp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af72cf873d6019926ef92c7f1eaeeab45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af72cf873d6019926ef92c7f1eaeeab45">&#9670;&nbsp;</a></span>ff_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_read </td>
+          <td>(</td>
+          <td class="paramtype">FIL *&#160;</td>
+          <td class="paramname"><em>fp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>btr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT *&#160;</td>
+          <td class="paramname"><em>br</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3da9de4bf53c143e64b97cf9abc82b91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3da9de4bf53c143e64b97cf9abc82b91">&#9670;&nbsp;</a></span>ff_readdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_readdir </td>
+          <td>(</td>
+          <td class="paramtype">DIR *&#160;</td>
+          <td class="paramname"><em>dp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILINFO *&#160;</td>
+          <td class="paramname"><em>fno</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a58661170f2bb3e8bd2bcca81156ca61b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58661170f2bb3e8bd2bcca81156ca61b">&#9670;&nbsp;</a></span>ff_rename()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_rename </td>
+          <td>(</td>
+          <td class="paramtype">const TCHAR *&#160;</td>
+          <td class="paramname"><em>path_old</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const TCHAR *&#160;</td>
+          <td class="paramname"><em>path_new</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa17eb24f1c5b3a1ab5ed0f08c5ac7331"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa17eb24f1c5b3a1ab5ed0f08c5ac7331">&#9670;&nbsp;</a></span>ff_setcp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_setcp </td>
+          <td>(</td>
+          <td class="paramtype">WORD&#160;</td>
+          <td class="paramname"><em>cp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafefee67f4449629c218b4c155ad6e7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafefee67f4449629c218b4c155ad6e7d">&#9670;&nbsp;</a></span>ff_setlabel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_setlabel </td>
+          <td>(</td>
+          <td class="paramtype">const TCHAR *&#160;</td>
+          <td class="paramname"><em>label</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a1e628cf6db04d479a6ebd99aab3990"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a1e628cf6db04d479a6ebd99aab3990">&#9670;&nbsp;</a></span>ff_stat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_stat </td>
+          <td>(</td>
+          <td class="paramtype">const TCHAR *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILINFO *&#160;</td>
+          <td class="paramname"><em>fno</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57278c253060db8ef027ab54d1913ff4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57278c253060db8ef027ab54d1913ff4">&#9670;&nbsp;</a></span>ff_sync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_sync </td>
+          <td>(</td>
+          <td class="paramtype">FIL *&#160;</td>
+          <td class="paramname"><em>fp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeccb410c5d61265a877033add9c73593"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeccb410c5d61265a877033add9c73593">&#9670;&nbsp;</a></span>ff_truncate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_truncate </td>
+          <td>(</td>
+          <td class="paramtype">FIL *&#160;</td>
+          <td class="paramname"><em>fp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca2da4751187f303745672d63a38ee23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca2da4751187f303745672d63a38ee23">&#9670;&nbsp;</a></span>ff_unlink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_unlink </td>
+          <td>(</td>
+          <td class="paramtype">const TCHAR *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ddbcdeb38806723a68413a589797d05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ddbcdeb38806723a68413a589797d05">&#9670;&nbsp;</a></span>ff_utime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_utime </td>
+          <td>(</td>
+          <td class="paramtype">const TCHAR *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FILINFO *&#160;</td>
+          <td class="paramname"><em>fno</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abdd5fce0a0a6f8771a25c9a70dec68e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdd5fce0a0a6f8771a25c9a70dec68e3">&#9670;&nbsp;</a></span>ff_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FRESULT ff_write </td>
+          <td>(</td>
+          <td class="paramtype">FIL *&#160;</td>
+          <td class="paramname"><em>fp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buff</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>btw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT *&#160;</td>
+          <td class="paramname"><em>bw</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_6bc6ad22483805bbbda55258ad2a62ea.html">inc</a></li><li class="navelem"><a class="el" href="fff_8h.html">fff.h</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
+  </ul>
+</div>
+</body>
+</html>

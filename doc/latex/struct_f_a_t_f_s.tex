@@ -1,0 +1,161 @@
+\hypertarget{struct_f_a_t_f_s}{}\section{Структура F\+A\+T\+FS}
+\label{struct_f_a_t_f_s}\index{FATFS@{FATFS}}
+
+
+{\ttfamily \#include $<$ff.\+h$>$}
+
+\subsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ff_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+TE}} \mbox{\hyperlink{struct_f_a_t_f_s_add27d97babe807b573eac98a71dc4ae5}{fs\+\_\+type}}
+\item 
+\mbox{\hyperlink{ff_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+TE}} \mbox{\hyperlink{struct_f_a_t_f_s_acae426c920cd7f59e5883f948e1b3184}{pdrv}}
+\item 
+\mbox{\hyperlink{ff_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+TE}} \mbox{\hyperlink{struct_f_a_t_f_s_a56716c7e7ac10cf46e73ffb2a2e9b545}{n\+\_\+fats}}
+\item 
+\mbox{\hyperlink{ff_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+TE}} \mbox{\hyperlink{struct_f_a_t_f_s_a647e43c9ccae94b7274793d1909897de}{wflag}}
+\item 
+\mbox{\hyperlink{ff_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+TE}} \mbox{\hyperlink{struct_f_a_t_f_s_a84e9cdc5a6a8e33ea7ec192058abf161}{fsi\+\_\+flag}}
+\item 
+\mbox{\hyperlink{ff_8h_a197942eefa7db30960ae396d68339b97}{W\+O\+RD}} \mbox{\hyperlink{struct_f_a_t_f_s_a417095d7c20d56d417dc0998e0dd5a5c}{id}}
+\item 
+\mbox{\hyperlink{ff_8h_a197942eefa7db30960ae396d68339b97}{W\+O\+RD}} \mbox{\hyperlink{struct_f_a_t_f_s_a189a00aa038044ffad0fc7f7dcf2aae1}{n\+\_\+rootdir}}
+\item 
+\mbox{\hyperlink{ff_8h_a197942eefa7db30960ae396d68339b97}{W\+O\+RD}} \mbox{\hyperlink{struct_f_a_t_f_s_ad7fa7a509f8d097a9ab182d6c47be568}{csize}}
+\item 
+\mbox{\hyperlink{ff_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+RD}} \mbox{\hyperlink{struct_f_a_t_f_s_ac26e848817569fedc15a9a4e49ddedd1}{last\+\_\+clst}}
+\item 
+\mbox{\hyperlink{ff_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+RD}} \mbox{\hyperlink{struct_f_a_t_f_s_ac834248773bf338df807f0d7e6b6a579}{free\+\_\+clst}}
+\item 
+\mbox{\hyperlink{ff_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+RD}} \mbox{\hyperlink{struct_f_a_t_f_s_a8da50eeba6469bc20d60ca0cf9a1307c}{n\+\_\+fatent}}
+\item 
+\mbox{\hyperlink{ff_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+RD}} \mbox{\hyperlink{struct_f_a_t_f_s_a53e9560659f14e66f306c2c444198bf3}{fsize}}
+\item 
+\mbox{\hyperlink{ff_8h_a1f3c30a83148a28340f009d4e583f087}{L\+B\+A\+\_\+t}} \mbox{\hyperlink{struct_f_a_t_f_s_a89358c0e7b2293254c9481dcd2984d30}{volbase}}
+\item 
+\mbox{\hyperlink{ff_8h_a1f3c30a83148a28340f009d4e583f087}{L\+B\+A\+\_\+t}} \mbox{\hyperlink{struct_f_a_t_f_s_a78b1024e7d7d086d132a58ee943b31df}{fatbase}}
+\item 
+\mbox{\hyperlink{ff_8h_a1f3c30a83148a28340f009d4e583f087}{L\+B\+A\+\_\+t}} \mbox{\hyperlink{struct_f_a_t_f_s_afc8c3d5d8408b70379f23382c6e28168}{dirbase}}
+\item 
+\mbox{\hyperlink{ff_8h_a1f3c30a83148a28340f009d4e583f087}{L\+B\+A\+\_\+t}} \mbox{\hyperlink{struct_f_a_t_f_s_a4ce7c10569f45fae1c709c9ee41f69cb}{database}}
+\item 
+\mbox{\hyperlink{ff_8h_a1f3c30a83148a28340f009d4e583f087}{L\+B\+A\+\_\+t}} \mbox{\hyperlink{struct_f_a_t_f_s_aaf7eccaccdc9c4243230672d6b2f6566}{winsect}}
+\item 
+\mbox{\hyperlink{ff_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+TE}} \mbox{\hyperlink{struct_f_a_t_f_s_a49e9c5c3ae9c13755242b6ce5748ecb1}{win}} \mbox{[}\mbox{\hyperlink{ffconf_8h_a104c36ee46f9d6e76dadf37f3d9696cc}{F\+F\+\_\+\+M\+A\+X\+\_\+\+SS}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Данные класса}
+\mbox{\Hypertarget{struct_f_a_t_f_s_ad7fa7a509f8d097a9ab182d6c47be568}\label{struct_f_a_t_f_s_ad7fa7a509f8d097a9ab182d6c47be568}} 
+\index{FATFS@{FATFS}!csize@{csize}}
+\index{csize@{csize}!FATFS@{FATFS}}
+\subsubsection{\texorpdfstring{csize}{csize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ff_8h_a197942eefa7db30960ae396d68339b97}{W\+O\+RD}} F\+A\+T\+F\+S\+::csize}
+
+\mbox{\Hypertarget{struct_f_a_t_f_s_a4ce7c10569f45fae1c709c9ee41f69cb}\label{struct_f_a_t_f_s_a4ce7c10569f45fae1c709c9ee41f69cb}} 
+\index{FATFS@{FATFS}!database@{database}}
+\index{database@{database}!FATFS@{FATFS}}
+\subsubsection{\texorpdfstring{database}{database}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ff_8h_a1f3c30a83148a28340f009d4e583f087}{L\+B\+A\+\_\+t}} F\+A\+T\+F\+S\+::database}
+
+\mbox{\Hypertarget{struct_f_a_t_f_s_afc8c3d5d8408b70379f23382c6e28168}\label{struct_f_a_t_f_s_afc8c3d5d8408b70379f23382c6e28168}} 
+\index{FATFS@{FATFS}!dirbase@{dirbase}}
+\index{dirbase@{dirbase}!FATFS@{FATFS}}
+\subsubsection{\texorpdfstring{dirbase}{dirbase}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ff_8h_a1f3c30a83148a28340f009d4e583f087}{L\+B\+A\+\_\+t}} F\+A\+T\+F\+S\+::dirbase}
+
+\mbox{\Hypertarget{struct_f_a_t_f_s_a78b1024e7d7d086d132a58ee943b31df}\label{struct_f_a_t_f_s_a78b1024e7d7d086d132a58ee943b31df}} 
+\index{FATFS@{FATFS}!fatbase@{fatbase}}
+\index{fatbase@{fatbase}!FATFS@{FATFS}}
+\subsubsection{\texorpdfstring{fatbase}{fatbase}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ff_8h_a1f3c30a83148a28340f009d4e583f087}{L\+B\+A\+\_\+t}} F\+A\+T\+F\+S\+::fatbase}
+
+\mbox{\Hypertarget{struct_f_a_t_f_s_ac834248773bf338df807f0d7e6b6a579}\label{struct_f_a_t_f_s_ac834248773bf338df807f0d7e6b6a579}} 
+\index{FATFS@{FATFS}!free\_clst@{free\_clst}}
+\index{free\_clst@{free\_clst}!FATFS@{FATFS}}
+\subsubsection{\texorpdfstring{free\_clst}{free\_clst}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ff_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+RD}} F\+A\+T\+F\+S\+::free\+\_\+clst}
+
+\mbox{\Hypertarget{struct_f_a_t_f_s_add27d97babe807b573eac98a71dc4ae5}\label{struct_f_a_t_f_s_add27d97babe807b573eac98a71dc4ae5}} 
+\index{FATFS@{FATFS}!fs\_type@{fs\_type}}
+\index{fs\_type@{fs\_type}!FATFS@{FATFS}}
+\subsubsection{\texorpdfstring{fs\_type}{fs\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ff_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+TE}} F\+A\+T\+F\+S\+::fs\+\_\+type}
+
+\mbox{\Hypertarget{struct_f_a_t_f_s_a84e9cdc5a6a8e33ea7ec192058abf161}\label{struct_f_a_t_f_s_a84e9cdc5a6a8e33ea7ec192058abf161}} 
+\index{FATFS@{FATFS}!fsi\_flag@{fsi\_flag}}
+\index{fsi\_flag@{fsi\_flag}!FATFS@{FATFS}}
+\subsubsection{\texorpdfstring{fsi\_flag}{fsi\_flag}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ff_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+TE}} F\+A\+T\+F\+S\+::fsi\+\_\+flag}
+
+\mbox{\Hypertarget{struct_f_a_t_f_s_a53e9560659f14e66f306c2c444198bf3}\label{struct_f_a_t_f_s_a53e9560659f14e66f306c2c444198bf3}} 
+\index{FATFS@{FATFS}!fsize@{fsize}}
+\index{fsize@{fsize}!FATFS@{FATFS}}
+\subsubsection{\texorpdfstring{fsize}{fsize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ff_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+RD}} F\+A\+T\+F\+S\+::fsize}
+
+\mbox{\Hypertarget{struct_f_a_t_f_s_a417095d7c20d56d417dc0998e0dd5a5c}\label{struct_f_a_t_f_s_a417095d7c20d56d417dc0998e0dd5a5c}} 
+\index{FATFS@{FATFS}!id@{id}}
+\index{id@{id}!FATFS@{FATFS}}
+\subsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ff_8h_a197942eefa7db30960ae396d68339b97}{W\+O\+RD}} F\+A\+T\+F\+S\+::id}
+
+\mbox{\Hypertarget{struct_f_a_t_f_s_ac26e848817569fedc15a9a4e49ddedd1}\label{struct_f_a_t_f_s_ac26e848817569fedc15a9a4e49ddedd1}} 
+\index{FATFS@{FATFS}!last\_clst@{last\_clst}}
+\index{last\_clst@{last\_clst}!FATFS@{FATFS}}
+\subsubsection{\texorpdfstring{last\_clst}{last\_clst}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ff_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+RD}} F\+A\+T\+F\+S\+::last\+\_\+clst}
+
+\mbox{\Hypertarget{struct_f_a_t_f_s_a8da50eeba6469bc20d60ca0cf9a1307c}\label{struct_f_a_t_f_s_a8da50eeba6469bc20d60ca0cf9a1307c}} 
+\index{FATFS@{FATFS}!n\_fatent@{n\_fatent}}
+\index{n\_fatent@{n\_fatent}!FATFS@{FATFS}}
+\subsubsection{\texorpdfstring{n\_fatent}{n\_fatent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ff_8h_ad342ac907eb044443153a22f964bf0af}{D\+W\+O\+RD}} F\+A\+T\+F\+S\+::n\+\_\+fatent}
+
+\mbox{\Hypertarget{struct_f_a_t_f_s_a56716c7e7ac10cf46e73ffb2a2e9b545}\label{struct_f_a_t_f_s_a56716c7e7ac10cf46e73ffb2a2e9b545}} 
+\index{FATFS@{FATFS}!n\_fats@{n\_fats}}
+\index{n\_fats@{n\_fats}!FATFS@{FATFS}}
+\subsubsection{\texorpdfstring{n\_fats}{n\_fats}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ff_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+TE}} F\+A\+T\+F\+S\+::n\+\_\+fats}
+
+\mbox{\Hypertarget{struct_f_a_t_f_s_a189a00aa038044ffad0fc7f7dcf2aae1}\label{struct_f_a_t_f_s_a189a00aa038044ffad0fc7f7dcf2aae1}} 
+\index{FATFS@{FATFS}!n\_rootdir@{n\_rootdir}}
+\index{n\_rootdir@{n\_rootdir}!FATFS@{FATFS}}
+\subsubsection{\texorpdfstring{n\_rootdir}{n\_rootdir}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ff_8h_a197942eefa7db30960ae396d68339b97}{W\+O\+RD}} F\+A\+T\+F\+S\+::n\+\_\+rootdir}
+
+\mbox{\Hypertarget{struct_f_a_t_f_s_acae426c920cd7f59e5883f948e1b3184}\label{struct_f_a_t_f_s_acae426c920cd7f59e5883f948e1b3184}} 
+\index{FATFS@{FATFS}!pdrv@{pdrv}}
+\index{pdrv@{pdrv}!FATFS@{FATFS}}
+\subsubsection{\texorpdfstring{pdrv}{pdrv}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ff_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+TE}} F\+A\+T\+F\+S\+::pdrv}
+
+\mbox{\Hypertarget{struct_f_a_t_f_s_a89358c0e7b2293254c9481dcd2984d30}\label{struct_f_a_t_f_s_a89358c0e7b2293254c9481dcd2984d30}} 
+\index{FATFS@{FATFS}!volbase@{volbase}}
+\index{volbase@{volbase}!FATFS@{FATFS}}
+\subsubsection{\texorpdfstring{volbase}{volbase}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ff_8h_a1f3c30a83148a28340f009d4e583f087}{L\+B\+A\+\_\+t}} F\+A\+T\+F\+S\+::volbase}
+
+\mbox{\Hypertarget{struct_f_a_t_f_s_a647e43c9ccae94b7274793d1909897de}\label{struct_f_a_t_f_s_a647e43c9ccae94b7274793d1909897de}} 
+\index{FATFS@{FATFS}!wflag@{wflag}}
+\index{wflag@{wflag}!FATFS@{FATFS}}
+\subsubsection{\texorpdfstring{wflag}{wflag}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ff_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+TE}} F\+A\+T\+F\+S\+::wflag}
+
+\mbox{\Hypertarget{struct_f_a_t_f_s_a49e9c5c3ae9c13755242b6ce5748ecb1}\label{struct_f_a_t_f_s_a49e9c5c3ae9c13755242b6ce5748ecb1}} 
+\index{FATFS@{FATFS}!win@{win}}
+\index{win@{win}!FATFS@{FATFS}}
+\subsubsection{\texorpdfstring{win}{win}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ff_8h_a4ae1dab0fb4b072a66584546209e7d58}{B\+Y\+TE}} F\+A\+T\+F\+S\+::win\mbox{[}\mbox{\hyperlink{ffconf_8h_a104c36ee46f9d6e76dadf37f3d9696cc}{F\+F\+\_\+\+M\+A\+X\+\_\+\+SS}}\mbox{]}}
+
+\mbox{\Hypertarget{struct_f_a_t_f_s_aaf7eccaccdc9c4243230672d6b2f6566}\label{struct_f_a_t_f_s_aaf7eccaccdc9c4243230672d6b2f6566}} 
+\index{FATFS@{FATFS}!winsect@{winsect}}
+\index{winsect@{winsect}!FATFS@{FATFS}}
+\subsubsection{\texorpdfstring{winsect}{winsect}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ff_8h_a1f3c30a83148a28340f009d4e583f087}{L\+B\+A\+\_\+t}} F\+A\+T\+F\+S\+::winsect}
+
+
+
+Объявления и описания членов структуры находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+Fat\+F\+S/\mbox{\hyperlink{ff_8h}{ff.\+h}}\end{DoxyCompactItemize}

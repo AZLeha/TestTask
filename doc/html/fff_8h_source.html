@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AVAKS_TestTask: Исходный файл src/inc/fff.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AVAKS_TestTask
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('fff_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">fff.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="fff_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef INC_FFff_H_</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define INC_FFff_H_</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;ff.h&quot;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keywordtype">void</span> <a class="code" href="fff_8h.html#acac8f24d75f5ab482f85edc47abd35b3">ff_init</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;FRESULT <a class="code" href="fff_8h.html#a9292a99ce261cfd98d113a8f3402989b">ff_open</a> (FIL* fp, <span class="keyword">const</span> TCHAR* path, BYTE mode);                <span class="comment">/* Open or create a file */</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;FRESULT <a class="code" href="fff_8h.html#a241d6aa074e5894080a2e7ed8ccd8d62">ff_close</a> (FIL* fp);                                         <span class="comment">/* Close an open file object */</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;FRESULT <a class="code" href="fff_8h.html#af72cf873d6019926ef92c7f1eaeeab45">ff_read</a> (FIL* fp, <span class="keywordtype">void</span>* buff, UINT btr, UINT* br);          <span class="comment">/* Read data from the file */</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;FRESULT <a class="code" href="fff_8h.html#abdd5fce0a0a6f8771a25c9a70dec68e3">ff_write</a> (FIL* fp, <span class="keyword">const</span> <span class="keywordtype">void</span>* buff, UINT btw, UINT* bw);   <span class="comment">/* Write data to the file */</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;FRESULT <a class="code" href="fff_8h.html#a34b18cdf9a7401c295f4467cb0733d75">ff_lseek</a> (FIL* fp, FSIZE_t ofs);                                <span class="comment">/* Move file pointer of the file object */</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;FRESULT <a class="code" href="fff_8h.html#aeccb410c5d61265a877033add9c73593">ff_truncate</a> (FIL* fp);                                      <span class="comment">/* Truncate the file */</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;FRESULT <a class="code" href="fff_8h.html#a57278c253060db8ef027ab54d1913ff4">ff_sync</a> (FIL* fp);                                          <span class="comment">/* Flush cached data of the writing file */</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;FRESULT <a class="code" href="fff_8h.html#ae36896cfd6e95569f5ac977a71517555">ff_opendir</a> (DIR* dp, <span class="keyword">const</span> TCHAR* path);                        <span class="comment">/* Open a directory */</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;FRESULT <a class="code" href="fff_8h.html#a5fe5b46bdc142fd8d63985c1265a2a71">ff_closedir</a> (DIR* dp);                                      <span class="comment">/* Close an open directory */</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;FRESULT <a class="code" href="fff_8h.html#a3da9de4bf53c143e64b97cf9abc82b91">ff_readdir</a> (DIR* dp, FILINFO* fno);                         <span class="comment">/* Read a directory item */</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;FRESULT <a class="code" href="fff_8h.html#a6a4980b18c31d2d01ae590f90adde0d3">ff_findfirst</a> (DIR* dp, FILINFO* fno, <span class="keyword">const</span> TCHAR* path, <span class="keyword">const</span> TCHAR* pattern);  <span class="comment">/* Find first file */</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;FRESULT <a class="code" href="fff_8h.html#a98c1fc6e09b539154ddf92b1e6221b5e">ff_findnext</a> (DIR* dp, FILINFO* fno);                            <span class="comment">/* Find next file */</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;FRESULT <a class="code" href="fff_8h.html#a0f5f6f80ab2d7c18354f83b967d93237">ff_mkdir</a> (<span class="keyword">const</span> TCHAR* path);                               <span class="comment">/* Create a sub directory */</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;FRESULT <a class="code" href="fff_8h.html#aca2da4751187f303745672d63a38ee23">ff_unlink</a> (<span class="keyword">const</span> TCHAR* path);                              <span class="comment">/* Delete an existing file or directory */</span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;FRESULT <a class="code" href="fff_8h.html#a58661170f2bb3e8bd2bcca81156ca61b">ff_rename</a> (<span class="keyword">const</span> TCHAR* path_old, <span class="keyword">const</span> TCHAR* path_new);   <span class="comment">/* Rename/Move a file or directory */</span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;FRESULT <a class="code" href="fff_8h.html#a1a1e628cf6db04d479a6ebd99aab3990">ff_stat</a> (<span class="keyword">const</span> TCHAR* path, FILINFO* fno);                  <span class="comment">/* Get file status */</span></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;FRESULT <a class="code" href="fff_8h.html#ad590a631e778d7b2ff63c497c3fb573b">ff_chmod</a> (<span class="keyword">const</span> TCHAR* path, BYTE attr, BYTE mask);         <span class="comment">/* Change attribute of a file/dir */</span></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;FRESULT <a class="code" href="fff_8h.html#a4ddbcdeb38806723a68413a589797d05">ff_utime</a> (<span class="keyword">const</span> TCHAR* path, <span class="keyword">const</span> FILINFO* fno);           <span class="comment">/* Change timestamp of a file/dir */</span></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;FRESULT <a class="code" href="fff_8h.html#a35303384fa9440806bd7126ed81c4a7f">ff_chdir</a> (<span class="keyword">const</span> TCHAR* path);                               <span class="comment">/* Change current directory */</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;FRESULT <a class="code" href="fff_8h.html#a05342c598150a844db56dc8172499f6f">ff_chdrive</a> (<span class="keyword">const</span> TCHAR* path);                             <span class="comment">/* Change current drive */</span></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;FRESULT <a class="code" href="fff_8h.html#a8c110906046b2127afd11198a54e0198">ff_getcwd</a> (TCHAR* buff, UINT len);                          <span class="comment">/* Get current directory */</span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;FRESULT <a class="code" href="fff_8h.html#acfb3522de8ef32a6b80f8e7217f47791">ff_getfree</a> (<span class="keyword">const</span> TCHAR* path, DWORD* nclst, FATFS** fatfs);    <span class="comment">/* Get number of free clusters on the drive */</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;FRESULT <a class="code" href="fff_8h.html#acaa8aca573361b6d06211b0d0d3891be">ff_getlabel</a> (<span class="keyword">const</span> TCHAR* path, TCHAR* label, DWORD* vsn);  <span class="comment">/* Get volume label */</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;FRESULT <a class="code" href="fff_8h.html#aafefee67f4449629c218b4c155ad6e7d">ff_setlabel</a> (<span class="keyword">const</span> TCHAR* label);                           <span class="comment">/* Set volume label */</span></div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;FRESULT <a class="code" href="fff_8h.html#a6c44117bd43ab7a43b0ce79c10df4ef2">ff_forward</a> (FIL* fp, UINT(*func)(<span class="keyword">const</span> BYTE*,UINT), UINT btf, UINT* bf);    <span class="comment">/* Forward data to the stream */</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;FRESULT <a class="code" href="fff_8h.html#a0e3d564f2c64616ef28de613bcc54af2">ff_expand</a> (FIL* fp, FSIZE_t fsz, BYTE opt);                 <span class="comment">/* Allocate a contiguous block to the file */</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;FRESULT <a class="code" href="fff_8h.html#ac0bd8bdba5d063a92e2964a780897d81">ff_mount</a> (FATFS* fs, <span class="keyword">const</span> TCHAR* path, BYTE opt);          <span class="comment">/* Mount/Unmount a logical drive */</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;FRESULT <a class="code" href="fff_8h.html#ae7c0a24435a446d8d0728a168b5a1b69">ff_mkfs</a> (<span class="keyword">const</span> TCHAR* path, <span class="keyword">const</span> MKFS_PARM* opt, <span class="keywordtype">void</span>* work, UINT len);    <span class="comment">/* Create a FAT volume */</span></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;FRESULT <a class="code" href="fff_8h.html#a64a0a9536bdb32a4ce37ceeb1c294692">ff_fdisk</a> (BYTE pdrv, <span class="keyword">const</span> LBA_t ptbl[], <span class="keywordtype">void</span>* work);       <span class="comment">/* Divide a physical drive into some partitions */</span></div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;FRESULT <a class="code" href="fff_8h.html#aa17eb24f1c5b3a1ab5ed0f08c5ac7331">ff_setcp</a> (WORD cp);                                         <span class="comment">/* Set current code page */</span></div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">int</span> <a class="code" href="fff_8h.html#ad1cde8c9bbf477f9ef1346e10767e01e">ff_putc</a> (TCHAR c, FIL* fp);                                     <span class="comment">/* Put a character to the file */</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">int</span> <a class="code" href="fff_8h.html#a30e69efa82bb76ba194a559ce1b01a1b">ff_puts</a> (<span class="keyword">const</span> TCHAR* str, FIL* cp);                                <span class="comment">/* Put a string to the file */</span></div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">int</span> <a class="code" href="fff_8h.html#af31bad9b0ba6fe2ef7fe88102e88710a">ff_printf</a> (FIL* fp, <span class="keyword">const</span> TCHAR* str, ...);                     <span class="comment">/* Put a formatted string to the file */</span></div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;TCHAR* <a class="code" href="fff_8h.html#abd32f24cf7c8884badefad2e0abb344c">ff_gets</a> (TCHAR* buff, <span class="keywordtype">int</span> len, FIL* fp);                     <span class="comment">/* Get a string from the file */</span></div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div><div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="fff_8h.html#a6cbf52747c06ecf2aa8df282cc5d0fdb">   44</a></span>&#160;<span class="preprocessor">#define ff_eof(fp) ((int)((fp)-&gt;fptr == (fp)-&gt;obj.objsize))</span></div><div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="fff_8h.html#abf75dc454ef73fe551e68174ef16de72">   45</a></span>&#160;<span class="preprocessor">#define ff_error(fp) ((fp)-&gt;err)</span></div><div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="fff_8h.html#a130b3c21cbef5d15249fc1bdfd496bc7">   46</a></span>&#160;<span class="preprocessor">#define ff_tell(fp) ((fp)-&gt;fptr)</span></div><div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="fff_8h.html#a72caf55ef30c67f1522505cc8a1411e9">   47</a></span>&#160;<span class="preprocessor">#define ff_size(fp) ((fp)-&gt;obj.objsize)</span></div><div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="fff_8h.html#a34f3837610af8ddf072a973682bdf156">   48</a></span>&#160;<span class="preprocessor">#define ff_rewind(fp) ff_lseek((fp), 0)</span></div><div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="fff_8h.html#ad05a6fb86fdb41e274d99f60d003b599">   49</a></span>&#160;<span class="preprocessor">#define ff_rewinddir(dp) ff_readdir((dp), 0)</span></div><div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="fff_8h.html#a687cb9bff8bb5413ccebdedcc50b6c8b">   50</a></span>&#160;<span class="preprocessor">#define ff_rmdir(path) ff_unlink(path)</span></div><div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="fff_8h.html#a6432334ad6fd03f696836b8bbf7b87f1">   51</a></span>&#160;<span class="preprocessor">#define ff_unmount(path) ff_mount(0, path, 0)</span></div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* INC_FFff_H_ */</span><span class="preprocessor"></span></div><div class="ttc" id="afff_8h_html_acac8f24d75f5ab482f85edc47abd35b3"><div class="ttname"><a href="fff_8h.html#acac8f24d75f5ab482f85edc47abd35b3">ff_init</a></div><div class="ttdeci">void ff_init(void)</div><div class="ttdef"><b>Definition:</b> fff.c:14</div></div>
+<div class="ttc" id="afff_8h_html_a4ddbcdeb38806723a68413a589797d05"><div class="ttname"><a href="fff_8h.html#a4ddbcdeb38806723a68413a589797d05">ff_utime</a></div><div class="ttdeci">FRESULT ff_utime(const TCHAR *path, const FILINFO *fno)</div><div class="ttdef"><b>Definition:</b> fff.c:239</div></div>
+<div class="ttc" id="afff_8h_html_ae36896cfd6e95569f5ac977a71517555"><div class="ttname"><a href="fff_8h.html#ae36896cfd6e95569f5ac977a71517555">ff_opendir</a></div><div class="ttdeci">FRESULT ff_opendir(DIR *dp, const TCHAR *path)</div><div class="ttdef"><b>Definition:</b> fff.c:111</div></div>
+<div class="ttc" id="afff_8h_html_a8c110906046b2127afd11198a54e0198"><div class="ttname"><a href="fff_8h.html#a8c110906046b2127afd11198a54e0198">ff_getcwd</a></div><div class="ttdeci">FRESULT ff_getcwd(TCHAR *buff, UINT len)</div><div class="ttdef"><b>Definition:</b> fff.c:278</div></div>
+<div class="ttc" id="afff_8h_html_acaa8aca573361b6d06211b0d0d3891be"><div class="ttname"><a href="fff_8h.html#acaa8aca573361b6d06211b0d0d3891be">ff_getlabel</a></div><div class="ttdeci">FRESULT ff_getlabel(const TCHAR *path, TCHAR *label, DWORD *vsn)</div><div class="ttdef"><b>Definition:</b> fff.c:304</div></div>
+<div class="ttc" id="afff_8h_html_a6a4980b18c31d2d01ae590f90adde0d3"><div class="ttname"><a href="fff_8h.html#a6a4980b18c31d2d01ae590f90adde0d3">ff_findfirst</a></div><div class="ttdeci">FRESULT ff_findfirst(DIR *dp, FILINFO *fno, const TCHAR *path, const TCHAR *pattern)</div><div class="ttdef"><b>Definition:</b> fff.c:150</div></div>
+<div class="ttc" id="afff_8h_html_a6c44117bd43ab7a43b0ce79c10df4ef2"><div class="ttname"><a href="fff_8h.html#a6c44117bd43ab7a43b0ce79c10df4ef2">ff_forward</a></div><div class="ttdeci">FRESULT ff_forward(FIL *fp, UINT(*func)(const BYTE *, UINT), UINT btf, UINT *bf)</div><div class="ttdef"><b>Definition:</b> fff.c:330</div></div>
+<div class="ttc" id="afff_8h_html_a241d6aa074e5894080a2e7ed8ccd8d62"><div class="ttname"><a href="fff_8h.html#a241d6aa074e5894080a2e7ed8ccd8d62">ff_close</a></div><div class="ttdeci">FRESULT ff_close(FIL *fp)</div><div class="ttdef"><b>Definition:</b> fff.c:33</div></div>
+<div class="ttc" id="afff_8h_html_a34b18cdf9a7401c295f4467cb0733d75"><div class="ttname"><a href="fff_8h.html#a34b18cdf9a7401c295f4467cb0733d75">ff_lseek</a></div><div class="ttdeci">FRESULT ff_lseek(FIL *fp, FSIZE_t ofs)</div><div class="ttdef"><b>Definition:</b> fff.c:71</div></div>
+<div class="ttc" id="afff_8h_html_a1a1e628cf6db04d479a6ebd99aab3990"><div class="ttname"><a href="fff_8h.html#a1a1e628cf6db04d479a6ebd99aab3990">ff_stat</a></div><div class="ttdeci">FRESULT ff_stat(const TCHAR *path, FILINFO *fno)</div><div class="ttdef"><b>Definition:</b> fff.c:215</div></div>
+<div class="ttc" id="afff_8h_html_af31bad9b0ba6fe2ef7fe88102e88710a"><div class="ttname"><a href="fff_8h.html#af31bad9b0ba6fe2ef7fe88102e88710a">ff_printf</a></div><div class="ttdeci">int ff_printf(FIL *fp, const TCHAR *str,...)</div></div>
+<div class="ttc" id="afff_8h_html_aeccb410c5d61265a877033add9c73593"><div class="ttname"><a href="fff_8h.html#aeccb410c5d61265a877033add9c73593">ff_truncate</a></div><div class="ttdeci">FRESULT ff_truncate(FIL *fp)</div><div class="ttdef"><b>Definition:</b> fff.c:84</div></div>
+<div class="ttc" id="afff_8h_html_a98c1fc6e09b539154ddf92b1e6221b5e"><div class="ttname"><a href="fff_8h.html#a98c1fc6e09b539154ddf92b1e6221b5e">ff_findnext</a></div><div class="ttdeci">FRESULT ff_findnext(DIR *dp, FILINFO *fno)</div><div class="ttdef"><b>Definition:</b> fff.c:163</div></div>
+<div class="ttc" id="afff_8h_html_abd32f24cf7c8884badefad2e0abb344c"><div class="ttname"><a href="fff_8h.html#abd32f24cf7c8884badefad2e0abb344c">ff_gets</a></div><div class="ttdeci">TCHAR * ff_gets(TCHAR *buff, int len, FIL *fp)</div><div class="ttdef"><b>Definition:</b> fff.c:432</div></div>
+<div class="ttc" id="afff_8h_html_a0e3d564f2c64616ef28de613bcc54af2"><div class="ttname"><a href="fff_8h.html#a0e3d564f2c64616ef28de613bcc54af2">ff_expand</a></div><div class="ttdeci">FRESULT ff_expand(FIL *fp, FSIZE_t fsz, BYTE opt)</div><div class="ttdef"><b>Definition:</b> fff.c:343</div></div>
+<div class="ttc" id="afff_8h_html_af72cf873d6019926ef92c7f1eaeeab45"><div class="ttname"><a href="fff_8h.html#af72cf873d6019926ef92c7f1eaeeab45">ff_read</a></div><div class="ttdeci">FRESULT ff_read(FIL *fp, void *buff, UINT btr, UINT *br)</div><div class="ttdef"><b>Definition:</b> fff.c:45</div></div>
+<div class="ttc" id="afff_8h_html_a3da9de4bf53c143e64b97cf9abc82b91"><div class="ttname"><a href="fff_8h.html#a3da9de4bf53c143e64b97cf9abc82b91">ff_readdir</a></div><div class="ttdeci">FRESULT ff_readdir(DIR *dp, FILINFO *fno)</div><div class="ttdef"><b>Definition:</b> fff.c:137</div></div>
+<div class="ttc" id="afff_8h_html_acfb3522de8ef32a6b80f8e7217f47791"><div class="ttname"><a href="fff_8h.html#acfb3522de8ef32a6b80f8e7217f47791">ff_getfree</a></div><div class="ttdeci">FRESULT ff_getfree(const TCHAR *path, DWORD *nclst, FATFS **fatfs)</div><div class="ttdef"><b>Definition:</b> fff.c:291</div></div>
+<div class="ttc" id="afff_8h_html_a9292a99ce261cfd98d113a8f3402989b"><div class="ttname"><a href="fff_8h.html#a9292a99ce261cfd98d113a8f3402989b">ff_open</a></div><div class="ttdeci">FRESULT ff_open(FIL *fp, const TCHAR *path, BYTE mode)</div><div class="ttdef"><b>Definition:</b> fff.c:20</div></div>
+<div class="ttc" id="afff_8h_html_a05342c598150a844db56dc8172499f6f"><div class="ttname"><a href="fff_8h.html#a05342c598150a844db56dc8172499f6f">ff_chdrive</a></div><div class="ttdeci">FRESULT ff_chdrive(const TCHAR *path)</div><div class="ttdef"><b>Definition:</b> fff.c:265</div></div>
+<div class="ttc" id="afff_8h_html_ac0bd8bdba5d063a92e2964a780897d81"><div class="ttname"><a href="fff_8h.html#ac0bd8bdba5d063a92e2964a780897d81">ff_mount</a></div><div class="ttdeci">FRESULT ff_mount(FATFS *fs, const TCHAR *path, BYTE opt)</div><div class="ttdef"><b>Definition:</b> fff.c:356</div></div>
+<div class="ttc" id="afff_8h_html_aafefee67f4449629c218b4c155ad6e7d"><div class="ttname"><a href="fff_8h.html#aafefee67f4449629c218b4c155ad6e7d">ff_setlabel</a></div><div class="ttdeci">FRESULT ff_setlabel(const TCHAR *label)</div><div class="ttdef"><b>Definition:</b> fff.c:317</div></div>
+<div class="ttc" id="afff_8h_html_aa17eb24f1c5b3a1ab5ed0f08c5ac7331"><div class="ttname"><a href="fff_8h.html#aa17eb24f1c5b3a1ab5ed0f08c5ac7331">ff_setcp</a></div><div class="ttdeci">FRESULT ff_setcp(WORD cp)</div><div class="ttdef"><b>Definition:</b> fff.c:395</div></div>
+<div class="ttc" id="afff_8h_html_abdd5fce0a0a6f8771a25c9a70dec68e3"><div class="ttname"><a href="fff_8h.html#abdd5fce0a0a6f8771a25c9a70dec68e3">ff_write</a></div><div class="ttdeci">FRESULT ff_write(FIL *fp, const void *buff, UINT btw, UINT *bw)</div><div class="ttdef"><b>Definition:</b> fff.c:58</div></div>
+<div class="ttc" id="afff_8h_html_a57278c253060db8ef027ab54d1913ff4"><div class="ttname"><a href="fff_8h.html#a57278c253060db8ef027ab54d1913ff4">ff_sync</a></div><div class="ttdeci">FRESULT ff_sync(FIL *fp)</div><div class="ttdef"><b>Definition:</b> fff.c:97</div></div>
+<div class="ttc" id="afff_8h_html_ae7c0a24435a446d8d0728a168b5a1b69"><div class="ttname"><a href="fff_8h.html#ae7c0a24435a446d8d0728a168b5a1b69">ff_mkfs</a></div><div class="ttdeci">FRESULT ff_mkfs(const TCHAR *path, const MKFS_PARM *opt, void *work, UINT len)</div><div class="ttdef"><b>Definition:</b> fff.c:369</div></div>
+<div class="ttc" id="afff_8h_html_a58661170f2bb3e8bd2bcca81156ca61b"><div class="ttname"><a href="fff_8h.html#a58661170f2bb3e8bd2bcca81156ca61b">ff_rename</a></div><div class="ttdeci">FRESULT ff_rename(const TCHAR *path_old, const TCHAR *path_new)</div><div class="ttdef"><b>Definition:</b> fff.c:202</div></div>
+<div class="ttc" id="afff_8h_html_a0f5f6f80ab2d7c18354f83b967d93237"><div class="ttname"><a href="fff_8h.html#a0f5f6f80ab2d7c18354f83b967d93237">ff_mkdir</a></div><div class="ttdeci">FRESULT ff_mkdir(const TCHAR *path)</div><div class="ttdef"><b>Definition:</b> fff.c:176</div></div>
+<div class="ttc" id="afff_8h_html_a5fe5b46bdc142fd8d63985c1265a2a71"><div class="ttname"><a href="fff_8h.html#a5fe5b46bdc142fd8d63985c1265a2a71">ff_closedir</a></div><div class="ttdeci">FRESULT ff_closedir(DIR *dp)</div><div class="ttdef"><b>Definition:</b> fff.c:124</div></div>
+<div class="ttc" id="afff_8h_html_ad590a631e778d7b2ff63c497c3fb573b"><div class="ttname"><a href="fff_8h.html#ad590a631e778d7b2ff63c497c3fb573b">ff_chmod</a></div><div class="ttdeci">FRESULT ff_chmod(const TCHAR *path, BYTE attr, BYTE mask)</div><div class="ttdef"><b>Definition:</b> fff.c:226</div></div>
+<div class="ttc" id="afff_8h_html_aca2da4751187f303745672d63a38ee23"><div class="ttname"><a href="fff_8h.html#aca2da4751187f303745672d63a38ee23">ff_unlink</a></div><div class="ttdeci">FRESULT ff_unlink(const TCHAR *path)</div><div class="ttdef"><b>Definition:</b> fff.c:189</div></div>
+<div class="ttc" id="afff_8h_html_a30e69efa82bb76ba194a559ce1b01a1b"><div class="ttname"><a href="fff_8h.html#a30e69efa82bb76ba194a559ce1b01a1b">ff_puts</a></div><div class="ttdeci">int ff_puts(const TCHAR *str, FIL *cp)</div><div class="ttdef"><b>Definition:</b> fff.c:420</div></div>
+<div class="ttc" id="afff_8h_html_a64a0a9536bdb32a4ce37ceeb1c294692"><div class="ttname"><a href="fff_8h.html#a64a0a9536bdb32a4ce37ceeb1c294692">ff_fdisk</a></div><div class="ttdeci">FRESULT ff_fdisk(BYTE pdrv, const LBA_t ptbl[], void *work)</div><div class="ttdef"><b>Definition:</b> fff.c:382</div></div>
+<div class="ttc" id="afff_8h_html_ad1cde8c9bbf477f9ef1346e10767e01e"><div class="ttname"><a href="fff_8h.html#ad1cde8c9bbf477f9ef1346e10767e01e">ff_putc</a></div><div class="ttdeci">int ff_putc(TCHAR c, FIL *fp)</div><div class="ttdef"><b>Definition:</b> fff.c:408</div></div>
+<div class="ttc" id="afff_8h_html_a35303384fa9440806bd7126ed81c4a7f"><div class="ttname"><a href="fff_8h.html#a35303384fa9440806bd7126ed81c4a7f">ff_chdir</a></div><div class="ttdeci">FRESULT ff_chdir(const TCHAR *path)</div><div class="ttdef"><b>Definition:</b> fff.c:252</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_6bc6ad22483805bbbda55258ad2a62ea.html">inc</a></li><li class="navelem"><a class="el" href="fff_8h.html">fff.h</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
+  </ul>
+</div>
+</body>
+</html>

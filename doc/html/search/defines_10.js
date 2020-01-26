@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['sbbytes_5fto_5fstore_5fmessage_5flength',['sbBYTES_TO_STORE_MESSAGE_LENGTH',['../stream__buffer_8c.html#aaa21967227eb06d02cdd038047b836f6',1,'stream_buffer.c']]],
+  ['sbflags_5fis_5fmessage_5fbuffer',['sbFLAGS_IS_MESSAGE_BUFFER',['../stream__buffer_8c.html#a4954c04e3f9f6b0d4a98b9441b35d896',1,'stream_buffer.c']]],
+  ['sbflags_5fis_5fstatically_5fallocated',['sbFLAGS_IS_STATICALLY_ALLOCATED',['../stream__buffer_8c.html#a80943e49aae8a493f02d78527b3fc01e',1,'stream_buffer.c']]],
+  ['sbreceive_5fcompleted',['sbRECEIVE_COMPLETED',['../stream__buffer_8c.html#a4d6a29d283acfa2d4ef576476eedc789',1,'stream_buffer.c']]],
+  ['sbreceive_5fcompleted_5ffrom_5fisr',['sbRECEIVE_COMPLETED_FROM_ISR',['../stream__buffer_8c.html#ab72c363566113705c021596f90c6eb5a',1,'stream_buffer.c']]],
+  ['sbsend_5fcomplete_5ffrom_5fisr',['sbSEND_COMPLETE_FROM_ISR',['../stream__buffer_8c.html#aadd3cf567c5086402552c463c55dda7c',1,'stream_buffer.c']]],
+  ['sbsend_5fcompleted',['sbSEND_COMPLETED',['../stream__buffer_8c.html#aa75273dfbcd92710254df0165ae1da5d',1,'stream_buffer.c']]],
+  ['scl_5fclock',['SCL_CLOCK',['../_i2_c_8c.html#a17ae80300a19853baae9dc086d18bb38',1,'I2C.c']]],
+  ['sector_5fsize',['SECTOR_SIZE',['../_a_t45_d_b641_e_8h.html#aa35bad1e92008da628f27b2f6bb270aa',1,'AT45DB641E.h']]],
+  ['sembinary_5fsemaphore_5fqueue_5flength',['semBINARY_SEMAPHORE_QUEUE_LENGTH',['../semphr_8h.html#a73cfd14cf25a13f8dd4dc1d74b7fc04a',1,'semphr.h']]],
+  ['semgive_5fblock_5ftime',['semGIVE_BLOCK_TIME',['../semphr_8h.html#a124bb5bd7805baa06fbd3239840d6803',1,'semphr.h']]],
+  ['semsemaphore_5fqueue_5fitem_5flength',['semSEMAPHORE_QUEUE_ITEM_LENGTH',['../semphr_8h.html#a93bd07e28aed3084bdafa1f4e99700b2',1,'semphr.h']]],
+  ['size_5frx_5fbuffer',['SIZE_RX_BUFFER',['../terminal_8h.html#ab480fdc4b952fd3ce8109b25dd19ce05',1,'terminal.h']]],
+  ['srr',['SRR',['../_a_t45_d_b641_e_8c.html#aa83ca513aa104505303150430d954fe1',1,'AT45DB641E.c']]],
+  ['ss',['SS',['../ff_8c.html#a42b5140fc5e09a53c8f4cba66dc0e6c1',1,'ff.c']]],
+  ['sta_5fnodisk',['STA_NODISK',['../diskio_8h.html#aec625080763d6cf487e550a6c9a2dd19',1,'diskio.h']]],
+  ['sta_5fnoinit',['STA_NOINIT',['../diskio_8h.html#abd6503c70d862b979a3f7080a59e9acd',1,'diskio.h']]],
+  ['sta_5fprotect',['STA_PROTECT',['../diskio_8h.html#a9ec6dc5f6620a33fabe388d3a111ca8c',1,'diskio.h']]],
+  ['sz_5fgpte',['SZ_GPTE',['../ff_8c.html#aaaa69650a3bce4a6f68f88e2e3a07f43',1,'ff.c']]],
+  ['sz_5fpte',['SZ_PTE',['../ff_8c.html#af133060c47366e7e557d4085d931183f',1,'ff.c']]],
+  ['szdire',['SZDIRE',['../ff_8c.html#a90943705ce4b32e47562c9f56860c7af',1,'ff.c']]]
+];

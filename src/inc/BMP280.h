@@ -4,7 +4,12 @@
 #include <stdint.h>
 
 
+#define FREERTO_MODIFIED
+
 #define BMP280_I2C_ADDRESS 0x76
+
+
+
 
 
 typedef enum

@@ -1,0 +1,184 @@
+\hypertarget{group__terminal}{}\section{Terminal}
+\label{group__terminal}\index{Terminal@{Terminal}}
+
+
+Командный интерпретатор  
+
+
+\subsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__terminal_gab480fdc4b952fd3ce8109b25dd19ce05}{S\+I\+Z\+E\+\_\+\+R\+X\+\_\+\+B\+U\+F\+F\+ER}}~100
+\begin{DoxyCompactList}\small\item\em Размер буфера команд \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_terminal__state_item}{Terminal\+\_\+state\+Item}} $\ast$ \mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}}
+\begin{DoxyCompactList}\small\item\em handle для работы с командой \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{group__terminal_gac9891fc8397e8a100f20698722ab1e71}{v\+Get\+Comand}} (Tick\+Type\+\_\+t x\+Ticks\+To\+Wait)
+\begin{DoxyCompactList}\small\item\em Функция ожидает ввод команды с клавиатуры \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__terminal_ga5ba2d01659937984488cb072a40fe320}{Terminal\+\_\+exit\+Stae}} (\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} this\+State)
+\begin{DoxyCompactList}\small\item\em Функция для возврата на 1 уровень вниз по списку \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__terminal_gab3311fb037407fc4553f30a8122f2dc3}{Terminal\+\_\+print\+Internal\+Item\+Comand\+Or\+Description}} (\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} px\+Root\+Item)
+\begin{DoxyCompactList}\small\item\em Функция выводит список вложеных команд \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} \mbox{\hyperlink{group__terminal_ga41d80f135933b7877905ebb785c0014b}{Terminal\+\_\+\+Crate\+State}} (char $\ast$pc\+Description, char $\ast$pc\+Comand, char $\ast$pc\+Message, uint8\+\_\+t uc\+States\+Count, Terminal\+\_\+\+Colback x\+Handler)
+\begin{DoxyCompactList}\small\item\em Функция создаёт объект команды \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__terminal_ga7fde78408fabbc2c2790850003202044}{Terminal\+\_\+add\+Are\+State\+To\+List}} (\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} \mbox{\hyperlink{terminal_8c_ae24b34035b22614977faf32d842e9a97}{x\+State\+Item}}, \mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} px\+Parent\+Item)
+\begin{DoxyCompactList}\small\item\em Функция добавляет объект в список родителя \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__terminal_gacc9b80fa13f248f795d961b1817b7d4b}{Terminal\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Функция инициализации терминальной оболочки \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} \mbox{\hyperlink{group__terminal_ga7a0e27324a74d61713c05ec981b8d5ed}{Terminal\+\_\+state\+Machine}} (\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} px\+Root\+Item)
+\begin{DoxyCompactList}\small\item\em Функция для прокрутки состояний терминальной оболочки \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+Командный интерпретатор 
+
+
+
+\subsection{Макросы}
+\mbox{\Hypertarget{group__terminal_gab480fdc4b952fd3ce8109b25dd19ce05}\label{group__terminal_gab480fdc4b952fd3ce8109b25dd19ce05}} 
+\index{Terminal@{Terminal}!SIZE\_RX\_BUFFER@{SIZE\_RX\_BUFFER}}
+\index{SIZE\_RX\_BUFFER@{SIZE\_RX\_BUFFER}!Terminal@{Terminal}}
+\subsubsection{\texorpdfstring{SIZE\_RX\_BUFFER}{SIZE\_RX\_BUFFER}}
+{\footnotesize\ttfamily \#define S\+I\+Z\+E\+\_\+\+R\+X\+\_\+\+B\+U\+F\+F\+ER~100}
+
+
+
+Размер буфера команд 
+
+
+
+\subsection{Типы}
+\mbox{\Hypertarget{group__terminal_gadcd4acb437149111c071e40bccbac72a}\label{group__terminal_gadcd4acb437149111c071e40bccbac72a}} 
+\index{Terminal@{Terminal}!Terminal\_stateHandle@{Terminal\_stateHandle}}
+\index{Terminal\_stateHandle@{Terminal\_stateHandle}!Terminal@{Terminal}}
+\subsubsection{\texorpdfstring{Terminal\_stateHandle}{Terminal\_stateHandle}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_terminal__state_item}{Terminal\+\_\+state\+Item}}$\ast$ \mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}}}
+
+
+
+handle для работы с командой 
+
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{group__terminal_ga7fde78408fabbc2c2790850003202044}\label{group__terminal_ga7fde78408fabbc2c2790850003202044}} 
+\index{Terminal@{Terminal}!Terminal\_addAreStateToList@{Terminal\_addAreStateToList}}
+\index{Terminal\_addAreStateToList@{Terminal\_addAreStateToList}!Terminal@{Terminal}}
+\subsubsection{\texorpdfstring{Terminal\_addAreStateToList()}{Terminal\_addAreStateToList()}}
+{\footnotesize\ttfamily bool Terminal\+\_\+add\+Are\+State\+To\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}}}]{x\+State\+Item,  }\item[{\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}}}]{px\+Parent\+Item }\end{DoxyParamCaption})}
+
+
+
+Функция добавляет объект в список родителя 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em x\+State\+Item} & handle команды которые необходимо добавить в список \\
+\hline
+\mbox{\texttt{ in}}  & {\em px\+Parent\+Item} & handle команды родителя \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__terminal_ga41d80f135933b7877905ebb785c0014b}\label{group__terminal_ga41d80f135933b7877905ebb785c0014b}} 
+\index{Terminal@{Terminal}!Terminal\_CrateState@{Terminal\_CrateState}}
+\index{Terminal\_CrateState@{Terminal\_CrateState}!Terminal@{Terminal}}
+\subsubsection{\texorpdfstring{Terminal\_CrateState()}{Terminal\_CrateState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} Terminal\+\_\+\+Crate\+State (\begin{DoxyParamCaption}\item[{char $\ast$}]{pc\+Description,  }\item[{char $\ast$}]{pc\+Comand,  }\item[{char $\ast$}]{pc\+Message,  }\item[{uint8\+\_\+t}]{uc\+States\+Count,  }\item[{Terminal\+\_\+\+Colback}]{x\+Handler }\end{DoxyParamCaption})}
+
+
+
+Функция создаёт объект команды 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em pc\+Description} & Описание команды может \\
+\hline
+\mbox{\texttt{ in}}  & {\em pc\+Comand} & handle Сама команда \\
+\hline
+\mbox{\texttt{ in}}  & {\em pc\+Message} & handle Сообщение после выполнения команды \\
+\hline
+\mbox{\texttt{ in}}  & {\em x\+Handler} & handle Функция обратного вызова, которая будет вызвана при вызове команды \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__terminal_ga5ba2d01659937984488cb072a40fe320}\label{group__terminal_ga5ba2d01659937984488cb072a40fe320}} 
+\index{Terminal@{Terminal}!Terminal\_exitStae@{Terminal\_exitStae}}
+\index{Terminal\_exitStae@{Terminal\_exitStae}!Terminal@{Terminal}}
+\subsubsection{\texorpdfstring{Terminal\_exitStae()}{Terminal\_exitStae()}}
+{\footnotesize\ttfamily void Terminal\+\_\+exit\+Stae (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}}}]{this\+State }\end{DoxyParamCaption})}
+
+
+
+Функция для возврата на 1 уровень вниз по списку 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em this\+State} & handle текущего уровня \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__terminal_gacc9b80fa13f248f795d961b1817b7d4b}\label{group__terminal_gacc9b80fa13f248f795d961b1817b7d4b}} 
+\index{Terminal@{Terminal}!Terminal\_Init@{Terminal\_Init}}
+\index{Terminal\_Init@{Terminal\_Init}!Terminal@{Terminal}}
+\subsubsection{\texorpdfstring{Terminal\_Init()}{Terminal\_Init()}}
+{\footnotesize\ttfamily void Terminal\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Функция инициализации терминальной оболочки 
+
+\mbox{\Hypertarget{group__terminal_gab3311fb037407fc4553f30a8122f2dc3}\label{group__terminal_gab3311fb037407fc4553f30a8122f2dc3}} 
+\index{Terminal@{Terminal}!Terminal\_printInternalItemComandOrDescription@{Terminal\_printInternalItemComandOrDescription}}
+\index{Terminal\_printInternalItemComandOrDescription@{Terminal\_printInternalItemComandOrDescription}!Terminal@{Terminal}}
+\subsubsection{\texorpdfstring{Terminal\_printInternalItemComandOrDescription()}{Terminal\_printInternalItemComandOrDescription()}}
+{\footnotesize\ttfamily void Terminal\+\_\+print\+Internal\+Item\+Comand\+Or\+Description (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}}}]{px\+Root\+Item }\end{DoxyParamCaption})}
+
+
+
+Функция выводит список вложеных команд 
+
+Вывод состоит из названия самой команды и её описания
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em px\+Root\+Item} & handle текущего уровня \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__terminal_ga7a0e27324a74d61713c05ec981b8d5ed}\label{group__terminal_ga7a0e27324a74d61713c05ec981b8d5ed}} 
+\index{Terminal@{Terminal}!Terminal\_stateMachine@{Terminal\_stateMachine}}
+\index{Terminal\_stateMachine@{Terminal\_stateMachine}!Terminal@{Terminal}}
+\subsubsection{\texorpdfstring{Terminal\_stateMachine()}{Terminal\_stateMachine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} Terminal\+\_\+state\+Machine (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}}}]{px\+Root\+Item }\end{DoxyParamCaption})}
+
+
+
+Функция для прокрутки состояний терминальной оболочки 
+
+Осуществляется прокрутка одной команды, по завершению работы будет получен указатель на следующую команду. Подразумевается что данная функция будет крутиться в бесконечном цикле. 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em px\+Root\+Item} & handle текущего уровня \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Возвращает объект следующей итерации 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__terminal_gac9891fc8397e8a100f20698722ab1e71}\label{group__terminal_gac9891fc8397e8a100f20698722ab1e71}} 
+\index{Terminal@{Terminal}!vGetComand@{vGetComand}}
+\index{vGetComand@{vGetComand}!Terminal@{Terminal}}
+\subsubsection{\texorpdfstring{vGetComand()}{vGetComand()}}
+{\footnotesize\ttfamily bool v\+Get\+Comand (\begin{DoxyParamCaption}\item[{Tick\+Type\+\_\+t}]{x\+Ticks\+To\+Wait }\end{DoxyParamCaption})}
+
+
+
+Функция ожидает ввод команды с клавиатуры 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em x\+Ticks\+To\+Wait} & Время ожидания получения команды \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Вернёт True, когда в терминале будет нажат Enter. Если время ожидания истекло, то вернёт false. 
+\end{DoxyReturn}

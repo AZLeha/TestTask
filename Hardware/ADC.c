@@ -1,23 +1,25 @@
 #include "inc/ADC.h"
 
+#include <stddef.h>
+
 #include "stm32f10x.h"
 #include "UART.h"
-#include "stddef.h"
-ADC_Colback handler = NULL;
 
-void ADC_init(uint16_t usHThreshold, uint16_t usLThreshold)
+ADC_Colback _handler = NULL;
+float _fVoltageReference = 3.3;
+
+void ADC_init(float fVoltageReference)
 {
-
+	_fVoltageReference = fVoltageReference;
+	// PA0 ADC PA1 Watchdog
 	RCC->APB2ENR |= RCC_APB2ENR_ADC1EN | RCC_APB2ENR_IOPAEN;
 
 	GPIOA->CRL &= ~(GPIO_CRL_MODE0 | GPIO_CRL_MODE1 | GPIO_CRL_CNF0 | GPIO_CRL_CNF1);
 
 	ADC1->CR2 = 0;
 
-	ADC1->HTR = usHThreshold;
-	ADC1->LTR = usLThreshold;
 
-	ADC1->CR1 |=  ADC_CR1_JAWDEN | ADC_CR1_JAUTO | ADC_CR1_AWDSGL | ADC_CR1_SCAN | ADC_CR1_AWDIE | ADC_CR1_AWDCH_0;
+	ADC1->CR1 |=  ADC_CR1_JAWDEN | ADC_CR1_JAUTO | ADC_CR1_AWDSGL | ADC_CR1_SCAN | ADC_CR1_AWDCH_0;
 
 	ADC1->CR2 |= ADC_CR2_JEXTTRIG | ADC_CR2_JEXTSEL | ADC_CR2_CONT;
 
@@ -35,7 +37,7 @@ void ADC_init(uint16_t usHThreshold, uint16_t usLThreshold)
 
 	ADC1->CR2 |= ADC_CR2_JSWSTART;
 
-	ADC1->SR = 0;
+
 
 
 	NVIC_SetPriority(ADC1_2_IRQn,4);
@@ -47,17 +49,31 @@ uint16_t ADC_getData(void)
 	return (uint16_t)ADC1->JDR1;
 }
 
+
+float ADC_getVoltage(void)
+{
+	return _fVoltageReference / 4096 * ADC1->JDR1;
+}
+
 void ADC_setWatchdogHandler(ADC_Colback xHandler)
 {
-	handler=xHandler;
+	_handler=xHandler;
 }
 
 void ADC1_2_IRQHandler(void)
 {
 	if(ADC1->SR & ADC_SR_AWD)
 	{
-		if(handler != NULL) handler();
+		if(_handler != NULL) _handler();
 	}
 	ADC1->SR = 0;
 }
+void ADC_runWatchdog(uint16_t usHThreshold, uint16_t usLThreshold)
+{
+	ADC1->SR = 0;
+	ADC1->CR1 |= ADC_CR1_AWDIE;
 
+	ADC1->HTR = usHThreshold;
+	ADC1->LTR = usLThreshold;
+
+}

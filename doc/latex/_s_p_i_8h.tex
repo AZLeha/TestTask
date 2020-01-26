@@ -1,0 +1,59 @@
+\hypertarget{_s_p_i_8h}{}\section{Файл Hardware/inc/\+S\+PI.h}
+\label{_s_p_i_8h}\index{Hardware/inc/SPI.h@{Hardware/inc/SPI.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\subsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_s_p_i_8h_af11df049ea6aa8b40a3f6a85e39fc9b0}{e\+S\+P\+I\+\_\+\+Endianness}} \{ \mbox{\hyperlink{_s_p_i_8h_af11df049ea6aa8b40a3f6a85e39fc9b0a1cdf9dab06db8dea4ced438c2e0a3b47}{e\+S\+P\+I\+\_\+little\+Endian}} =0, 
+\mbox{\hyperlink{_s_p_i_8h_af11df049ea6aa8b40a3f6a85e39fc9b0a12af5fbaa034a8d02689e80c65eeca9b}{e\+S\+P\+I\+\_\+big\+Endian}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_s_p_i_8h_afd9b09f58917f0e2d14c61b956eba214}{S\+P\+I\+\_\+init}} (void)
+\item 
+void \mbox{\hyperlink{_s_p_i_8h_aaf2a2b437a5464409e3c630fcf3763d6}{S\+P\+I\+\_\+\+Write\+Data}} (void $\ast$pv\+Output\+Data, uint16\+\_\+t us\+Data\+Size, \mbox{\hyperlink{_s_p_i_8h_af11df049ea6aa8b40a3f6a85e39fc9b0}{e\+S\+P\+I\+\_\+\+Endianness}} x\+Direction\+Data)
+\item 
+void \mbox{\hyperlink{_s_p_i_8h_a0ffca51dc4e6770567d58ebc2ad08042}{S\+P\+I\+\_\+\+Read\+Data}} (void $\ast$pv\+Input\+Data, uint16\+\_\+t us\+Data\+Size, \mbox{\hyperlink{_s_p_i_8h_af11df049ea6aa8b40a3f6a85e39fc9b0}{e\+S\+P\+I\+\_\+\+Endianness}} x\+Direction\+Data)
+\end{DoxyCompactItemize}
+
+
+\subsection{Перечисления}
+\mbox{\Hypertarget{_s_p_i_8h_af11df049ea6aa8b40a3f6a85e39fc9b0}\label{_s_p_i_8h_af11df049ea6aa8b40a3f6a85e39fc9b0}} 
+\index{SPI.h@{SPI.h}!eSPI\_Endianness@{eSPI\_Endianness}}
+\index{eSPI\_Endianness@{eSPI\_Endianness}!SPI.h@{SPI.h}}
+\subsubsection{\texorpdfstring{eSPI\_Endianness}{eSPI\_Endianness}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_s_p_i_8h_af11df049ea6aa8b40a3f6a85e39fc9b0}{e\+S\+P\+I\+\_\+\+Endianness}}}
+
+\begin{DoxyEnumFields}{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eSPI\_littleEndian@{eSPI\_littleEndian}!SPI.h@{SPI.h}}\index{SPI.h@{SPI.h}!eSPI\_littleEndian@{eSPI\_littleEndian}}}\mbox{\Hypertarget{_s_p_i_8h_af11df049ea6aa8b40a3f6a85e39fc9b0a1cdf9dab06db8dea4ced438c2e0a3b47}\label{_s_p_i_8h_af11df049ea6aa8b40a3f6a85e39fc9b0a1cdf9dab06db8dea4ced438c2e0a3b47}} 
+e\+S\+P\+I\+\_\+little\+Endian&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eSPI\_bigEndian@{eSPI\_bigEndian}!SPI.h@{SPI.h}}\index{SPI.h@{SPI.h}!eSPI\_bigEndian@{eSPI\_bigEndian}}}\mbox{\Hypertarget{_s_p_i_8h_af11df049ea6aa8b40a3f6a85e39fc9b0a12af5fbaa034a8d02689e80c65eeca9b}\label{_s_p_i_8h_af11df049ea6aa8b40a3f6a85e39fc9b0a12af5fbaa034a8d02689e80c65eeca9b}} 
+e\+S\+P\+I\+\_\+big\+Endian&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{_s_p_i_8h_afd9b09f58917f0e2d14c61b956eba214}\label{_s_p_i_8h_afd9b09f58917f0e2d14c61b956eba214}} 
+\index{SPI.h@{SPI.h}!SPI\_init@{SPI\_init}}
+\index{SPI\_init@{SPI\_init}!SPI.h@{SPI.h}}
+\subsubsection{\texorpdfstring{SPI\_init()}{SPI\_init()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_s_p_i_8h_a0ffca51dc4e6770567d58ebc2ad08042}\label{_s_p_i_8h_a0ffca51dc4e6770567d58ebc2ad08042}} 
+\index{SPI.h@{SPI.h}!SPI\_ReadData@{SPI\_ReadData}}
+\index{SPI\_ReadData@{SPI\_ReadData}!SPI.h@{SPI.h}}
+\subsubsection{\texorpdfstring{SPI\_ReadData()}{SPI\_ReadData()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+Read\+Data (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Input\+Data,  }\item[{uint16\+\_\+t}]{us\+Data\+Size,  }\item[{\mbox{\hyperlink{_s_p_i_8h_af11df049ea6aa8b40a3f6a85e39fc9b0}{e\+S\+P\+I\+\_\+\+Endianness}}}]{x\+Direction\+Data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_s_p_i_8h_aaf2a2b437a5464409e3c630fcf3763d6}\label{_s_p_i_8h_aaf2a2b437a5464409e3c630fcf3763d6}} 
+\index{SPI.h@{SPI.h}!SPI\_WriteData@{SPI\_WriteData}}
+\index{SPI\_WriteData@{SPI\_WriteData}!SPI.h@{SPI.h}}
+\subsubsection{\texorpdfstring{SPI\_WriteData()}{SPI\_WriteData()}}
+{\footnotesize\ttfamily void S\+P\+I\+\_\+\+Write\+Data (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Output\+Data,  }\item[{uint16\+\_\+t}]{us\+Data\+Size,  }\item[{\mbox{\hyperlink{_s_p_i_8h_af11df049ea6aa8b40a3f6a85e39fc9b0}{e\+S\+P\+I\+\_\+\+Endianness}}}]{x\+Direction\+Data }\end{DoxyParamCaption})}
+

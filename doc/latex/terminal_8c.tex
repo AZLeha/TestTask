@@ -1,0 +1,43 @@
+\hypertarget{terminal_8c}{}\section{Файл src/terminal.c}
+\label{terminal_8c}\index{src/terminal.c@{src/terminal.c}}
+{\ttfamily \#include \char`\"{}terminal.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}U\+A\+R\+T.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}queue.\+h\char`\"{}}\newline
+\subsection*{Структуры данных}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_terminal__state_item}{Terminal\+\_\+state\+Item}}
+\end{DoxyCompactItemize}
+\subsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_terminal__state_item}{Terminal\+\_\+state\+Item}} \mbox{\hyperlink{terminal_8c_ae24b34035b22614977faf32d842e9a97}{x\+State\+Item}}
+\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__terminal_ga5ba2d01659937984488cb072a40fe320}{Terminal\+\_\+exit\+Stae}} (\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} this\+State)
+\begin{DoxyCompactList}\small\item\em Функция для возврата на 1 уровень вниз по списку \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__terminal_gab3311fb037407fc4553f30a8122f2dc3}{Terminal\+\_\+print\+Internal\+Item\+Comand\+Or\+Description}} (\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} px\+Root\+Item)
+\begin{DoxyCompactList}\small\item\em Функция выводит список вложеных команд \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} \mbox{\hyperlink{group__terminal_ga41d80f135933b7877905ebb785c0014b}{Terminal\+\_\+\+Crate\+State}} (char $\ast$pc\+Description, char $\ast$pc\+Comand, char $\ast$pc\+Message, uint8\+\_\+t uc\+States\+Count, Terminal\+\_\+\+Colback x\+Handler)
+\begin{DoxyCompactList}\small\item\em Функция создаёт объект команды \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__terminal_ga7fde78408fabbc2c2790850003202044}{Terminal\+\_\+add\+Are\+State\+To\+List}} (\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} \mbox{\hyperlink{terminal_8c_ae24b34035b22614977faf32d842e9a97}{x\+State\+Item}}, \mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} px\+Parent\+Item)
+\begin{DoxyCompactList}\small\item\em Функция добавляет объект в список родителя \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__terminal_gacc9b80fa13f248f795d961b1817b7d4b}{Terminal\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Функция инициализации терминальной оболочки \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} \mbox{\hyperlink{group__terminal_ga7a0e27324a74d61713c05ec981b8d5ed}{Terminal\+\_\+state\+Machine}} (\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} px\+Root\+Item)
+\begin{DoxyCompactList}\small\item\em Функция для прокрутки состояний терминальной оболочки \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__terminal_gac9891fc8397e8a100f20698722ab1e71}{v\+Get\+Comand}} (Tick\+Type\+\_\+t x\+Ticks\+To\+Wait)
+\begin{DoxyCompactList}\small\item\em Функция ожидает ввод команды с клавиатуры \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Типы}
+\mbox{\Hypertarget{terminal_8c_ae24b34035b22614977faf32d842e9a97}\label{terminal_8c_ae24b34035b22614977faf32d842e9a97}} 
+\index{terminal.c@{terminal.c}!xStateItem@{xStateItem}}
+\index{xStateItem@{xStateItem}!terminal.c@{terminal.c}}
+\subsubsection{\texorpdfstring{xStateItem}{xStateItem}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_terminal__state_item}{Terminal\+\_\+state\+Item}} \mbox{\hyperlink{terminal_8c_ae24b34035b22614977faf32d842e9a97}{x\+State\+Item}}}
+

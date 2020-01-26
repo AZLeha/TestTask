@@ -1,0 +1,216 @@
+\hypertarget{_b_m_p280_8c}{}\section{Файл src/\+B\+M\+P280.c}
+\label{_b_m_p280_8c}\index{src/BMP280.c@{src/BMP280.c}}
+{\ttfamily \#include \char`\"{}inc/\+B\+M\+P280.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}I2\+C.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}semphr.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+\subsection*{Структуры данных}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_calibration_tabel}{Calibration\+Tabel}}
+\end{DoxyCompactItemize}
+\subsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7c}{B\+M\+P280\+\_\+\+Memory\+Map\+\_\+16bit}} \{ \newline
+\mbox{\hyperlink{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7ca4899ead4d7e3e52446ad8265cec1d498}{B\+M\+P280\+\_\+e\+Dig\+\_\+\+T1}} = 0x88, 
+\mbox{\hyperlink{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7cac776272e94885e31b39704ce1eb7e070}{B\+M\+P280\+\_\+e\+Dig\+\_\+\+T2}} = 0x8A, 
+\mbox{\hyperlink{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7ca95d35a18d5ed081141ab2ba9f83d480c}{B\+M\+P280\+\_\+e\+Dig\+\_\+\+T3}} = 0x8C, 
+\mbox{\hyperlink{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7caefff6c2ca02fb9df8b823fddabcb1e52}{B\+M\+P280\+\_\+e\+Dig\+\_\+\+P1}} = 0x8E, 
+\newline
+\mbox{\hyperlink{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7ca9f57564497c0c69d25670cb7bf32f14f}{B\+M\+P280\+\_\+e\+Dig\+\_\+\+P2}} = 0x90, 
+\mbox{\hyperlink{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7ca0fb5f938a52cd0f19aa47f17783d2c99}{B\+M\+P280\+\_\+e\+Dig\+\_\+\+P3}} = 0x92, 
+\mbox{\hyperlink{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7cab67be86e0db64b845d7469b11f31d1cf}{B\+M\+P280\+\_\+e\+Dig\+\_\+\+P4}} = 0x94, 
+\mbox{\hyperlink{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7ca28e99d56aea7f20e6360b1b2a8e113b1}{B\+M\+P280\+\_\+e\+Dig\+\_\+\+P5}} = 0x96, 
+\newline
+\mbox{\hyperlink{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7ca779228696997d11864c82e037f9fbd85}{B\+M\+P280\+\_\+e\+Dig\+\_\+\+P6}} = 0x98, 
+\mbox{\hyperlink{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7ca57762953ec4bb2f643e4904fe8cd4fac}{B\+M\+P280\+\_\+e\+Dig\+\_\+\+P7}} = 0x9A, 
+\mbox{\hyperlink{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7caee043f9319f5fa35c1e6ec94513cb8c3}{B\+M\+P280\+\_\+e\+Dig\+\_\+\+P8}} = 0x9C, 
+\mbox{\hyperlink{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7ca64b1a6add8ff1b1da47515177fe839e5}{B\+M\+P280\+\_\+e\+Dig\+\_\+\+P9}} = 0x9E
+ \}
+\item 
+enum \mbox{\hyperlink{_b_m_p280_8c_a74ce3d08a239d97674fa81b35ae14372}{B\+M\+P280\+\_\+\+Memory\+Map\+\_\+8bit}} \{ \newline
+\mbox{\hyperlink{_b_m_p280_8c_a74ce3d08a239d97674fa81b35ae14372a317f5f422ea991decb6442306bbe75a9}{B\+M\+P280\+\_\+e\+Device\+ID}} = 0x\+D0, 
+\mbox{\hyperlink{_b_m_p280_8c_a74ce3d08a239d97674fa81b35ae14372a9b7b7e4a43280f48bfcb252c82779beb}{B\+M\+P280\+\_\+e\+Device\+Reset}} = 0x\+E0, 
+\mbox{\hyperlink{_b_m_p280_8c_a74ce3d08a239d97674fa81b35ae14372a55ec4290a0a357af37bf3448156ecf89}{B\+M\+P280\+\_\+e\+Device\+Status}} = 0x\+F3, 
+\mbox{\hyperlink{_b_m_p280_8c_a74ce3d08a239d97674fa81b35ae14372a248d7f69189d609a3964dabc9b951bcc}{B\+M\+P280\+\_\+e\+Control}} = 0x\+F4, 
+\newline
+\mbox{\hyperlink{_b_m_p280_8c_a74ce3d08a239d97674fa81b35ae14372aa81d3845d09d1d01d37f83aa3aa56bc4}{B\+M\+P280\+\_\+e\+Config}} = 0x\+F5
+ \}
+\item 
+enum \mbox{\hyperlink{_b_m_p280_8c_acf5a10273ecbf9bfaa345a181bf32dd7}{B\+M\+P280\+\_\+\+Memory\+Map\+\_\+24bit}} \{ \mbox{\hyperlink{_b_m_p280_8c_acf5a10273ecbf9bfaa345a181bf32dd7a516f14040c6ec5295498743fe05bfdc5}{B\+M\+P280\+\_\+e\+Pressure}} = 0x\+F7, 
+\mbox{\hyperlink{_b_m_p280_8c_acf5a10273ecbf9bfaa345a181bf32dd7ad3c261dec5cfdcfdb9b54ec45a9719eb}{B\+M\+P280\+\_\+e\+Temp}} = 0x\+FA
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_b_m_p280_8c_a33f4f4e12ec1d6a54e9b5f0a75855072}{B\+M\+P280\+\_\+setings}} (\mbox{\hyperlink{_b_m_p280_8h_a56de2f62b1b4cc7cf25ef7772e949d8f}{e\+B\+M\+P280\+\_\+setings}} x\+Setings)
+\item 
+void \mbox{\hyperlink{_b_m_p280_8c_aa2a4016db9a6b90364e3fd51b5bb429f}{B\+M\+P280\+\_\+update\+Calibration\+Tabel}} ()
+\item 
+void \mbox{\hyperlink{_b_m_p280_8c_abf66d721f8837bac0d653d68752e2d9f}{B\+M\+P280\+\_\+init}} (void)
+\item 
+double \mbox{\hyperlink{_b_m_p280_8c_adae74550f348ba8b4879cc9fb3cec601}{B\+M\+P280\+\_\+get\+Temp}} (void)
+\item 
+double \mbox{\hyperlink{_b_m_p280_8c_a6cdc5be2f6a9dd4a9727c212ac80c520}{B\+M\+P280\+\_\+get\+Press}} (void)
+\end{DoxyCompactItemize}
+\subsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+Semaphore\+Handle\+\_\+t \mbox{\hyperlink{_b_m_p280_8c_a4ad0be2779d1b139eb93a327f56ab1d6}{x\+Mutex\+B\+M\+P280}}
+\item 
+\mbox{\hyperlink{struct_calibration_tabel}{Calibration\+Tabel}} \mbox{\hyperlink{_b_m_p280_8c_acbb53e2c4c5de92f21ae497b0c7dedb1}{calibration\+Tabel}} =\{0\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Перечисления}
+\mbox{\Hypertarget{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7c}\label{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7c}} 
+\index{BMP280.c@{BMP280.c}!BMP280\_MemoryMap\_16bit@{BMP280\_MemoryMap\_16bit}}
+\index{BMP280\_MemoryMap\_16bit@{BMP280\_MemoryMap\_16bit}!BMP280.c@{BMP280.c}}
+\subsubsection{\texorpdfstring{BMP280\_MemoryMap\_16bit}{BMP280\_MemoryMap\_16bit}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7c}{B\+M\+P280\+\_\+\+Memory\+Map\+\_\+16bit}}}
+
+\begin{DoxyEnumFields}{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMP280\_eDig\_T1@{BMP280\_eDig\_T1}!BMP280.c@{BMP280.c}}\index{BMP280.c@{BMP280.c}!BMP280\_eDig\_T1@{BMP280\_eDig\_T1}}}\mbox{\Hypertarget{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7ca4899ead4d7e3e52446ad8265cec1d498}\label{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7ca4899ead4d7e3e52446ad8265cec1d498}} 
+B\+M\+P280\+\_\+e\+Dig\+\_\+\+T1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMP280\_eDig\_T2@{BMP280\_eDig\_T2}!BMP280.c@{BMP280.c}}\index{BMP280.c@{BMP280.c}!BMP280\_eDig\_T2@{BMP280\_eDig\_T2}}}\mbox{\Hypertarget{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7cac776272e94885e31b39704ce1eb7e070}\label{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7cac776272e94885e31b39704ce1eb7e070}} 
+B\+M\+P280\+\_\+e\+Dig\+\_\+\+T2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMP280\_eDig\_T3@{BMP280\_eDig\_T3}!BMP280.c@{BMP280.c}}\index{BMP280.c@{BMP280.c}!BMP280\_eDig\_T3@{BMP280\_eDig\_T3}}}\mbox{\Hypertarget{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7ca95d35a18d5ed081141ab2ba9f83d480c}\label{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7ca95d35a18d5ed081141ab2ba9f83d480c}} 
+B\+M\+P280\+\_\+e\+Dig\+\_\+\+T3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMP280\_eDig\_P1@{BMP280\_eDig\_P1}!BMP280.c@{BMP280.c}}\index{BMP280.c@{BMP280.c}!BMP280\_eDig\_P1@{BMP280\_eDig\_P1}}}\mbox{\Hypertarget{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7caefff6c2ca02fb9df8b823fddabcb1e52}\label{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7caefff6c2ca02fb9df8b823fddabcb1e52}} 
+B\+M\+P280\+\_\+e\+Dig\+\_\+\+P1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMP280\_eDig\_P2@{BMP280\_eDig\_P2}!BMP280.c@{BMP280.c}}\index{BMP280.c@{BMP280.c}!BMP280\_eDig\_P2@{BMP280\_eDig\_P2}}}\mbox{\Hypertarget{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7ca9f57564497c0c69d25670cb7bf32f14f}\label{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7ca9f57564497c0c69d25670cb7bf32f14f}} 
+B\+M\+P280\+\_\+e\+Dig\+\_\+\+P2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMP280\_eDig\_P3@{BMP280\_eDig\_P3}!BMP280.c@{BMP280.c}}\index{BMP280.c@{BMP280.c}!BMP280\_eDig\_P3@{BMP280\_eDig\_P3}}}\mbox{\Hypertarget{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7ca0fb5f938a52cd0f19aa47f17783d2c99}\label{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7ca0fb5f938a52cd0f19aa47f17783d2c99}} 
+B\+M\+P280\+\_\+e\+Dig\+\_\+\+P3&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMP280\_eDig\_P4@{BMP280\_eDig\_P4}!BMP280.c@{BMP280.c}}\index{BMP280.c@{BMP280.c}!BMP280\_eDig\_P4@{BMP280\_eDig\_P4}}}\mbox{\Hypertarget{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7cab67be86e0db64b845d7469b11f31d1cf}\label{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7cab67be86e0db64b845d7469b11f31d1cf}} 
+B\+M\+P280\+\_\+e\+Dig\+\_\+\+P4&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMP280\_eDig\_P5@{BMP280\_eDig\_P5}!BMP280.c@{BMP280.c}}\index{BMP280.c@{BMP280.c}!BMP280\_eDig\_P5@{BMP280\_eDig\_P5}}}\mbox{\Hypertarget{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7ca28e99d56aea7f20e6360b1b2a8e113b1}\label{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7ca28e99d56aea7f20e6360b1b2a8e113b1}} 
+B\+M\+P280\+\_\+e\+Dig\+\_\+\+P5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMP280\_eDig\_P6@{BMP280\_eDig\_P6}!BMP280.c@{BMP280.c}}\index{BMP280.c@{BMP280.c}!BMP280\_eDig\_P6@{BMP280\_eDig\_P6}}}\mbox{\Hypertarget{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7ca779228696997d11864c82e037f9fbd85}\label{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7ca779228696997d11864c82e037f9fbd85}} 
+B\+M\+P280\+\_\+e\+Dig\+\_\+\+P6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMP280\_eDig\_P7@{BMP280\_eDig\_P7}!BMP280.c@{BMP280.c}}\index{BMP280.c@{BMP280.c}!BMP280\_eDig\_P7@{BMP280\_eDig\_P7}}}\mbox{\Hypertarget{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7ca57762953ec4bb2f643e4904fe8cd4fac}\label{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7ca57762953ec4bb2f643e4904fe8cd4fac}} 
+B\+M\+P280\+\_\+e\+Dig\+\_\+\+P7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMP280\_eDig\_P8@{BMP280\_eDig\_P8}!BMP280.c@{BMP280.c}}\index{BMP280.c@{BMP280.c}!BMP280\_eDig\_P8@{BMP280\_eDig\_P8}}}\mbox{\Hypertarget{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7caee043f9319f5fa35c1e6ec94513cb8c3}\label{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7caee043f9319f5fa35c1e6ec94513cb8c3}} 
+B\+M\+P280\+\_\+e\+Dig\+\_\+\+P8&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMP280\_eDig\_P9@{BMP280\_eDig\_P9}!BMP280.c@{BMP280.c}}\index{BMP280.c@{BMP280.c}!BMP280\_eDig\_P9@{BMP280\_eDig\_P9}}}\mbox{\Hypertarget{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7ca64b1a6add8ff1b1da47515177fe839e5}\label{_b_m_p280_8c_adec60cc2e40dc43d9b4db15519ff7d7ca64b1a6add8ff1b1da47515177fe839e5}} 
+B\+M\+P280\+\_\+e\+Dig\+\_\+\+P9&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_b_m_p280_8c_acf5a10273ecbf9bfaa345a181bf32dd7}\label{_b_m_p280_8c_acf5a10273ecbf9bfaa345a181bf32dd7}} 
+\index{BMP280.c@{BMP280.c}!BMP280\_MemoryMap\_24bit@{BMP280\_MemoryMap\_24bit}}
+\index{BMP280\_MemoryMap\_24bit@{BMP280\_MemoryMap\_24bit}!BMP280.c@{BMP280.c}}
+\subsubsection{\texorpdfstring{BMP280\_MemoryMap\_24bit}{BMP280\_MemoryMap\_24bit}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_b_m_p280_8c_acf5a10273ecbf9bfaa345a181bf32dd7}{B\+M\+P280\+\_\+\+Memory\+Map\+\_\+24bit}}}
+
+\begin{DoxyEnumFields}{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMP280\_ePressure@{BMP280\_ePressure}!BMP280.c@{BMP280.c}}\index{BMP280.c@{BMP280.c}!BMP280\_ePressure@{BMP280\_ePressure}}}\mbox{\Hypertarget{_b_m_p280_8c_acf5a10273ecbf9bfaa345a181bf32dd7a516f14040c6ec5295498743fe05bfdc5}\label{_b_m_p280_8c_acf5a10273ecbf9bfaa345a181bf32dd7a516f14040c6ec5295498743fe05bfdc5}} 
+B\+M\+P280\+\_\+e\+Pressure&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMP280\_eTemp@{BMP280\_eTemp}!BMP280.c@{BMP280.c}}\index{BMP280.c@{BMP280.c}!BMP280\_eTemp@{BMP280\_eTemp}}}\mbox{\Hypertarget{_b_m_p280_8c_acf5a10273ecbf9bfaa345a181bf32dd7ad3c261dec5cfdcfdb9b54ec45a9719eb}\label{_b_m_p280_8c_acf5a10273ecbf9bfaa345a181bf32dd7ad3c261dec5cfdcfdb9b54ec45a9719eb}} 
+B\+M\+P280\+\_\+e\+Temp&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_b_m_p280_8c_a74ce3d08a239d97674fa81b35ae14372}\label{_b_m_p280_8c_a74ce3d08a239d97674fa81b35ae14372}} 
+\index{BMP280.c@{BMP280.c}!BMP280\_MemoryMap\_8bit@{BMP280\_MemoryMap\_8bit}}
+\index{BMP280\_MemoryMap\_8bit@{BMP280\_MemoryMap\_8bit}!BMP280.c@{BMP280.c}}
+\subsubsection{\texorpdfstring{BMP280\_MemoryMap\_8bit}{BMP280\_MemoryMap\_8bit}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_b_m_p280_8c_a74ce3d08a239d97674fa81b35ae14372}{B\+M\+P280\+\_\+\+Memory\+Map\+\_\+8bit}}}
+
+\begin{DoxyEnumFields}{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMP280\_eDeviceID@{BMP280\_eDeviceID}!BMP280.c@{BMP280.c}}\index{BMP280.c@{BMP280.c}!BMP280\_eDeviceID@{BMP280\_eDeviceID}}}\mbox{\Hypertarget{_b_m_p280_8c_a74ce3d08a239d97674fa81b35ae14372a317f5f422ea991decb6442306bbe75a9}\label{_b_m_p280_8c_a74ce3d08a239d97674fa81b35ae14372a317f5f422ea991decb6442306bbe75a9}} 
+B\+M\+P280\+\_\+e\+Device\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMP280\_eDeviceReset@{BMP280\_eDeviceReset}!BMP280.c@{BMP280.c}}\index{BMP280.c@{BMP280.c}!BMP280\_eDeviceReset@{BMP280\_eDeviceReset}}}\mbox{\Hypertarget{_b_m_p280_8c_a74ce3d08a239d97674fa81b35ae14372a9b7b7e4a43280f48bfcb252c82779beb}\label{_b_m_p280_8c_a74ce3d08a239d97674fa81b35ae14372a9b7b7e4a43280f48bfcb252c82779beb}} 
+B\+M\+P280\+\_\+e\+Device\+Reset&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMP280\_eDeviceStatus@{BMP280\_eDeviceStatus}!BMP280.c@{BMP280.c}}\index{BMP280.c@{BMP280.c}!BMP280\_eDeviceStatus@{BMP280\_eDeviceStatus}}}\mbox{\Hypertarget{_b_m_p280_8c_a74ce3d08a239d97674fa81b35ae14372a55ec4290a0a357af37bf3448156ecf89}\label{_b_m_p280_8c_a74ce3d08a239d97674fa81b35ae14372a55ec4290a0a357af37bf3448156ecf89}} 
+B\+M\+P280\+\_\+e\+Device\+Status&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMP280\_eControl@{BMP280\_eControl}!BMP280.c@{BMP280.c}}\index{BMP280.c@{BMP280.c}!BMP280\_eControl@{BMP280\_eControl}}}\mbox{\Hypertarget{_b_m_p280_8c_a74ce3d08a239d97674fa81b35ae14372a248d7f69189d609a3964dabc9b951bcc}\label{_b_m_p280_8c_a74ce3d08a239d97674fa81b35ae14372a248d7f69189d609a3964dabc9b951bcc}} 
+B\+M\+P280\+\_\+e\+Control&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BMP280\_eConfig@{BMP280\_eConfig}!BMP280.c@{BMP280.c}}\index{BMP280.c@{BMP280.c}!BMP280\_eConfig@{BMP280\_eConfig}}}\mbox{\Hypertarget{_b_m_p280_8c_a74ce3d08a239d97674fa81b35ae14372aa81d3845d09d1d01d37f83aa3aa56bc4}\label{_b_m_p280_8c_a74ce3d08a239d97674fa81b35ae14372aa81d3845d09d1d01d37f83aa3aa56bc4}} 
+B\+M\+P280\+\_\+e\+Config&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{_b_m_p280_8c_a6cdc5be2f6a9dd4a9727c212ac80c520}\label{_b_m_p280_8c_a6cdc5be2f6a9dd4a9727c212ac80c520}} 
+\index{BMP280.c@{BMP280.c}!BMP280\_getPress@{BMP280\_getPress}}
+\index{BMP280\_getPress@{BMP280\_getPress}!BMP280.c@{BMP280.c}}
+\subsubsection{\texorpdfstring{BMP280\_getPress()}{BMP280\_getPress()}}
+{\footnotesize\ttfamily double B\+M\+P280\+\_\+get\+Press (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_b_m_p280_8c_adae74550f348ba8b4879cc9fb3cec601}\label{_b_m_p280_8c_adae74550f348ba8b4879cc9fb3cec601}} 
+\index{BMP280.c@{BMP280.c}!BMP280\_getTemp@{BMP280\_getTemp}}
+\index{BMP280\_getTemp@{BMP280\_getTemp}!BMP280.c@{BMP280.c}}
+\subsubsection{\texorpdfstring{BMP280\_getTemp()}{BMP280\_getTemp()}}
+{\footnotesize\ttfamily double B\+M\+P280\+\_\+get\+Temp (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_b_m_p280_8c_abf66d721f8837bac0d653d68752e2d9f}\label{_b_m_p280_8c_abf66d721f8837bac0d653d68752e2d9f}} 
+\index{BMP280.c@{BMP280.c}!BMP280\_init@{BMP280\_init}}
+\index{BMP280\_init@{BMP280\_init}!BMP280.c@{BMP280.c}}
+\subsubsection{\texorpdfstring{BMP280\_init()}{BMP280\_init()}}
+{\footnotesize\ttfamily void B\+M\+P280\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_b_m_p280_8c_a33f4f4e12ec1d6a54e9b5f0a75855072}\label{_b_m_p280_8c_a33f4f4e12ec1d6a54e9b5f0a75855072}} 
+\index{BMP280.c@{BMP280.c}!BMP280\_setings@{BMP280\_setings}}
+\index{BMP280\_setings@{BMP280\_setings}!BMP280.c@{BMP280.c}}
+\subsubsection{\texorpdfstring{BMP280\_setings()}{BMP280\_setings()}}
+{\footnotesize\ttfamily void B\+M\+P280\+\_\+setings (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_b_m_p280_8h_a56de2f62b1b4cc7cf25ef7772e949d8f}{e\+B\+M\+P280\+\_\+setings}}}]{x\+Setings }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_b_m_p280_8c_aa2a4016db9a6b90364e3fd51b5bb429f}\label{_b_m_p280_8c_aa2a4016db9a6b90364e3fd51b5bb429f}} 
+\index{BMP280.c@{BMP280.c}!BMP280\_updateCalibrationTabel@{BMP280\_updateCalibrationTabel}}
+\index{BMP280\_updateCalibrationTabel@{BMP280\_updateCalibrationTabel}!BMP280.c@{BMP280.c}}
+\subsubsection{\texorpdfstring{BMP280\_updateCalibrationTabel()}{BMP280\_updateCalibrationTabel()}}
+{\footnotesize\ttfamily void B\+M\+P280\+\_\+update\+Calibration\+Tabel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Переменные}
+\mbox{\Hypertarget{_b_m_p280_8c_acbb53e2c4c5de92f21ae497b0c7dedb1}\label{_b_m_p280_8c_acbb53e2c4c5de92f21ae497b0c7dedb1}} 
+\index{BMP280.c@{BMP280.c}!calibrationTabel@{calibrationTabel}}
+\index{calibrationTabel@{calibrationTabel}!BMP280.c@{BMP280.c}}
+\subsubsection{\texorpdfstring{calibrationTabel}{calibrationTabel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_calibration_tabel}{Calibration\+Tabel}} calibration\+Tabel =\{0\}}
+
+\mbox{\Hypertarget{_b_m_p280_8c_a4ad0be2779d1b139eb93a327f56ab1d6}\label{_b_m_p280_8c_a4ad0be2779d1b139eb93a327f56ab1d6}} 
+\index{BMP280.c@{BMP280.c}!xMutexBMP280@{xMutexBMP280}}
+\index{xMutexBMP280@{xMutexBMP280}!BMP280.c@{BMP280.c}}
+\subsubsection{\texorpdfstring{xMutexBMP280}{xMutexBMP280}}
+{\footnotesize\ttfamily Semaphore\+Handle\+\_\+t x\+Mutex\+B\+M\+P280}
+

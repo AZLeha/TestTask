@@ -38,8 +38,8 @@ void AT45DB641E_configurePageSize(AT45DB641E_ePageSize xPageSize)
 
 typedef union {
 
-	//тут небольшой кастыль так как сперва нужно отправит старший байт адреса а потом младщий
-	//то заголовок будет пеердоватсяв обратно пордке
+	//здесь не большой костыль, так как сперва нужно отправить старший байт адреса, а потом младший
+	//то заголовок будет передаваться в обратном порядке
 	#pragma pack(push, 1)
 	struct
 	{
@@ -76,11 +76,12 @@ void AT45DB641E_readSector(void * pvInputData, uint16_t usSectorNumber)
 	//[opcode(0-7bits)][ (8bits MSB byte address) (9-23 bits number sector) ] [LSB byte address (24-31 bits)] [dummy byte (32-47 bites)]
  	PacketHeder heder = {{.ucOpcode = CARHF_M, .usSectorNumber = usSectorNumber<<1}};
 
+ 	NVIC_DisableIRQ(ADC1_2_IRQn);
  	AT45DB641E_CS(true);
 	SPI_WriteData(heder.array+2, 6, eSPI_bigEndian);
 	SPI_ReadData(pvInputData, SECTOR_SIZE, eSPI_littleEndian);
 	AT45DB641E_CS(false);
-
+	NVIC_EnableIRQ(ADC1_2_IRQn);
 }
 void AT45DB641E_writeSector(void * pvOutputData, uint16_t usSectorNumber)
 {
@@ -88,11 +89,13 @@ void AT45DB641E_writeSector(void * pvOutputData, uint16_t usSectorNumber)
 	//sector one byte address
 	PacketHeder heder = {{.ucOpcode = MMPPTB1, .usSectorNumber = usSectorNumber<<1}};
 
-	//ТУТ МОГЛА БЫТЬ ОПТИМИЗАЦИЯ ДЛЯ ЗАПИСИ ЧЕРЗ 2 БУФЕРА НО её НЕТ ))
+	NVIC_DisableIRQ(ADC1_2_IRQn);
+	//ТУТ МОГЛА БЫТЬ ОПТИМИЗАЦИЯ ДЛЯ ЗАПИСИ ЧЕРЕЗ 2 БУФЕРА, НО ЕЁ НЕТ ))
 	AT45DB641E_CS(true);
 	SPI_WriteData(heder.array+4, 4, eSPI_bigEndian);
 	SPI_WriteData(pvOutputData, SECTOR_SIZE, eSPI_littleEndian);
 	AT45DB641E_CS(false);
+	NVIC_EnableIRQ(ADC1_2_IRQn);
 
 
 	for(uint32_t i=0; (i<0x1fffff) && (!(AT45DB641E_status()&(1<<7)));i++) asm("NOP");

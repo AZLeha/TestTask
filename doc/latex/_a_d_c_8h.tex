@@ -1,0 +1,63 @@
+\hypertarget{_a_d_c_8h}{}\section{Файл Hardware/inc/\+A\+DC.h}
+\label{_a_d_c_8h}\index{Hardware/inc/ADC.h@{Hardware/inc/ADC.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\subsection*{Определения типов}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \mbox{\hyperlink{_a_d_c_8h_a8ab986d0bafd8720a73c903ad0fa41e7}{A\+D\+C\+\_\+\+Colback}}) (void)
+\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_a_d_c_8h_a9226e75303bd164a6b36237f8799c373}{A\+D\+C\+\_\+init}} (float f\+Voltage\+Reference)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{_a_d_c_8h_a85efa478ed6478d8ece9e0821f2d6efa}{A\+D\+C\+\_\+get\+Data}} (void)
+\item 
+float \mbox{\hyperlink{_a_d_c_8h_a44e115c58d7eb6b4f5e1ae02c5b27a03}{A\+D\+C\+\_\+get\+Voltage}} (void)
+\item 
+void \mbox{\hyperlink{_a_d_c_8h_a6b0b44e5622a638d712d41bfe3374697}{A\+D\+C\+\_\+set\+Watchdog\+Handler}} (\mbox{\hyperlink{_a_d_c_8h_a8ab986d0bafd8720a73c903ad0fa41e7}{A\+D\+C\+\_\+\+Colback}} x\+Handler)
+\item 
+void \mbox{\hyperlink{_a_d_c_8h_a87392193c129f15f58f53340ba7a0457}{A\+D\+C\+\_\+run\+Watchdog}} (uint16\+\_\+t us\+H\+Threshold, uint16\+\_\+t us\+L\+Threshold)
+\end{DoxyCompactItemize}
+
+
+\subsection{Типы}
+\mbox{\Hypertarget{_a_d_c_8h_a8ab986d0bafd8720a73c903ad0fa41e7}\label{_a_d_c_8h_a8ab986d0bafd8720a73c903ad0fa41e7}} 
+\index{ADC.h@{ADC.h}!ADC\_Colback@{ADC\_Colback}}
+\index{ADC\_Colback@{ADC\_Colback}!ADC.h@{ADC.h}}
+\subsubsection{\texorpdfstring{ADC\_Colback}{ADC\_Colback}}
+{\footnotesize\ttfamily typedef void($\ast$ A\+D\+C\+\_\+\+Colback) (void)}
+
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{_a_d_c_8h_a85efa478ed6478d8ece9e0821f2d6efa}\label{_a_d_c_8h_a85efa478ed6478d8ece9e0821f2d6efa}} 
+\index{ADC.h@{ADC.h}!ADC\_getData@{ADC\_getData}}
+\index{ADC\_getData@{ADC\_getData}!ADC.h@{ADC.h}}
+\subsubsection{\texorpdfstring{ADC\_getData()}{ADC\_getData()}}
+{\footnotesize\ttfamily uint16\+\_\+t A\+D\+C\+\_\+get\+Data (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_a_d_c_8h_a44e115c58d7eb6b4f5e1ae02c5b27a03}\label{_a_d_c_8h_a44e115c58d7eb6b4f5e1ae02c5b27a03}} 
+\index{ADC.h@{ADC.h}!ADC\_getVoltage@{ADC\_getVoltage}}
+\index{ADC\_getVoltage@{ADC\_getVoltage}!ADC.h@{ADC.h}}
+\subsubsection{\texorpdfstring{ADC\_getVoltage()}{ADC\_getVoltage()}}
+{\footnotesize\ttfamily float A\+D\+C\+\_\+get\+Voltage (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_a_d_c_8h_a9226e75303bd164a6b36237f8799c373}\label{_a_d_c_8h_a9226e75303bd164a6b36237f8799c373}} 
+\index{ADC.h@{ADC.h}!ADC\_init@{ADC\_init}}
+\index{ADC\_init@{ADC\_init}!ADC.h@{ADC.h}}
+\subsubsection{\texorpdfstring{ADC\_init()}{ADC\_init()}}
+{\footnotesize\ttfamily void A\+D\+C\+\_\+init (\begin{DoxyParamCaption}\item[{float}]{f\+Voltage\+Reference }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_a_d_c_8h_a87392193c129f15f58f53340ba7a0457}\label{_a_d_c_8h_a87392193c129f15f58f53340ba7a0457}} 
+\index{ADC.h@{ADC.h}!ADC\_runWatchdog@{ADC\_runWatchdog}}
+\index{ADC\_runWatchdog@{ADC\_runWatchdog}!ADC.h@{ADC.h}}
+\subsubsection{\texorpdfstring{ADC\_runWatchdog()}{ADC\_runWatchdog()}}
+{\footnotesize\ttfamily void A\+D\+C\+\_\+run\+Watchdog (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{us\+H\+Threshold,  }\item[{uint16\+\_\+t}]{us\+L\+Threshold }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_a_d_c_8h_a6b0b44e5622a638d712d41bfe3374697}\label{_a_d_c_8h_a6b0b44e5622a638d712d41bfe3374697}} 
+\index{ADC.h@{ADC.h}!ADC\_setWatchdogHandler@{ADC\_setWatchdogHandler}}
+\index{ADC\_setWatchdogHandler@{ADC\_setWatchdogHandler}!ADC.h@{ADC.h}}
+\subsubsection{\texorpdfstring{ADC\_setWatchdogHandler()}{ADC\_setWatchdogHandler()}}
+{\footnotesize\ttfamily void A\+D\+C\+\_\+set\+Watchdog\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_a_d_c_8h_a8ab986d0bafd8720a73c903ad0fa41e7}{A\+D\+C\+\_\+\+Colback}}}]{x\+Handler }\end{DoxyParamCaption})}
+

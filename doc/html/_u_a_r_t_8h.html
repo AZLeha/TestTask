@@ -1,0 +1,502 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AVAKS_TestTask: Файл Hardware/inc/UART.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AVAKS_TestTask
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_u_a_r_t_8h.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Макросы</a> &#124;
+<a href="#typedef-members">Определения типов</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл UART.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &quot;stm32f10x.h&quot;</code><br />
+</div>
+<p><a href="_u_a_r_t_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a3a713c057e9ed5237a98d728f59f3744"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_t_8h.html#a3a713c057e9ed5237a98d728f59f3744">UART_US_RX</a></td></tr>
+<tr class="separator:a3a713c057e9ed5237a98d728f59f3744"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21655afbdba10202a11e22e971a54e98"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_t_8h.html#a21655afbdba10202a11e22e971a54e98">UART_US_RX_IRQ</a></td></tr>
+<tr class="separator:a21655afbdba10202a11e22e971a54e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cb8fe996ef7105cb254615d3a885b94"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_t_8h.html#a4cb8fe996ef7105cb254615d3a885b94">UART_US_TX</a></td></tr>
+<tr class="separator:a4cb8fe996ef7105cb254615d3a885b94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae41746b0e3f303d8d841048253d49be5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_t_8h.html#ae41746b0e3f303d8d841048253d49be5">UART_US_DMA_TX</a></td></tr>
+<tr class="separator:ae41746b0e3f303d8d841048253d49be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab48644d928613e71029bb038dd14f476"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_t_8h.html#ab48644d928613e71029bb038dd14f476">UART_IRQ_Priority</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:ab48644d928613e71029bb038dd14f476"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9885a4de151b39475bb054324d0137ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_t_8h.html#a9885a4de151b39475bb054324d0137ce">UART_DMA_Priority</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:a9885a4de151b39475bb054324d0137ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:a8ae28a9c10c2664c201b13452484c8e5"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_t_8h.html#a8ae28a9c10c2664c201b13452484c8e5">UART_Colback</a>) (void)</td></tr>
+<tr class="separator:a8ae28a9c10c2664c201b13452484c8e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:ad5cbed2a2222bb84e8b5c1caaa50634e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_t_8h.html#ad5cbed2a2222bb84e8b5c1caaa50634e">UART_Init</a> (void)</td></tr>
+<tr class="separator:ad5cbed2a2222bb84e8b5c1caaa50634e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca0e3de239f94f0c690e5ab5ee30f7f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_t_8h.html#aca0e3de239f94f0c690e5ab5ee30f7f2">UART_TransmitString</a> (char *aData)</td></tr>
+<tr class="separator:aca0e3de239f94f0c690e5ab5ee30f7f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57b44adf32c09f77d69c8251453a9585"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_t_8h.html#a57b44adf32c09f77d69c8251453a9585">UART_TransmitByte</a> (uint8_t data)</td></tr>
+<tr class="separator:a57b44adf32c09f77d69c8251453a9585"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a250423a9d284659a90f44e4bc7494795"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_t_8h.html#a250423a9d284659a90f44e4bc7494795">__attribute__</a> ((always_inline)) inline uint8_t UART_ReadByte()</td></tr>
+<tr class="separator:a250423a9d284659a90f44e4bc7494795"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a600044d65bd9cfa8c13cc73be850395b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_t_8h.html#a600044d65bd9cfa8c13cc73be850395b">UART_TransmitDataViaDMA</a> (void *aData, uint16_t dataSize)</td></tr>
+<tr class="separator:a600044d65bd9cfa8c13cc73be850395b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a158e462e187bf3670e8650f742d284d6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_t_8h.html#a158e462e187bf3670e8650f742d284d6">UART_ReceiveDataViaDMA</a> (void *aData, uint16_t dataSize)</td></tr>
+<tr class="separator:a158e462e187bf3670e8650f742d284d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af55c6bdc8e70d864dc7544123265c5c2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_t_8h.html#af55c6bdc8e70d864dc7544123265c5c2">UART_StopReceiveViaDMA</a> ()</td></tr>
+<tr class="separator:af55c6bdc8e70d864dc7544123265c5c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcdc85307f43b471de773d072c0fb28d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_t_8h.html#adcdc85307f43b471de773d072c0fb28d">UART_setDMATxHandler</a> (<a class="el" href="_u_a_r_t_8h.html#a8ae28a9c10c2664c201b13452484c8e5">UART_Colback</a> xHandler)</td></tr>
+<tr class="separator:adcdc85307f43b471de773d072c0fb28d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f5b98b1806b9f0585ef8803a33b7744"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_t_8h.html#a1f5b98b1806b9f0585ef8803a33b7744">UART_setDMARxHandler</a> (<a class="el" href="_u_a_r_t_8h.html#a8ae28a9c10c2664c201b13452484c8e5">UART_Colback</a> xHandler)</td></tr>
+<tr class="separator:a1f5b98b1806b9f0585ef8803a33b7744"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a392c9f297fd6a829978b2fa727ecc229"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_t_8h.html#a392c9f297fd6a829978b2fa727ecc229">UART_setIRQTxHandler</a> (<a class="el" href="_u_a_r_t_8h.html#a8ae28a9c10c2664c201b13452484c8e5">UART_Colback</a> xHandler)</td></tr>
+<tr class="separator:a392c9f297fd6a829978b2fa727ecc229"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad77c6e98e1806078216148f00103f13b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_t_8h.html#ad77c6e98e1806078216148f00103f13b">UART_setIRQRxHandler</a> (<a class="el" href="_u_a_r_t_8h.html#a8ae28a9c10c2664c201b13452484c8e5">UART_Colback</a> xHandler)</td></tr>
+<tr class="separator:ad77c6e98e1806078216148f00103f13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b4a5f4868665be17bdb18636cd0016c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_u_a_r_t_8h.html#a9b4a5f4868665be17bdb18636cd0016c">UART_ErorHandler</a> ()</td></tr>
+<tr class="separator:a9b4a5f4868665be17bdb18636cd0016c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Макросы</h2>
+<a id="a9885a4de151b39475bb054324d0137ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9885a4de151b39475bb054324d0137ce">&#9670;&nbsp;</a></span>UART_DMA_Priority</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UART_DMA_Priority&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab48644d928613e71029bb038dd14f476"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab48644d928613e71029bb038dd14f476">&#9670;&nbsp;</a></span>UART_IRQ_Priority</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UART_IRQ_Priority&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae41746b0e3f303d8d841048253d49be5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae41746b0e3f303d8d841048253d49be5">&#9670;&nbsp;</a></span>UART_US_DMA_TX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UART_US_DMA_TX</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a713c057e9ed5237a98d728f59f3744"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a713c057e9ed5237a98d728f59f3744">&#9670;&nbsp;</a></span>UART_US_RX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UART_US_RX</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a21655afbdba10202a11e22e971a54e98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21655afbdba10202a11e22e971a54e98">&#9670;&nbsp;</a></span>UART_US_RX_IRQ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UART_US_RX_IRQ</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4cb8fe996ef7105cb254615d3a885b94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cb8fe996ef7105cb254615d3a885b94">&#9670;&nbsp;</a></span>UART_US_TX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UART_US_TX</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Типы</h2>
+<a id="a8ae28a9c10c2664c201b13452484c8e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ae28a9c10c2664c201b13452484c8e5">&#9670;&nbsp;</a></span>UART_Colback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* UART_Colback) (void)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Функции</h2>
+<a id="a250423a9d284659a90f44e4bc7494795"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a250423a9d284659a90f44e4bc7494795">&#9670;&nbsp;</a></span>__attribute__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__attribute__ </td>
+          <td>(</td>
+          <td class="paramtype">(always_inline)&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b4a5f4868665be17bdb18636cd0016c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b4a5f4868665be17bdb18636cd0016c">&#9670;&nbsp;</a></span>UART_ErorHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UART_ErorHandler </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5cbed2a2222bb84e8b5c1caaa50634e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5cbed2a2222bb84e8b5c1caaa50634e">&#9670;&nbsp;</a></span>UART_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UART_Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a158e462e187bf3670e8650f742d284d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a158e462e187bf3670e8650f742d284d6">&#9670;&nbsp;</a></span>UART_ReceiveDataViaDMA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UART_ReceiveDataViaDMA </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>aData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>dataSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f5b98b1806b9f0585ef8803a33b7744"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f5b98b1806b9f0585ef8803a33b7744">&#9670;&nbsp;</a></span>UART_setDMARxHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UART_setDMARxHandler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_u_a_r_t_8h.html#a8ae28a9c10c2664c201b13452484c8e5">UART_Colback</a>&#160;</td>
+          <td class="paramname"><em>xHandler</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adcdc85307f43b471de773d072c0fb28d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcdc85307f43b471de773d072c0fb28d">&#9670;&nbsp;</a></span>UART_setDMATxHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UART_setDMATxHandler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_u_a_r_t_8h.html#a8ae28a9c10c2664c201b13452484c8e5">UART_Colback</a>&#160;</td>
+          <td class="paramname"><em>xHandler</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad77c6e98e1806078216148f00103f13b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad77c6e98e1806078216148f00103f13b">&#9670;&nbsp;</a></span>UART_setIRQRxHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UART_setIRQRxHandler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_u_a_r_t_8h.html#a8ae28a9c10c2664c201b13452484c8e5">UART_Colback</a>&#160;</td>
+          <td class="paramname"><em>xHandler</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a392c9f297fd6a829978b2fa727ecc229"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a392c9f297fd6a829978b2fa727ecc229">&#9670;&nbsp;</a></span>UART_setIRQTxHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UART_setIRQTxHandler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_u_a_r_t_8h.html#a8ae28a9c10c2664c201b13452484c8e5">UART_Colback</a>&#160;</td>
+          <td class="paramname"><em>xHandler</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af55c6bdc8e70d864dc7544123265c5c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af55c6bdc8e70d864dc7544123265c5c2">&#9670;&nbsp;</a></span>UART_StopReceiveViaDMA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UART_StopReceiveViaDMA </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57b44adf32c09f77d69c8251453a9585"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57b44adf32c09f77d69c8251453a9585">&#9670;&nbsp;</a></span>UART_TransmitByte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UART_TransmitByte </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a600044d65bd9cfa8c13cc73be850395b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a600044d65bd9cfa8c13cc73be850395b">&#9670;&nbsp;</a></span>UART_TransmitDataViaDMA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool UART_TransmitDataViaDMA </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>aData</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>dataSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca0e3de239f94f0c690e5ab5ee30f7f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca0e3de239f94f0c690e5ab5ee30f7f2">&#9670;&nbsp;</a></span>UART_TransmitString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UART_TransmitString </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>aData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_6cc751a9e685a986d41d35de353de328.html">Hardware</a></li><li class="navelem"><a class="el" href="dir_19cc3a5218af25c14d75ffef9051bb33.html">inc</a></li><li class="navelem"><a class="el" href="_u_a_r_t_8h.html">UART.h</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
+  </ul>
+</div>
+</body>
+</html>

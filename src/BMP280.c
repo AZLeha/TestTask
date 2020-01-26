@@ -1,6 +1,14 @@
 #include "inc/BMP280.h"
 #include "I2C.h"
 
+#ifdef FREERTO_MODIFIED
+#include "FreeRTOS.h"
+#include "semphr.h"
+#include <stddef.h>
+SemaphoreHandle_t xMutexBMP280;
+#endif
+
+
 typedef enum
 {
 	BMP280_eDig_T1 = 0x88,
@@ -93,6 +101,11 @@ void BMP280_updateCalibrationTabel()
 
 void BMP280_init(void)
 {
+
+#ifdef FREERTO_MODIFIED
+	xMutexBMP280 = xSemaphoreCreateMutex();
+#endif
+
 	I2C_Init();
 
 	BMP280_updateCalibrationTabel();
@@ -108,9 +121,14 @@ double BMP280_getTemp(void)
 
 	int32_t adc_T=0;
 
-
+#ifdef FREERTO_MODIFIED
+	if( xSemaphoreTake(xMutexBMP280,1000) == pdTRUE)
+		I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eTemp,&adc_T, 3, eI2C_bigEndian);
+	else return 0;
+	xSemaphoreGive(xMutexBMP280);
+#else
 	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_eTemp,&adc_T, 3, eI2C_bigEndian);
-
+#endif
 	adc_T >>= 4;
 
 	double var1, var2, T;
@@ -125,17 +143,25 @@ double BMP280_getTemp(void)
 	return T;
 
 }
+
 double BMP280_getPress(void)
 {
 
 	int32_t adc_P=0;
 	BMP280_getTemp();
 
+
+
+#ifdef FREERTO_MODIFIED
+	if( xSemaphoreTake(xMutexBMP280,1000) == pdTRUE)
+		I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_ePressure,&adc_P, 3, eI2C_bigEndian);
+	else return 0;
+	xSemaphoreGive(xMutexBMP280);
+#else
 	I2C_ReadData(BMP280_I2C_ADDRESS,BMP280_ePressure,&adc_P, 3, eI2C_bigEndian);
+#endif
+
 	adc_P >>= 4;
-
-
-
 	double var1, var2, p;
 	var1 = ((double)t_fine/2.0) - 64000.0;
 	var2 = var1 * var1 * ((double)calibrationTabel.dig_P6) / 32768.0;

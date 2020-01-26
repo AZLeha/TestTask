@@ -1,0 +1,65 @@
+\hypertarget{_i2_c_8h}{}\section{Файл Hardware/inc/\+I2C.h}
+\label{_i2_c_8h}\index{Hardware/inc/I2C.h@{Hardware/inc/I2C.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\subsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_i2_c_8h_afe7122240bd4778fd24ebd669578cdcd}{e\+I2\+C\+\_\+\+Endianness}} \{ \mbox{\hyperlink{_i2_c_8h_afe7122240bd4778fd24ebd669578cdcda0f29837da056f55b5b7dafdaa3d473f1}{e\+I2\+C\+\_\+little\+Endian}} =0, 
+\mbox{\hyperlink{_i2_c_8h_afe7122240bd4778fd24ebd669578cdcdaea96b26d45dfa4d3d96424d4b90a7fd6}{e\+I2\+C\+\_\+big\+Endian}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_i2_c_8h_a84df9a5887b8b8230cfe85d18e53900e}{I2\+C\+\_\+\+Init}} (void)
+\item 
+void \mbox{\hyperlink{_i2_c_8h_a98ced6e282e969ab1694ea9ba3b946d6}{I2\+C\+\_\+\+Write\+Data}} (uint8\+\_\+t uc\+Device\+Address, uint8\+\_\+t uc\+Register\+Pointer, void $\ast$pv\+Output\+Data, uint8\+\_\+t uc\+Data\+Size, \mbox{\hyperlink{_i2_c_8h_afe7122240bd4778fd24ebd669578cdcd}{e\+I2\+C\+\_\+\+Endianness}} x\+Direction\+Data)
+\item 
+void \mbox{\hyperlink{_i2_c_8h_a148c8ea214f0a567e0ca1d5c70655b7b}{I2\+C\+\_\+\+Read\+Data}} (uint8\+\_\+t uc\+Device\+Address, uint8\+\_\+t uc\+Register\+Pointer, void $\ast$pv\+Input\+Data, uint8\+\_\+t uc\+Data\+Size, \mbox{\hyperlink{_i2_c_8h_afe7122240bd4778fd24ebd669578cdcd}{e\+I2\+C\+\_\+\+Endianness}} x\+Direction\+Data)
+\end{DoxyCompactItemize}
+
+
+\subsection{Перечисления}
+\mbox{\Hypertarget{_i2_c_8h_afe7122240bd4778fd24ebd669578cdcd}\label{_i2_c_8h_afe7122240bd4778fd24ebd669578cdcd}} 
+\index{I2C.h@{I2C.h}!eI2C\_Endianness@{eI2C\_Endianness}}
+\index{eI2C\_Endianness@{eI2C\_Endianness}!I2C.h@{I2C.h}}
+\subsubsection{\texorpdfstring{eI2C\_Endianness}{eI2C\_Endianness}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_i2_c_8h_afe7122240bd4778fd24ebd669578cdcd}{e\+I2\+C\+\_\+\+Endianness}}}
+
+\begin{DoxyRefDesc}{Необходимо сделать}
+\item[\mbox{\hyperlink{todo__todo000004}{Необходимо сделать}}]Подлежит оптимизации\+: (1. реализовать защиту от висяков.
+\begin{DoxyEnumerate}
+\item повешать на прерывания или ДМА
+\item кастомизировать под Free\+R\+T\+OS ) 
+\end{DoxyEnumerate}\end{DoxyRefDesc}
+\begin{DoxyEnumFields}{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eI2C\_littleEndian@{eI2C\_littleEndian}!I2C.h@{I2C.h}}\index{I2C.h@{I2C.h}!eI2C\_littleEndian@{eI2C\_littleEndian}}}\mbox{\Hypertarget{_i2_c_8h_afe7122240bd4778fd24ebd669578cdcda0f29837da056f55b5b7dafdaa3d473f1}\label{_i2_c_8h_afe7122240bd4778fd24ebd669578cdcda0f29837da056f55b5b7dafdaa3d473f1}} 
+e\+I2\+C\+\_\+little\+Endian&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{eI2C\_bigEndian@{eI2C\_bigEndian}!I2C.h@{I2C.h}}\index{I2C.h@{I2C.h}!eI2C\_bigEndian@{eI2C\_bigEndian}}}\mbox{\Hypertarget{_i2_c_8h_afe7122240bd4778fd24ebd669578cdcdaea96b26d45dfa4d3d96424d4b90a7fd6}\label{_i2_c_8h_afe7122240bd4778fd24ebd669578cdcdaea96b26d45dfa4d3d96424d4b90a7fd6}} 
+e\+I2\+C\+\_\+big\+Endian&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{_i2_c_8h_a84df9a5887b8b8230cfe85d18e53900e}\label{_i2_c_8h_a84df9a5887b8b8230cfe85d18e53900e}} 
+\index{I2C.h@{I2C.h}!I2C\_Init@{I2C\_Init}}
+\index{I2C\_Init@{I2C\_Init}!I2C.h@{I2C.h}}
+\subsubsection{\texorpdfstring{I2C\_Init()}{I2C\_Init()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_i2_c_8h_a148c8ea214f0a567e0ca1d5c70655b7b}\label{_i2_c_8h_a148c8ea214f0a567e0ca1d5c70655b7b}} 
+\index{I2C.h@{I2C.h}!I2C\_ReadData@{I2C\_ReadData}}
+\index{I2C\_ReadData@{I2C\_ReadData}!I2C.h@{I2C.h}}
+\subsubsection{\texorpdfstring{I2C\_ReadData()}{I2C\_ReadData()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Read\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{uc\+Device\+Address,  }\item[{uint8\+\_\+t}]{uc\+Register\+Pointer,  }\item[{void $\ast$}]{pv\+Input\+Data,  }\item[{uint8\+\_\+t}]{uc\+Data\+Size,  }\item[{\mbox{\hyperlink{_i2_c_8h_afe7122240bd4778fd24ebd669578cdcd}{e\+I2\+C\+\_\+\+Endianness}}}]{x\+Direction\+Data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_i2_c_8h_a98ced6e282e969ab1694ea9ba3b946d6}\label{_i2_c_8h_a98ced6e282e969ab1694ea9ba3b946d6}} 
+\index{I2C.h@{I2C.h}!I2C\_WriteData@{I2C\_WriteData}}
+\index{I2C\_WriteData@{I2C\_WriteData}!I2C.h@{I2C.h}}
+\subsubsection{\texorpdfstring{I2C\_WriteData()}{I2C\_WriteData()}}
+{\footnotesize\ttfamily void I2\+C\+\_\+\+Write\+Data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{uc\+Device\+Address,  }\item[{uint8\+\_\+t}]{uc\+Register\+Pointer,  }\item[{void $\ast$}]{pv\+Output\+Data,  }\item[{uint8\+\_\+t}]{uc\+Data\+Size,  }\item[{\mbox{\hyperlink{_i2_c_8h_afe7122240bd4778fd24ebd669578cdcd}{e\+I2\+C\+\_\+\+Endianness}}}]{x\+Direction\+Data }\end{DoxyParamCaption})}
+

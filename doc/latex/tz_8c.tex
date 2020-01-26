@@ -1,0 +1,179 @@
+\hypertarget{tz_8c}{}\section{Файл src/tz.c}
+\label{tz_8c}\index{src/tz.c@{src/tz.c}}
+{\ttfamily \#include \char`\"{}stm32f10x.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}inc/tz.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}task.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}terminal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}U\+A\+R\+T.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}B\+M\+P280.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ff.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fff.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+D\+C.\+h\char`\"{}}\newline
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{tz_8c_aaec3598f8f292a4300a24a653d867454}{system\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em Функция сброса, которая будет вызываться при событии сброса \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tz_8c_af59408f246d0a28c57b12f6f9dab8fa6}{T\+Z\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Инициализация всего необходимого \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{tz_8c_a9863a888be99d4d516a17a3caba795d9}{v\+Blink}} (void $\ast$par)
+\item 
+void \mbox{\hyperlink{tz_8c_a2a55b521a3be5ec0b43ba45ba5c669db}{v\+Logger}} (void $\ast$par)
+\begin{DoxyCompactList}\small\item\em Задача осуществляющая логирование \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{tz_8c_af8b2f750a1a211dcdd4955cca33fb02b}{faind\+Property}} (char $\ast$ptr)
+\item 
+bool \mbox{\hyperlink{tz_8c_ad49687c0d52ecabf027359d27a171e97}{log\+Comand}} (\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} this, void $\ast$ptr)
+\item 
+bool \mbox{\hyperlink{tz_8c_a46ee91a3869b10ce4fa372f6e233ebcd}{ls\+Comand}} (\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} this, void $\ast$ptr)
+\item 
+bool \mbox{\hyperlink{tz_8c_aa5ac613866691dd039c021edcc753e8f}{touchh\+Comand}} (\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} this, void $\ast$ptr)
+\item 
+bool \mbox{\hyperlink{tz_8c_a7df7db8311172e089d59687635524515}{mkdir\+Comand}} (\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} this, void $\ast$ptr)
+\item 
+bool \mbox{\hyperlink{tz_8c_ace28f59cc644c536f3c66bfe4f8f0f71}{cd\+Comand}} (\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} this, void $\ast$ptr)
+\item 
+bool \mbox{\hyperlink{tz_8c_a1bae2ab01ec130ef25e48174766f7593}{rm\+Comand}} (\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} this, void $\ast$ptr)
+\item 
+bool \mbox{\hyperlink{tz_8c_a1352f69cf18988f7e7e9f736e244242f}{pwd\+Comand}} (\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} this, void $\ast$ptr)
+\item 
+bool \mbox{\hyperlink{tz_8c_a9d7ba23f2480770f4de205b9690cf91d}{print\+Comand}} (\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} this, void $\ast$ptr)
+\item 
+bool \mbox{\hyperlink{tz_8c_ace26a392dd970eb3a0519f0e34a4557b}{help}} (\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} this, void $\ast$ptr)
+\item 
+bool \mbox{\hyperlink{tz_8c_a0470f1c6e71cb833f49b956ebc240424}{clear}} (\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} this, void $\ast$ptr)
+\item 
+bool \mbox{\hyperlink{tz_8c_a58ebc2bae17c1a90f337d9cb1737f847}{Comand\+\_\+bmp280}} (\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} this, void $\ast$ptr)
+\item 
+bool \mbox{\hyperlink{tz_8c_ad9367bbd75bcdd57d08536cccaa985a5}{exit\+Bmp}} (\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}} this, void $\ast$ptr)
+\item 
+void \mbox{\hyperlink{tz_8c_ab8e18022b38d42402fb08db3ddbf4e9c}{v\+Terminal}} (void $\ast$par)
+\begin{DoxyCompactList}\small\item\em командный интерфейс \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{tz_8c_ace28f59cc644c536f3c66bfe4f8f0f71}\label{tz_8c_ace28f59cc644c536f3c66bfe4f8f0f71}} 
+\index{tz.c@{tz.c}!cdComand@{cdComand}}
+\index{cdComand@{cdComand}!tz.c@{tz.c}}
+\subsubsection{\texorpdfstring{cdComand()}{cdComand()}}
+{\footnotesize\ttfamily bool cd\+Comand (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}}}]{this,  }\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tz_8c_a0470f1c6e71cb833f49b956ebc240424}\label{tz_8c_a0470f1c6e71cb833f49b956ebc240424}} 
+\index{tz.c@{tz.c}!clear@{clear}}
+\index{clear@{clear}!tz.c@{tz.c}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily bool clear (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}}}]{this,  }\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tz_8c_a58ebc2bae17c1a90f337d9cb1737f847}\label{tz_8c_a58ebc2bae17c1a90f337d9cb1737f847}} 
+\index{tz.c@{tz.c}!Comand\_bmp280@{Comand\_bmp280}}
+\index{Comand\_bmp280@{Comand\_bmp280}!tz.c@{tz.c}}
+\subsubsection{\texorpdfstring{Comand\_bmp280()}{Comand\_bmp280()}}
+{\footnotesize\ttfamily bool Comand\+\_\+bmp280 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}}}]{this,  }\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tz_8c_ad9367bbd75bcdd57d08536cccaa985a5}\label{tz_8c_ad9367bbd75bcdd57d08536cccaa985a5}} 
+\index{tz.c@{tz.c}!exitBmp@{exitBmp}}
+\index{exitBmp@{exitBmp}!tz.c@{tz.c}}
+\subsubsection{\texorpdfstring{exitBmp()}{exitBmp()}}
+{\footnotesize\ttfamily bool exit\+Bmp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}}}]{this,  }\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tz_8c_af8b2f750a1a211dcdd4955cca33fb02b}\label{tz_8c_af8b2f750a1a211dcdd4955cca33fb02b}} 
+\index{tz.c@{tz.c}!faindProperty@{faindProperty}}
+\index{faindProperty@{faindProperty}!tz.c@{tz.c}}
+\subsubsection{\texorpdfstring{faindProperty()}{faindProperty()}}
+{\footnotesize\ttfamily char$\ast$ faind\+Property (\begin{DoxyParamCaption}\item[{char $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tz_8c_ace26a392dd970eb3a0519f0e34a4557b}\label{tz_8c_ace26a392dd970eb3a0519f0e34a4557b}} 
+\index{tz.c@{tz.c}!help@{help}}
+\index{help@{help}!tz.c@{tz.c}}
+\subsubsection{\texorpdfstring{help()}{help()}}
+{\footnotesize\ttfamily bool help (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}}}]{this,  }\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tz_8c_ad49687c0d52ecabf027359d27a171e97}\label{tz_8c_ad49687c0d52ecabf027359d27a171e97}} 
+\index{tz.c@{tz.c}!logComand@{logComand}}
+\index{logComand@{logComand}!tz.c@{tz.c}}
+\subsubsection{\texorpdfstring{logComand()}{logComand()}}
+{\footnotesize\ttfamily bool log\+Comand (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}}}]{this,  }\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tz_8c_a46ee91a3869b10ce4fa372f6e233ebcd}\label{tz_8c_a46ee91a3869b10ce4fa372f6e233ebcd}} 
+\index{tz.c@{tz.c}!lsComand@{lsComand}}
+\index{lsComand@{lsComand}!tz.c@{tz.c}}
+\subsubsection{\texorpdfstring{lsComand()}{lsComand()}}
+{\footnotesize\ttfamily bool ls\+Comand (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}}}]{this,  }\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tz_8c_a7df7db8311172e089d59687635524515}\label{tz_8c_a7df7db8311172e089d59687635524515}} 
+\index{tz.c@{tz.c}!mkdirComand@{mkdirComand}}
+\index{mkdirComand@{mkdirComand}!tz.c@{tz.c}}
+\subsubsection{\texorpdfstring{mkdirComand()}{mkdirComand()}}
+{\footnotesize\ttfamily bool mkdir\+Comand (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}}}]{this,  }\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tz_8c_a9d7ba23f2480770f4de205b9690cf91d}\label{tz_8c_a9d7ba23f2480770f4de205b9690cf91d}} 
+\index{tz.c@{tz.c}!printComand@{printComand}}
+\index{printComand@{printComand}!tz.c@{tz.c}}
+\subsubsection{\texorpdfstring{printComand()}{printComand()}}
+{\footnotesize\ttfamily bool print\+Comand (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}}}]{this,  }\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tz_8c_a1352f69cf18988f7e7e9f736e244242f}\label{tz_8c_a1352f69cf18988f7e7e9f736e244242f}} 
+\index{tz.c@{tz.c}!pwdComand@{pwdComand}}
+\index{pwdComand@{pwdComand}!tz.c@{tz.c}}
+\subsubsection{\texorpdfstring{pwdComand()}{pwdComand()}}
+{\footnotesize\ttfamily bool pwd\+Comand (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}}}]{this,  }\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tz_8c_a1bae2ab01ec130ef25e48174766f7593}\label{tz_8c_a1bae2ab01ec130ef25e48174766f7593}} 
+\index{tz.c@{tz.c}!rmComand@{rmComand}}
+\index{rmComand@{rmComand}!tz.c@{tz.c}}
+\subsubsection{\texorpdfstring{rmComand()}{rmComand()}}
+{\footnotesize\ttfamily bool rm\+Comand (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}}}]{this,  }\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tz_8c_aaec3598f8f292a4300a24a653d867454}\label{tz_8c_aaec3598f8f292a4300a24a653d867454}} 
+\index{tz.c@{tz.c}!systemReset@{systemReset}}
+\index{systemReset@{systemReset}!tz.c@{tz.c}}
+\subsubsection{\texorpdfstring{systemReset()}{systemReset()}}
+{\footnotesize\ttfamily void system\+Reset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Функция сброса, которая будет вызываться при событии сброса 
+
+\mbox{\Hypertarget{tz_8c_aa5ac613866691dd039c021edcc753e8f}\label{tz_8c_aa5ac613866691dd039c021edcc753e8f}} 
+\index{tz.c@{tz.c}!touchhComand@{touchhComand}}
+\index{touchhComand@{touchhComand}!tz.c@{tz.c}}
+\subsubsection{\texorpdfstring{touchhComand()}{touchhComand()}}
+{\footnotesize\ttfamily bool touchh\+Comand (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__terminal_gadcd4acb437149111c071e40bccbac72a}{Terminal\+\_\+state\+Handle}}}]{this,  }\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tz_8c_af59408f246d0a28c57b12f6f9dab8fa6}\label{tz_8c_af59408f246d0a28c57b12f6f9dab8fa6}} 
+\index{tz.c@{tz.c}!TZ\_init@{TZ\_init}}
+\index{TZ\_init@{TZ\_init}!tz.c@{tz.c}}
+\subsubsection{\texorpdfstring{TZ\_init()}{TZ\_init()}}
+{\footnotesize\ttfamily void T\+Z\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Инициализация всего необходимого 
+
+\mbox{\Hypertarget{tz_8c_a9863a888be99d4d516a17a3caba795d9}\label{tz_8c_a9863a888be99d4d516a17a3caba795d9}} 
+\index{tz.c@{tz.c}!vBlink@{vBlink}}
+\index{vBlink@{vBlink}!tz.c@{tz.c}}
+\subsubsection{\texorpdfstring{vBlink()}{vBlink()}}
+{\footnotesize\ttfamily void v\+Blink (\begin{DoxyParamCaption}\item[{void $\ast$}]{par }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{tz_8c_a2a55b521a3be5ec0b43ba45ba5c669db}\label{tz_8c_a2a55b521a3be5ec0b43ba45ba5c669db}} 
+\index{tz.c@{tz.c}!vLogger@{vLogger}}
+\index{vLogger@{vLogger}!tz.c@{tz.c}}
+\subsubsection{\texorpdfstring{vLogger()}{vLogger()}}
+{\footnotesize\ttfamily void v\+Logger (\begin{DoxyParamCaption}\item[{void $\ast$}]{par }\end{DoxyParamCaption})}
+
+
+
+Задача осуществляющая логирование 
+
+\mbox{\Hypertarget{tz_8c_ab8e18022b38d42402fb08db3ddbf4e9c}\label{tz_8c_ab8e18022b38d42402fb08db3ddbf4e9c}} 
+\index{tz.c@{tz.c}!vTerminal@{vTerminal}}
+\index{vTerminal@{vTerminal}!tz.c@{tz.c}}
+\subsubsection{\texorpdfstring{vTerminal()}{vTerminal()}}
+{\footnotesize\ttfamily void v\+Terminal (\begin{DoxyParamCaption}\item[{void $\ast$}]{par }\end{DoxyParamCaption})}
+
+
+
+командный интерфейс 
+

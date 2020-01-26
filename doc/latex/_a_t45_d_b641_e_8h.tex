@@ -1,0 +1,103 @@
+\hypertarget{_a_t45_d_b641_e_8h}{}\section{Файл src/inc/\+A\+T45\+D\+B641E.h}
+\label{_a_t45_d_b641_e_8h}\index{src/inc/AT45DB641E.h@{src/inc/AT45DB641E.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\subsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_a_t45_d_b641_e_8h_aa35bad1e92008da628f27b2f6bb270aa}{S\+E\+C\+T\+O\+R\+\_\+\+S\+I\+ZE}}~\mbox{\hyperlink{_a_t45_d_b641_e_8h_a6ff075702fefcd1a168df52cb227899ba18c7f385a5ed3a53560493d2e352500b}{A\+T45\+D\+B641\+E\+\_\+e\+Binarysize}}
+\item 
+\#define \mbox{\hyperlink{_a_t45_d_b641_e_8h_ab4669ce3240dc839b04fd805358ee0fa}{U\+A\+R\+T\+\_\+\+D\+E\+B\+UG}}
+\end{DoxyCompactItemize}
+\subsection*{Перечисления}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_a_t45_d_b641_e_8h_a6ff075702fefcd1a168df52cb227899b}{A\+T45\+D\+B641\+E\+\_\+e\+Page\+Size}} \{ \mbox{\hyperlink{_a_t45_d_b641_e_8h_a6ff075702fefcd1a168df52cb227899ba18c7f385a5ed3a53560493d2e352500b}{A\+T45\+D\+B641\+E\+\_\+e\+Binarysize}} = 256, 
+\mbox{\hyperlink{_a_t45_d_b641_e_8h_a6ff075702fefcd1a168df52cb227899bac8d195b5306ff64c6fe1480946724c5e}{A\+T45\+D\+B641\+E\+\_\+e\+Default\+Size}} = 264
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_a_t45_d_b641_e_8h_aab99dc3f63d5aa16d4c2f87a5b73d9e3}{A\+T45\+D\+B641\+E\+\_\+configure\+Page\+Size}} (\mbox{\hyperlink{_a_t45_d_b641_e_8h_a6ff075702fefcd1a168df52cb227899b}{A\+T45\+D\+B641\+E\+\_\+e\+Page\+Size}} x\+Page\+Size)
+\item 
+void \mbox{\hyperlink{_a_t45_d_b641_e_8h_a91e1c0cb3868eb4a0b70bc3c7951a37e}{A\+T45\+D\+B641\+E\+\_\+init}} (void)
+\item 
+void \mbox{\hyperlink{_a_t45_d_b641_e_8h_abcec64b140665374938a75a78178b58b}{A\+T45\+D\+B641\+E\+\_\+read\+Sector}} (void $\ast$pv\+Input\+Data, uint16\+\_\+t us\+Sector\+Number)
+\item 
+void \mbox{\hyperlink{_a_t45_d_b641_e_8h_ab64a405a2c1a9651819eb126b353b110}{A\+T45\+D\+B641\+E\+\_\+write\+Sector}} (void $\ast$pv\+Output\+Data, uint16\+\_\+t us\+Sector\+Number)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{_a_t45_d_b641_e_8h_a1f58ba2ffb711cd8aaef5e6ae58be0ef}{A\+T45\+D\+B641\+E\+\_\+status}} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Макросы}
+\mbox{\Hypertarget{_a_t45_d_b641_e_8h_aa35bad1e92008da628f27b2f6bb270aa}\label{_a_t45_d_b641_e_8h_aa35bad1e92008da628f27b2f6bb270aa}} 
+\index{AT45DB641E.h@{AT45DB641E.h}!SECTOR\_SIZE@{SECTOR\_SIZE}}
+\index{SECTOR\_SIZE@{SECTOR\_SIZE}!AT45DB641E.h@{AT45DB641E.h}}
+\subsubsection{\texorpdfstring{SECTOR\_SIZE}{SECTOR\_SIZE}}
+{\footnotesize\ttfamily \#define S\+E\+C\+T\+O\+R\+\_\+\+S\+I\+ZE~\mbox{\hyperlink{_a_t45_d_b641_e_8h_a6ff075702fefcd1a168df52cb227899ba18c7f385a5ed3a53560493d2e352500b}{A\+T45\+D\+B641\+E\+\_\+e\+Binarysize}}}
+
+\mbox{\Hypertarget{_a_t45_d_b641_e_8h_ab4669ce3240dc839b04fd805358ee0fa}\label{_a_t45_d_b641_e_8h_ab4669ce3240dc839b04fd805358ee0fa}} 
+\index{AT45DB641E.h@{AT45DB641E.h}!UART\_DEBUG@{UART\_DEBUG}}
+\index{UART\_DEBUG@{UART\_DEBUG}!AT45DB641E.h@{AT45DB641E.h}}
+\subsubsection{\texorpdfstring{UART\_DEBUG}{UART\_DEBUG}}
+{\footnotesize\ttfamily \#define U\+A\+R\+T\+\_\+\+D\+E\+B\+UG}
+
+
+
+\subsection{Перечисления}
+\mbox{\Hypertarget{_a_t45_d_b641_e_8h_a6ff075702fefcd1a168df52cb227899b}\label{_a_t45_d_b641_e_8h_a6ff075702fefcd1a168df52cb227899b}} 
+\index{AT45DB641E.h@{AT45DB641E.h}!AT45DB641E\_ePageSize@{AT45DB641E\_ePageSize}}
+\index{AT45DB641E\_ePageSize@{AT45DB641E\_ePageSize}!AT45DB641E.h@{AT45DB641E.h}}
+\subsubsection{\texorpdfstring{AT45DB641E\_ePageSize}{AT45DB641E\_ePageSize}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_a_t45_d_b641_e_8h_a6ff075702fefcd1a168df52cb227899b}{A\+T45\+D\+B641\+E\+\_\+e\+Page\+Size}}}
+
+\begin{DoxyEnumFields}{Элементы перечислений}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AT45DB641E\_eBinarysize@{AT45DB641E\_eBinarysize}!AT45DB641E.h@{AT45DB641E.h}}\index{AT45DB641E.h@{AT45DB641E.h}!AT45DB641E\_eBinarysize@{AT45DB641E\_eBinarysize}}}\mbox{\Hypertarget{_a_t45_d_b641_e_8h_a6ff075702fefcd1a168df52cb227899ba18c7f385a5ed3a53560493d2e352500b}\label{_a_t45_d_b641_e_8h_a6ff075702fefcd1a168df52cb227899ba18c7f385a5ed3a53560493d2e352500b}} 
+A\+T45\+D\+B641\+E\+\_\+e\+Binarysize&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AT45DB641E\_eDefaultSize@{AT45DB641E\_eDefaultSize}!AT45DB641E.h@{AT45DB641E.h}}\index{AT45DB641E.h@{AT45DB641E.h}!AT45DB641E\_eDefaultSize@{AT45DB641E\_eDefaultSize}}}\mbox{\Hypertarget{_a_t45_d_b641_e_8h_a6ff075702fefcd1a168df52cb227899bac8d195b5306ff64c6fe1480946724c5e}\label{_a_t45_d_b641_e_8h_a6ff075702fefcd1a168df52cb227899bac8d195b5306ff64c6fe1480946724c5e}} 
+A\+T45\+D\+B641\+E\+\_\+e\+Default\+Size&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{_a_t45_d_b641_e_8h_aab99dc3f63d5aa16d4c2f87a5b73d9e3}\label{_a_t45_d_b641_e_8h_aab99dc3f63d5aa16d4c2f87a5b73d9e3}} 
+\index{AT45DB641E.h@{AT45DB641E.h}!AT45DB641E\_configurePageSize@{AT45DB641E\_configurePageSize}}
+\index{AT45DB641E\_configurePageSize@{AT45DB641E\_configurePageSize}!AT45DB641E.h@{AT45DB641E.h}}
+\subsubsection{\texorpdfstring{AT45DB641E\_configurePageSize()}{AT45DB641E\_configurePageSize()}}
+{\footnotesize\ttfamily void A\+T45\+D\+B641\+E\+\_\+configure\+Page\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_a_t45_d_b641_e_8h_a6ff075702fefcd1a168df52cb227899b}{A\+T45\+D\+B641\+E\+\_\+e\+Page\+Size}}}]{x\+Page\+Size }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyVerb}\warning The nonvolatile register has a limit of 10,000 erase/program cycles; therefore, care should be taken to not switch between the size options more than 10,000 times
+\end{DoxyVerb}
+ 
+\end{DoxyItemize}\mbox{\Hypertarget{_a_t45_d_b641_e_8h_a91e1c0cb3868eb4a0b70bc3c7951a37e}\label{_a_t45_d_b641_e_8h_a91e1c0cb3868eb4a0b70bc3c7951a37e}} 
+\index{AT45DB641E.h@{AT45DB641E.h}!AT45DB641E\_init@{AT45DB641E\_init}}
+\index{AT45DB641E\_init@{AT45DB641E\_init}!AT45DB641E.h@{AT45DB641E.h}}
+\subsubsection{\texorpdfstring{AT45DB641E\_init()}{AT45DB641E\_init()}}
+{\footnotesize\ttfamily void A\+T45\+D\+B641\+E\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_a_t45_d_b641_e_8h_abcec64b140665374938a75a78178b58b}\label{_a_t45_d_b641_e_8h_abcec64b140665374938a75a78178b58b}} 
+\index{AT45DB641E.h@{AT45DB641E.h}!AT45DB641E\_readSector@{AT45DB641E\_readSector}}
+\index{AT45DB641E\_readSector@{AT45DB641E\_readSector}!AT45DB641E.h@{AT45DB641E.h}}
+\subsubsection{\texorpdfstring{AT45DB641E\_readSector()}{AT45DB641E\_readSector()}}
+{\footnotesize\ttfamily void A\+T45\+D\+B641\+E\+\_\+read\+Sector (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Input\+Data,  }\item[{uint16\+\_\+t}]{us\+Sector\+Number }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_a_t45_d_b641_e_8h_a1f58ba2ffb711cd8aaef5e6ae58be0ef}\label{_a_t45_d_b641_e_8h_a1f58ba2ffb711cd8aaef5e6ae58be0ef}} 
+\index{AT45DB641E.h@{AT45DB641E.h}!AT45DB641E\_status@{AT45DB641E\_status}}
+\index{AT45DB641E\_status@{AT45DB641E\_status}!AT45DB641E.h@{AT45DB641E.h}}
+\subsubsection{\texorpdfstring{AT45DB641E\_status()}{AT45DB641E\_status()}}
+{\footnotesize\ttfamily uint16\+\_\+t A\+T45\+D\+B641\+E\+\_\+status (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_a_t45_d_b641_e_8h_ab64a405a2c1a9651819eb126b353b110}\label{_a_t45_d_b641_e_8h_ab64a405a2c1a9651819eb126b353b110}} 
+\index{AT45DB641E.h@{AT45DB641E.h}!AT45DB641E\_writeSector@{AT45DB641E\_writeSector}}
+\index{AT45DB641E\_writeSector@{AT45DB641E\_writeSector}!AT45DB641E.h@{AT45DB641E.h}}
+\subsubsection{\texorpdfstring{AT45DB641E\_writeSector()}{AT45DB641E\_writeSector()}}
+{\footnotesize\ttfamily void A\+T45\+D\+B641\+E\+\_\+write\+Sector (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Output\+Data,  }\item[{uint16\+\_\+t}]{us\+Sector\+Number }\end{DoxyParamCaption})}
+

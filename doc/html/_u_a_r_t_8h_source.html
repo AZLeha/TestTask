@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AVAKS_TestTask: Исходный файл Hardware/inc/UART.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script><script type="text/javascript" async="async" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">AVAKS_TestTask
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_u_a_r_t_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">UART.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_u_a_r_t_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef UART_H_</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define UART_H_</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;stm32f10x.h&quot;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//============================================Configure=========================================</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//______________________________________________________________________________________________</span></div><div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="_u_a_r_t_8h.html#a3a713c057e9ed5237a98d728f59f3744">   14</a></span>&#160;<span class="preprocessor">#define UART_US_RX</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#ifdef  UART_US_RX</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">//#define UART_US_DMA_RX</span></div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="_u_a_r_t_8h.html#a21655afbdba10202a11e22e971a54e98">   17</a></span>&#160;<span class="preprocessor">    #define UART_US_RX_IRQ</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="_u_a_r_t_8h.html#a4cb8fe996ef7105cb254615d3a885b94">   21</a></span>&#160;<span class="preprocessor">#define UART_US_TX</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#ifdef  UART_US_TX</span></div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="_u_a_r_t_8h.html#ae41746b0e3f303d8d841048253d49be5">   23</a></span>&#160;<span class="preprocessor">    #define UART_US_DMA_TX</span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">//#define UART_US_TX_IRQ</span></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#if defined(UART_US_TX_IRQ) || defined(UART_US_RX_IRQ)</span></div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="_u_a_r_t_8h.html#ab48644d928613e71029bb038dd14f476">   29</a></span>&#160;<span class="preprocessor">    #define UART_IRQ_Priority 3</span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#if defined(UART_US_DMA_TX) || defined(UART_US_DMA_RX)</span></div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="_u_a_r_t_8h.html#a9885a4de151b39475bb054324d0137ce">   33</a></span>&#160;<span class="preprocessor">    #define UART_DMA_Priority 3</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">//______________________________________________________________________________________________</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div><div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="_u_a_r_t_8h.html#a8ae28a9c10c2664c201b13452484c8e5">   46</a></span>&#160;<span class="keyword">typedef</span> void (*<a class="code" href="_u_a_r_t_8h.html#a8ae28a9c10c2664c201b13452484c8e5">UART_Colback</a>)(void);</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_u_a_r_t_8h.html#ad5cbed2a2222bb84e8b5c1caaa50634e">UART_Init</a>(<span class="keywordtype">void</span>);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_u_a_r_t_8h.html#aca0e3de239f94f0c690e5ab5ee30f7f2">UART_TransmitString</a>(<span class="keywordtype">char</span>* aData);</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_u_a_r_t_8h.html#a57b44adf32c09f77d69c8251453a9585">UART_TransmitByte</a>(uint8_t data);</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div><div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="_u_a_r_t_8h.html#a250423a9d284659a90f44e4bc7494795">   52</a></span>&#160;<a class="code" href="_u_a_r_t_8h.html#a250423a9d284659a90f44e4bc7494795">__attribute__</a>((always_inline)) <span class="keyword">inline</span> uint8_t UART_ReadByte()</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> (uint8_t)USART1-&gt;DR;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="_u_a_r_t_8h.html#a600044d65bd9cfa8c13cc73be850395b">UART_TransmitDataViaDMA</a>(<span class="keywordtype">void</span> * aData, uint16_t dataSize);</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="_u_a_r_t_8h.html#a158e462e187bf3670e8650f742d284d6">UART_ReceiveDataViaDMA</a>(<span class="keywordtype">void</span> * aData, uint16_t dataSize);</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="_u_a_r_t_8h.html#af55c6bdc8e70d864dc7544123265c5c2">UART_StopReceiveViaDMA</a>();</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_u_a_r_t_8h.html#adcdc85307f43b471de773d072c0fb28d">UART_setDMATxHandler</a>(<a class="code" href="_u_a_r_t_8h.html#a8ae28a9c10c2664c201b13452484c8e5">UART_Colback</a> xHandler);</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_u_a_r_t_8h.html#a1f5b98b1806b9f0585ef8803a33b7744">UART_setDMARxHandler</a>(<a class="code" href="_u_a_r_t_8h.html#a8ae28a9c10c2664c201b13452484c8e5">UART_Colback</a> xHandler);</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_u_a_r_t_8h.html#a392c9f297fd6a829978b2fa727ecc229">UART_setIRQTxHandler</a>(<a class="code" href="_u_a_r_t_8h.html#a8ae28a9c10c2664c201b13452484c8e5">UART_Colback</a> xHandler);</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_u_a_r_t_8h.html#ad77c6e98e1806078216148f00103f13b">UART_setIRQRxHandler</a>(<a class="code" href="_u_a_r_t_8h.html#a8ae28a9c10c2664c201b13452484c8e5">UART_Colback</a> xHandler);</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">// \todo Запилить обработчик ошибок</span></div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">void</span> <a class="code" href="_u_a_r_t_8h.html#a9b4a5f4868665be17bdb18636cd0016c">UART_ErorHandler</a>();</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* UART_H_ */</span><span class="preprocessor"></span></div><div class="ttc" id="a_u_a_r_t_8h_html_a57b44adf32c09f77d69c8251453a9585"><div class="ttname"><a href="_u_a_r_t_8h.html#a57b44adf32c09f77d69c8251453a9585">UART_TransmitByte</a></div><div class="ttdeci">void UART_TransmitByte(uint8_t data)</div><div class="ttdef"><b>Definition:</b> UART.c:141</div></div>
+<div class="ttc" id="a_u_a_r_t_8h_html_a158e462e187bf3670e8650f742d284d6"><div class="ttname"><a href="_u_a_r_t_8h.html#a158e462e187bf3670e8650f742d284d6">UART_ReceiveDataViaDMA</a></div><div class="ttdeci">bool UART_ReceiveDataViaDMA(void *aData, uint16_t dataSize)</div></div>
+<div class="ttc" id="a_u_a_r_t_8h_html_aca0e3de239f94f0c690e5ab5ee30f7f2"><div class="ttname"><a href="_u_a_r_t_8h.html#aca0e3de239f94f0c690e5ab5ee30f7f2">UART_TransmitString</a></div><div class="ttdeci">void UART_TransmitString(char *aData)</div><div class="ttdef"><b>Definition:</b> UART.c:129</div></div>
+<div class="ttc" id="a_u_a_r_t_8h_html_af55c6bdc8e70d864dc7544123265c5c2"><div class="ttname"><a href="_u_a_r_t_8h.html#af55c6bdc8e70d864dc7544123265c5c2">UART_StopReceiveViaDMA</a></div><div class="ttdeci">bool UART_StopReceiveViaDMA()</div></div>
+<div class="ttc" id="a_u_a_r_t_8h_html_a8ae28a9c10c2664c201b13452484c8e5"><div class="ttname"><a href="_u_a_r_t_8h.html#a8ae28a9c10c2664c201b13452484c8e5">UART_Colback</a></div><div class="ttdeci">void(* UART_Colback)(void)</div><div class="ttdef"><b>Definition:</b> UART.h:46</div></div>
+<div class="ttc" id="a_u_a_r_t_8h_html_a1f5b98b1806b9f0585ef8803a33b7744"><div class="ttname"><a href="_u_a_r_t_8h.html#a1f5b98b1806b9f0585ef8803a33b7744">UART_setDMARxHandler</a></div><div class="ttdeci">void UART_setDMARxHandler(UART_Colback xHandler)</div></div>
+<div class="ttc" id="a_u_a_r_t_8h_html_a392c9f297fd6a829978b2fa727ecc229"><div class="ttname"><a href="_u_a_r_t_8h.html#a392c9f297fd6a829978b2fa727ecc229">UART_setIRQTxHandler</a></div><div class="ttdeci">void UART_setIRQTxHandler(UART_Colback xHandler)</div></div>
+<div class="ttc" id="a_u_a_r_t_8h_html_ad5cbed2a2222bb84e8b5c1caaa50634e"><div class="ttname"><a href="_u_a_r_t_8h.html#ad5cbed2a2222bb84e8b5c1caaa50634e">UART_Init</a></div><div class="ttdeci">void UART_Init(void)</div></div>
+<div class="ttc" id="a_u_a_r_t_8h_html_adcdc85307f43b471de773d072c0fb28d"><div class="ttname"><a href="_u_a_r_t_8h.html#adcdc85307f43b471de773d072c0fb28d">UART_setDMATxHandler</a></div><div class="ttdeci">void UART_setDMATxHandler(UART_Colback xHandler)</div><div class="ttdef"><b>Definition:</b> UART.c:239</div></div>
+<div class="ttc" id="a_u_a_r_t_8h_html_a250423a9d284659a90f44e4bc7494795"><div class="ttname"><a href="_u_a_r_t_8h.html#a250423a9d284659a90f44e4bc7494795">__attribute__</a></div><div class="ttdeci">__attribute__((always_inline)) inline uint8_t UART_ReadByte()</div><div class="ttdef"><b>Definition:</b> UART.h:52</div></div>
+<div class="ttc" id="a_u_a_r_t_8h_html_a9b4a5f4868665be17bdb18636cd0016c"><div class="ttname"><a href="_u_a_r_t_8h.html#a9b4a5f4868665be17bdb18636cd0016c">UART_ErorHandler</a></div><div class="ttdeci">void UART_ErorHandler()</div></div>
+<div class="ttc" id="a_u_a_r_t_8h_html_a600044d65bd9cfa8c13cc73be850395b"><div class="ttname"><a href="_u_a_r_t_8h.html#a600044d65bd9cfa8c13cc73be850395b">UART_TransmitDataViaDMA</a></div><div class="ttdeci">bool UART_TransmitDataViaDMA(void *aData, uint16_t dataSize)</div><div class="ttdef"><b>Definition:</b> UART.c:245</div></div>
+<div class="ttc" id="a_u_a_r_t_8h_html_ad77c6e98e1806078216148f00103f13b"><div class="ttname"><a href="_u_a_r_t_8h.html#ad77c6e98e1806078216148f00103f13b">UART_setIRQRxHandler</a></div><div class="ttdeci">void UART_setIRQRxHandler(UART_Colback xHandler)</div><div class="ttdef"><b>Definition:</b> UART.c:179</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_6cc751a9e685a986d41d35de353de328.html">Hardware</a></li><li class="navelem"><a class="el" href="dir_19cc3a5218af25c14d75ffef9051bb33.html">inc</a></li><li class="navelem"><a class="el" href="_u_a_r_t_8h.html">UART.h</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
+  </ul>
+</div>
+</body>
+</html>

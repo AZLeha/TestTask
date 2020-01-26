@@ -1,0 +1,150 @@
+\hypertarget{_a_t45_d_b641_e_8c}{}\section{Файл src/\+A\+T45\+D\+B641E.c}
+\label{_a_t45_d_b641_e_8c}\index{src/AT45DB641E.c@{src/AT45DB641E.c}}
+{\ttfamily \#include \char`\"{}stm32f10x.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}inc/\+A\+T45\+D\+B641\+E.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}S\+P\+I.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}U\+A\+R\+T.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\subsection*{Структуры данных}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{union_packet_heder}{Packet\+Heder}}
+\end{DoxyCompactItemize}
+\subsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_a_t45_d_b641_e_8c_afc0658298e8fb677719ead6711bf2378}{A\+T45\+D\+B641\+E\+\_\+\+R\+E\+ST}}(is\+Rest)~(G\+P\+I\+OA-\/$>$B\+S\+RR = is\+Rest ? G\+P\+I\+O\+\_\+\+B\+S\+R\+R\+\_\+\+B\+R2 \+: G\+P\+I\+O\+\_\+\+B\+S\+R\+R\+\_\+\+B\+S2)
+\item 
+\#define \mbox{\hyperlink{_a_t45_d_b641_e_8c_ad4f9c3264c5c9204cf53f73fd90dd414}{A\+T45\+D\+B641\+E\+\_\+\+CS}}(is\+CS)~(G\+P\+I\+OA-\/$>$B\+S\+RR = is\+CS ? G\+P\+I\+O\+\_\+\+B\+S\+R\+R\+\_\+\+B\+R4 \+: G\+P\+I\+O\+\_\+\+B\+S\+R\+R\+\_\+\+B\+S4)
+\item 
+\#define \mbox{\hyperlink{_a_t45_d_b641_e_8c_a9e31a5414e115354a7cfd73cfde16167}{A\+T45\+D\+B641\+E\+\_\+\+WP}}(is\+WP)~(G\+P\+I\+OA-\/$>$B\+S\+RR = is\+WP ? G\+P\+I\+O\+\_\+\+B\+S\+R\+R\+\_\+\+B\+R3 \+: G\+P\+I\+O\+\_\+\+B\+S\+R\+R\+\_\+\+B\+S3)
+\item 
+\#define \mbox{\hyperlink{_a_t45_d_b641_e_8c_a567978a4bfe0fda06e57b2a5464c4e86}{M\+M\+PR}}~0x\+D2
+\item 
+\#define \mbox{\hyperlink{_a_t45_d_b641_e_8c_acdc539917dcad6ed9e096b68f7f08590}{C\+A\+R\+HF}}~0x0B
+\item 
+\#define \mbox{\hyperlink{_a_t45_d_b641_e_8c_aee3371b360cf972ee4bf34412c3ff3c8}{C\+A\+R\+H\+F\+\_\+M}}~0x1B
+\item 
+\#define \mbox{\hyperlink{_a_t45_d_b641_e_8c_af3b0423d20dd4b689462a1446135df1c}{M\+M\+P\+P\+T\+B1}}~0x82
+\item 
+\#define \mbox{\hyperlink{_a_t45_d_b641_e_8c_aea1cbfa2353f0533d1a5eed165b8b0ce}{M\+M\+P\+P\+T\+B2}}~0x85
+\item 
+\#define \mbox{\hyperlink{_a_t45_d_b641_e_8c_af332f65aca07c44deeda884c8f6c353c}{CE}}~0x9\+A8094\+C7
+\item 
+\#define \mbox{\hyperlink{_a_t45_d_b641_e_8c_aa83ca513aa104505303150430d954fe1}{S\+RR}}~0x\+D7
+\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_a_t45_d_b641_e_8c_aab99dc3f63d5aa16d4c2f87a5b73d9e3}{A\+T45\+D\+B641\+E\+\_\+configure\+Page\+Size}} (\mbox{\hyperlink{_a_t45_d_b641_e_8h_a6ff075702fefcd1a168df52cb227899b}{A\+T45\+D\+B641\+E\+\_\+e\+Page\+Size}} x\+Page\+Size)
+\item 
+void \mbox{\hyperlink{_a_t45_d_b641_e_8c_a91e1c0cb3868eb4a0b70bc3c7951a37e}{A\+T45\+D\+B641\+E\+\_\+init}} (void)
+\item 
+void \mbox{\hyperlink{_a_t45_d_b641_e_8c_abcec64b140665374938a75a78178b58b}{A\+T45\+D\+B641\+E\+\_\+read\+Sector}} (void $\ast$pv\+Input\+Data, uint16\+\_\+t us\+Sector\+Number)
+\item 
+void \mbox{\hyperlink{_a_t45_d_b641_e_8c_ab64a405a2c1a9651819eb126b353b110}{A\+T45\+D\+B641\+E\+\_\+write\+Sector}} (void $\ast$pv\+Output\+Data, uint16\+\_\+t us\+Sector\+Number)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{_a_t45_d_b641_e_8c_a1f58ba2ffb711cd8aaef5e6ae58be0ef}{A\+T45\+D\+B641\+E\+\_\+status}} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Макросы}
+\mbox{\Hypertarget{_a_t45_d_b641_e_8c_ad4f9c3264c5c9204cf53f73fd90dd414}\label{_a_t45_d_b641_e_8c_ad4f9c3264c5c9204cf53f73fd90dd414}} 
+\index{AT45DB641E.c@{AT45DB641E.c}!AT45DB641E\_CS@{AT45DB641E\_CS}}
+\index{AT45DB641E\_CS@{AT45DB641E\_CS}!AT45DB641E.c@{AT45DB641E.c}}
+\subsubsection{\texorpdfstring{AT45DB641E\_CS}{AT45DB641E\_CS}}
+{\footnotesize\ttfamily \#define A\+T45\+D\+B641\+E\+\_\+\+CS(\begin{DoxyParamCaption}\item[{}]{is\+CS }\end{DoxyParamCaption})~(G\+P\+I\+OA-\/$>$B\+S\+RR = is\+CS ? G\+P\+I\+O\+\_\+\+B\+S\+R\+R\+\_\+\+B\+R4 \+: G\+P\+I\+O\+\_\+\+B\+S\+R\+R\+\_\+\+B\+S4)}
+
+\mbox{\Hypertarget{_a_t45_d_b641_e_8c_afc0658298e8fb677719ead6711bf2378}\label{_a_t45_d_b641_e_8c_afc0658298e8fb677719ead6711bf2378}} 
+\index{AT45DB641E.c@{AT45DB641E.c}!AT45DB641E\_REST@{AT45DB641E\_REST}}
+\index{AT45DB641E\_REST@{AT45DB641E\_REST}!AT45DB641E.c@{AT45DB641E.c}}
+\subsubsection{\texorpdfstring{AT45DB641E\_REST}{AT45DB641E\_REST}}
+{\footnotesize\ttfamily \#define A\+T45\+D\+B641\+E\+\_\+\+R\+E\+ST(\begin{DoxyParamCaption}\item[{}]{is\+Rest }\end{DoxyParamCaption})~(G\+P\+I\+OA-\/$>$B\+S\+RR = is\+Rest ? G\+P\+I\+O\+\_\+\+B\+S\+R\+R\+\_\+\+B\+R2 \+: G\+P\+I\+O\+\_\+\+B\+S\+R\+R\+\_\+\+B\+S2)}
+
+\mbox{\Hypertarget{_a_t45_d_b641_e_8c_a9e31a5414e115354a7cfd73cfde16167}\label{_a_t45_d_b641_e_8c_a9e31a5414e115354a7cfd73cfde16167}} 
+\index{AT45DB641E.c@{AT45DB641E.c}!AT45DB641E\_WP@{AT45DB641E\_WP}}
+\index{AT45DB641E\_WP@{AT45DB641E\_WP}!AT45DB641E.c@{AT45DB641E.c}}
+\subsubsection{\texorpdfstring{AT45DB641E\_WP}{AT45DB641E\_WP}}
+{\footnotesize\ttfamily \#define A\+T45\+D\+B641\+E\+\_\+\+WP(\begin{DoxyParamCaption}\item[{}]{is\+WP }\end{DoxyParamCaption})~(G\+P\+I\+OA-\/$>$B\+S\+RR = is\+WP ? G\+P\+I\+O\+\_\+\+B\+S\+R\+R\+\_\+\+B\+R3 \+: G\+P\+I\+O\+\_\+\+B\+S\+R\+R\+\_\+\+B\+S3)}
+
+\mbox{\Hypertarget{_a_t45_d_b641_e_8c_acdc539917dcad6ed9e096b68f7f08590}\label{_a_t45_d_b641_e_8c_acdc539917dcad6ed9e096b68f7f08590}} 
+\index{AT45DB641E.c@{AT45DB641E.c}!CARHF@{CARHF}}
+\index{CARHF@{CARHF}!AT45DB641E.c@{AT45DB641E.c}}
+\subsubsection{\texorpdfstring{CARHF}{CARHF}}
+{\footnotesize\ttfamily \#define C\+A\+R\+HF~0x0B}
+
+\mbox{\Hypertarget{_a_t45_d_b641_e_8c_aee3371b360cf972ee4bf34412c3ff3c8}\label{_a_t45_d_b641_e_8c_aee3371b360cf972ee4bf34412c3ff3c8}} 
+\index{AT45DB641E.c@{AT45DB641E.c}!CARHF\_M@{CARHF\_M}}
+\index{CARHF\_M@{CARHF\_M}!AT45DB641E.c@{AT45DB641E.c}}
+\subsubsection{\texorpdfstring{CARHF\_M}{CARHF\_M}}
+{\footnotesize\ttfamily \#define C\+A\+R\+H\+F\+\_\+M~0x1B}
+
+\mbox{\Hypertarget{_a_t45_d_b641_e_8c_af332f65aca07c44deeda884c8f6c353c}\label{_a_t45_d_b641_e_8c_af332f65aca07c44deeda884c8f6c353c}} 
+\index{AT45DB641E.c@{AT45DB641E.c}!CE@{CE}}
+\index{CE@{CE}!AT45DB641E.c@{AT45DB641E.c}}
+\subsubsection{\texorpdfstring{CE}{CE}}
+{\footnotesize\ttfamily \#define CE~0x9\+A8094\+C7}
+
+\mbox{\Hypertarget{_a_t45_d_b641_e_8c_af3b0423d20dd4b689462a1446135df1c}\label{_a_t45_d_b641_e_8c_af3b0423d20dd4b689462a1446135df1c}} 
+\index{AT45DB641E.c@{AT45DB641E.c}!MMPPTB1@{MMPPTB1}}
+\index{MMPPTB1@{MMPPTB1}!AT45DB641E.c@{AT45DB641E.c}}
+\subsubsection{\texorpdfstring{MMPPTB1}{MMPPTB1}}
+{\footnotesize\ttfamily \#define M\+M\+P\+P\+T\+B1~0x82}
+
+\mbox{\Hypertarget{_a_t45_d_b641_e_8c_aea1cbfa2353f0533d1a5eed165b8b0ce}\label{_a_t45_d_b641_e_8c_aea1cbfa2353f0533d1a5eed165b8b0ce}} 
+\index{AT45DB641E.c@{AT45DB641E.c}!MMPPTB2@{MMPPTB2}}
+\index{MMPPTB2@{MMPPTB2}!AT45DB641E.c@{AT45DB641E.c}}
+\subsubsection{\texorpdfstring{MMPPTB2}{MMPPTB2}}
+{\footnotesize\ttfamily \#define M\+M\+P\+P\+T\+B2~0x85}
+
+\mbox{\Hypertarget{_a_t45_d_b641_e_8c_a567978a4bfe0fda06e57b2a5464c4e86}\label{_a_t45_d_b641_e_8c_a567978a4bfe0fda06e57b2a5464c4e86}} 
+\index{AT45DB641E.c@{AT45DB641E.c}!MMPR@{MMPR}}
+\index{MMPR@{MMPR}!AT45DB641E.c@{AT45DB641E.c}}
+\subsubsection{\texorpdfstring{MMPR}{MMPR}}
+{\footnotesize\ttfamily \#define M\+M\+PR~0x\+D2}
+
+\mbox{\Hypertarget{_a_t45_d_b641_e_8c_aa83ca513aa104505303150430d954fe1}\label{_a_t45_d_b641_e_8c_aa83ca513aa104505303150430d954fe1}} 
+\index{AT45DB641E.c@{AT45DB641E.c}!SRR@{SRR}}
+\index{SRR@{SRR}!AT45DB641E.c@{AT45DB641E.c}}
+\subsubsection{\texorpdfstring{SRR}{SRR}}
+{\footnotesize\ttfamily \#define S\+RR~0x\+D7}
+
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{_a_t45_d_b641_e_8c_aab99dc3f63d5aa16d4c2f87a5b73d9e3}\label{_a_t45_d_b641_e_8c_aab99dc3f63d5aa16d4c2f87a5b73d9e3}} 
+\index{AT45DB641E.c@{AT45DB641E.c}!AT45DB641E\_configurePageSize@{AT45DB641E\_configurePageSize}}
+\index{AT45DB641E\_configurePageSize@{AT45DB641E\_configurePageSize}!AT45DB641E.c@{AT45DB641E.c}}
+\subsubsection{\texorpdfstring{AT45DB641E\_configurePageSize()}{AT45DB641E\_configurePageSize()}}
+{\footnotesize\ttfamily void A\+T45\+D\+B641\+E\+\_\+configure\+Page\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_a_t45_d_b641_e_8h_a6ff075702fefcd1a168df52cb227899b}{A\+T45\+D\+B641\+E\+\_\+e\+Page\+Size}}}]{x\+Page\+Size }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyVerb}\warning The nonvolatile register has a limit of 10,000 erase/program cycles; therefore, care should be taken to not switch between the size options more than 10,000 times
+\end{DoxyVerb}
+ 
+\end{DoxyItemize}\mbox{\Hypertarget{_a_t45_d_b641_e_8c_a91e1c0cb3868eb4a0b70bc3c7951a37e}\label{_a_t45_d_b641_e_8c_a91e1c0cb3868eb4a0b70bc3c7951a37e}} 
+\index{AT45DB641E.c@{AT45DB641E.c}!AT45DB641E\_init@{AT45DB641E\_init}}
+\index{AT45DB641E\_init@{AT45DB641E\_init}!AT45DB641E.c@{AT45DB641E.c}}
+\subsubsection{\texorpdfstring{AT45DB641E\_init()}{AT45DB641E\_init()}}
+{\footnotesize\ttfamily void A\+T45\+D\+B641\+E\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_a_t45_d_b641_e_8c_abcec64b140665374938a75a78178b58b}\label{_a_t45_d_b641_e_8c_abcec64b140665374938a75a78178b58b}} 
+\index{AT45DB641E.c@{AT45DB641E.c}!AT45DB641E\_readSector@{AT45DB641E\_readSector}}
+\index{AT45DB641E\_readSector@{AT45DB641E\_readSector}!AT45DB641E.c@{AT45DB641E.c}}
+\subsubsection{\texorpdfstring{AT45DB641E\_readSector()}{AT45DB641E\_readSector()}}
+{\footnotesize\ttfamily void A\+T45\+D\+B641\+E\+\_\+read\+Sector (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Input\+Data,  }\item[{uint16\+\_\+t}]{us\+Sector\+Number }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_a_t45_d_b641_e_8c_a1f58ba2ffb711cd8aaef5e6ae58be0ef}\label{_a_t45_d_b641_e_8c_a1f58ba2ffb711cd8aaef5e6ae58be0ef}} 
+\index{AT45DB641E.c@{AT45DB641E.c}!AT45DB641E\_status@{AT45DB641E\_status}}
+\index{AT45DB641E\_status@{AT45DB641E\_status}!AT45DB641E.c@{AT45DB641E.c}}
+\subsubsection{\texorpdfstring{AT45DB641E\_status()}{AT45DB641E\_status()}}
+{\footnotesize\ttfamily uint16\+\_\+t A\+T45\+D\+B641\+E\+\_\+status (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_a_t45_d_b641_e_8c_ab64a405a2c1a9651819eb126b353b110}\label{_a_t45_d_b641_e_8c_ab64a405a2c1a9651819eb126b353b110}} 
+\index{AT45DB641E.c@{AT45DB641E.c}!AT45DB641E\_writeSector@{AT45DB641E\_writeSector}}
+\index{AT45DB641E\_writeSector@{AT45DB641E\_writeSector}!AT45DB641E.c@{AT45DB641E.c}}
+\subsubsection{\texorpdfstring{AT45DB641E\_writeSector()}{AT45DB641E\_writeSector()}}
+{\footnotesize\ttfamily void A\+T45\+D\+B641\+E\+\_\+write\+Sector (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Output\+Data,  }\item[{uint16\+\_\+t}]{us\+Sector\+Number }\end{DoxyParamCaption})}
+

@@ -37,7 +37,7 @@ void I2C_Init()
 
 	I2C1->CR2 = SystemCoreClock / FREQR;
 
-	//500 магическое чило 0,5(так-как нужно пол периуда) *1000(так-как расчёт в KHz )
+	//500 магическое число 0,5(так-как нужно пол периода) *1000(так-как расчёт в KHz )
 	I2C1->CCR = (uint32_t)(500 / SCL_CLOCK / ((float)1 / (SystemCoreClock / FREQR)));
 
 	I2C1->TRISE = (SystemCoreClock / FREQR) + 1;
@@ -67,7 +67,7 @@ void I2C_ReadData (uint8_t ucDeviceAddress, uint8_t ucRegisterPointer, void * pv
 
 
 /*! \todo Подлежит оптимизации:
- *  (1. реалзовать защиту от висяков.)
+ *  (1. реализовать защиту от висяков.)
  */
 __attribute__((always_inline)) inline void inlineStartConditions(uint8_t ucDeviceAddress, eDataDirection xDataDirection)
 {
@@ -86,7 +86,7 @@ __attribute__((always_inline)) inline void inlineStartConditions(uint8_t ucDevic
 
 
 /*! \todo Подлежит оптимизации:
- *  (1. реалзовать защиту от висяков.)
+ *  (1. реализовать защиту от висяков.)
  */
 __attribute__((always_inline)) inline void inlineWriteData(void * pvOutputData, uint8_t ucDataSize, eI2C_Endianness xDirectionData)
 {
@@ -105,7 +105,7 @@ __attribute__((always_inline)) inline void inlineWriteData(void * pvOutputData, 
 }
 
 /*! \todo Подлежит оптимизации:
- *  (1. реалзовать защиту от висяков.)
+ *  (1. реализовать защиту от висяков.)
  */
 __attribute__((always_inline)) inline void inlineReadData(void * pvInputData, uint8_t ucDataSize, eI2C_Endianness xDirectionData)
 {
@@ -115,7 +115,7 @@ __attribute__((always_inline)) inline void inlineReadData(void * pvInputData, ui
 	for(uint8_t i = 0;ucDataSize>0; i++, ucDataSize--)
 	{
 
-		if(ucDataSize==1)	//если последний байт то не генреируем ACK и следом выстовляем на шину стоп условие
+		if(ucDataSize==1)	//если последний байт, то не генерируем ACK и следом выставляем на шину стоп условие
 		{
 			I2C1->CR1 &= ~I2C_CR1_ACK;
 			I2C1->CR1 |= I2C_CR1_STOP;
